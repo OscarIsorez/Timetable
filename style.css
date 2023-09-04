@@ -1,0 +1,117 @@
+
+
+/* le fond des cellules du tableau avec comme classes lundi à vendredi de 5 couleurs différentes */
+.Lundi {
+    background-color: #FFCC66;
+}
+
+.Mardi {
+    background-color: #FFCC99;
+}
+
+.Mercredi {
+    background-color: #FFCCCC;
+}
+
+.Jeudi {
+    background-color: #FFCCFF;
+}
+
+.Vendredi {
+    background-color: #FF99CC;
+}
+
+
+.huit{
+    background-color: #FFCC66;
+}
+
+.huittr{
+    background-color: #FFCC66;
+}
+
+.neuf{
+    background-color: #FFCC99;
+}
+
+.neuftr{
+    background-color: #FFCC99;
+}
+
+.dix{
+    background-color: #FFCCCC;
+}
+
+.dixtr{
+    background-color: #FFCCCC;
+}
+
+.onze{
+    background-color: #FFCCFF;
+}
+
+.onzetr{
+    background-color: #FFCCFF;
+}
+
+.douze{
+    background-color: #FF99CC;
+}
+
+.douzetr{
+    background-color: #FF99CC;
+}
+
+.treize{
+    background-color: #FFCC66;
+}
+
+.treizetr{
+    background-color: #FFCC66;
+}
+
+.quatorze{
+    background-color: #FFCC99;
+}
+
+.quatorzetr{
+    background-color: #FFCC99;
+}
+
+.quinze{
+    background-color: #FFCCCC;
+}
+
+.quinzetr{
+    background-color: #FFCCCC;
+}
+
+.seize{
+    background-color: #FFCCFF;
+}
+
+.seizetr{
+    background-color: #FFCCFF;
+}
+
+.dixsept{
+    background-color: #FF99CC;
+}
+
+.dixsepttr{
+    background-color: #FF99CC;
+}   
+
+.dixhuit{
+    background-color: #FFCC66;
+}
+
+.dixhuittr{
+    background-color: #FFCC66;
+}
+
+
+
+.vide{
+    background-color: #f1f1f1;
+}

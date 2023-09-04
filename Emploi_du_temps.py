@@ -3,7 +3,7 @@ import datetime
 import pyperclip
 
 # Chargez le fichier .ics
-with open('September.ics', 'rb') as f:
+with open('Timetable/September.ics', 'rb') as f:
     cal = Calendar.from_ical(f.read())
 
 # Créez un dictionnaire pour stocker les données par jour de la semaine
