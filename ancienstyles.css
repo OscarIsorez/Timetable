@@ -1,0 +1,229 @@
+/* le fond des cellules du tableau avec comme classes lundi à vendredi de 5 couleurs différentes */
+.Lundi {
+    border: none;
+    background-color: #FFCC66;
+}
+
+.Mardi {
+    border: none;background-color: #FFCC99;
+}
+
+.Mercredi {
+    border: none;background-color: #FFCCCC;
+}
+
+.Jeudi {
+    border: none;background-color: #FFCCFF;
+}
+
+.Vendredi {
+    border: none;background-color: #FF99CC;
+}
+
+
+.huit {
+    border: none;
+    ;
+    background-color: #FFCC66;
+}
+
+.huittr {
+    border: none;
+    ;
+
+    background-color: #FFCC66;
+}
+
+.neuf {
+    border: none;
+    ;
+
+    background-color: #FFCC99;
+}
+
+.neuftr {
+    border: none;
+    ;
+
+    background-color: #FFCC99;
+}
+
+.dix {
+    border: none;
+    ;
+
+    background-color: #FFCCCC;
+}
+
+.dixtr {
+    border: none;
+    ;
+
+    background-color: #FFCCCC;
+}
+
+.onze {
+    border: none;
+    ;
+
+    background-color: #FFCCFF;
+}
+
+.onzetr {
+    border: none;
+    ;
+
+    background-color: #FFCCFF;
+}
+
+.douze {
+    border: none;
+    ;
+
+    background-color: #FF99CC;
+}
+
+.douzetr {
+    border: none;
+    ;
+
+    background-color: #FF99CC;
+}
+
+.treize {
+    border: none;
+    ;
+
+    background-color: #FFCC66;
+}
+
+.treizetr {
+    border: none;
+    ;
+
+    background-color: #FFCC66;
+}
+
+.quatorze {
+    border: none;
+    ;
+
+    background-color: #FFCC99;
+}
+
+.quatorzetr {
+    border: none;
+    ;
+
+    background-color: #FFCC99;
+}
+
+.quinze {
+    border: none;
+    ;
+
+    background-color: #FFCCCC;
+}
+
+.quinzetr {
+    border: none;
+    ;
+
+    background-color: #FFCCCC;
+}
+
+.seize {
+    border: none;
+    ;
+
+    background-color: #FFCCFF;
+}
+
+.seizetr {
+    border: none;
+    ;
+
+    background-color: #FFCCFF;
+}
+
+.dixsept {
+    border: none;
+    ;
+
+    background-color: #FF99CC;
+}
+
+.dixsepttr {
+    border: none;
+    ;
+
+    background-color: #FF99CC;
+}
+
+.dixhuit {
+    border: none;
+    ;
+
+    background-color: #FFCC66;
+}
+
+.dixhuittr {
+    border: none;
+    ;
+
+    background-color: #FFCC66;
+}
+
+
+
+.vide {
+    background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;
+}
+
+.AlgLin {
+    background-color: #FFCC66;border: none;border-radius: 10px;padding: 10px;
+}
+
+.res {
+    background-color: #FFCC99;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.trombinoscope {
+    background-color: #FFCCCC;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.algdeux {
+    background-color: #FFCCFF;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+
+
+.permanence {
+    background-color: #FF99CC;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.ofi {
+    background-color: #FFAAAA;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.po {
+    background-color: #FFAAAA;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+}
