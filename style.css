@@ -114,4 +114,43 @@
 
 .vide{
     background-color: #f1f1f1;
+    border: none; border-radius: 10px; padding: 10px;
 }
+
+.AlgLin{
+    background-color: #FFCC66;
+    border: none; border-radius: 10px; padding: 10px;
+}
+
+.res{
+    background-color: #FFCC99;
+    border: none; border-radius: 10px; padding: 10px;
+}
+
+.trombinoscope{
+    background-color: #FFCCCC;
+    border: none; border-radius: 10px; padding: 10px;
+}
+
+.algdeux{
+    background-color: #FFCCFF;
+    border: none; border-radius: 10px; padding: 10px;
+}
+
+.permanence{
+    background-color: #FF99CC;
+    border: none; border-radius: 10px; padding: 10px;
+}   
+
+.ofi{
+    background-color: #FFAAAA;
+    border: none; border-radius: 10px; padding: 10px;
+}
+
+.po{
+    background-color: #FFAAAA;
+    border: none;   
+    border-radius: 10px;
+    padding: 10px;
+}
+
