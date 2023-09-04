@@ -1,112 +1,135 @@
 
 
 /* le fond des cellules du tableau avec comme classes lundi à vendredi de 5 couleurs différentes */
-.Lundi {
+.Lundi { border:none;
     background-color: #FFCC66;
 }
 
-.Mardi {
+.Mardi { border:none;
     background-color: #FFCC99;
 }
 
-.Mercredi {
+.Mercredi { border:none;
     background-color: #FFCCCC;
 }
 
-.Jeudi {
+.Jeudi { border:none;
     background-color: #FFCCFF;
 }
 
-.Vendredi {
+.Vendredi { border:none;
     background-color: #FF99CC;
 }
 
 
 .huit{
+    border: none;;
     background-color: #FFCC66;
 }
 
 .huittr{
+    border: none;;
+
     background-color: #FFCC66;
 }
 
-.neuf{
+.neuf{    border: none;;
+
     background-color: #FFCC99;
 }
 
-.neuftr{
+.neuftr{    border: none;;
+
     background-color: #FFCC99;
 }
 
-.dix{
+.dix{    border: none;;
+
     background-color: #FFCCCC;
 }
 
-.dixtr{
+.dixtr{    border: none;;
+
     background-color: #FFCCCC;
 }
 
-.onze{
+.onze{    border: none;;
+
     background-color: #FFCCFF;
 }
 
-.onzetr{
+.onzetr{    border: none;;
+
     background-color: #FFCCFF;
 }
 
-.douze{
+.douze{    border: none;;
+
     background-color: #FF99CC;
 }
 
-.douzetr{
+.douzetr{    border: none;;
+
     background-color: #FF99CC;
 }
 
-.treize{
+.treize{    border: none;;
+
     background-color: #FFCC66;
 }
 
-.treizetr{
+.treizetr{    border: none;;
+
     background-color: #FFCC66;
 }
 
-.quatorze{
+.quatorze{    border: none;;
+
     background-color: #FFCC99;
 }
 
-.quatorzetr{
+.quatorzetr{    border: none;;
+
     background-color: #FFCC99;
 }
 
-.quinze{
+.quinze{    border: none;;
+
     background-color: #FFCCCC;
 }
 
-.quinzetr{
+.quinzetr{    border: none;;
+
     background-color: #FFCCCC;
 }
 
-.seize{
+.seize{    border: none;;
+
     background-color: #FFCCFF;
 }
 
-.seizetr{
+.seizetr{    border: none;;
+
     background-color: #FFCCFF;
 }
 
-.dixsept{
+.dixsept{    border: none;;
+
     background-color: #FF99CC;
 }
 
-.dixsepttr{
+.dixsepttr{    border: none;;
+
     background-color: #FF99CC;
 }   
 
-.dixhuit{
+.dixhuit{    border: none;;
+
     background-color: #FFCC66;
 }
 
-.dixhuittr{
+.dixhuittr{    border: none;;
+
     background-color: #FFCC66;
 }
 
