@@ -5,8 +5,8 @@ from random import randint
 
 
 #une liste de 50 strings de couleurs en hexadécimal dans la même gamme de couleurs
-random_color_palette = ["#FFCC66", "#FFCC66", "#FFCCCC", "#FFCCFF", "#FF99CC", "#FF99FF", "#FF66CC", "#FF66FF", "#FF33CC", "#FF33FF", "#FF00CC"]
-
+color_palette = ["#ffd6ff","#f3ceff","#e7c6ff","#d8beff","#c8b6ff","#c0bbff","#b8c0ff","#bac8ff","#baccff","#bbd0ff", "#bbd6ff","#bbdaff"]
+backup_color_palette = color_palette.copy()
 #fonction qui renvoie une liste contenant tous les event_text de la semaine
 def count_events (week_data):
     all_events_text = []
@@ -30,8 +30,8 @@ week_data = {'Monday': [], 'Tuesday': [],
 for event in cal.walk('vevent'):
     summary = event.get('summary')
     location = event.get('location')
-    start_time = event.get('dtstart').dt + datetime.timedelta(hours=2.5)  # Ajoutez 2 heures et demi car données du site mauvaises
-    end_time = event.get('dtend').dt + datetime.timedelta(hours=2.5)  # Ajoutez 2 heures et demi car données du site mauvaises
+    start_time = event.get('dtstart').dt + datetime.timedelta(hours=2.5) 
+    end_time = event.get('dtend').dt + datetime.timedelta(hours=2.5)  
 
     # Obtenez le nom du jour de la semaine (Lundi, Mardi, etc.)
     day_of_week = start_time.strftime('%A')
@@ -50,7 +50,7 @@ for event in cal.walk('vevent'):
 
 # Créez un tableau HTML
 html_table = "<table border='1'>"
-html_table += "<tr><th>Plage Horaire</th><th style='border: none; background-color: #FFCC66;'>Lundi</th><th style='    border: none;background-color: #FFCC99;'>Mardi</th><th style='    border: none;background-color: #FFCCCC;'>Mercredi</th><th style='    border: none;background-color: #FFCCFF;'>Jeudi</th><th style='    border: none;background-color: #FF99CC;'>Vendredi</th></tr>"
+html_table += f"<tr><th>Plage Horaire</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
 
 # Définissez l'heure de début (8h du matin, après avoir ajouté 2 heures)
 start_hour = 8
@@ -82,8 +82,16 @@ while current_time.hour < end_hour or (current_time.hour == end_hour and current
 
     # Mettre les heures sur 2 cellules, une fois sur deux
     if one_or_two : 
-        color = random_color_palette[randint(0, len(random_color_palette)-1)]
-        html_table += f"<td rowspan='2' style='border:none;background-color: {color}'>{time_range} ---------    </td>" 
+        
+        if color_palette != [] :
+            color = color_palette[0]
+            color_palette.pop(0)
+        else :
+            color_palette = backup_color_palette.copy()
+            color = color_palette[0]
+            color_palette.pop(0)
+        
+        html_table += f"<td rowspan='2' style='border:none;background-color: {color}'>{time_range} --------</td>" 
         one_or_two = False
     else :
         one_or_two = True
@@ -126,7 +134,6 @@ html_page = '<!DOCTYPE html><html lang="fr"><meta charset="UTF-8"><title>Emploi 
 html_page += html_table
 html_page += '</head><body></body></html>'
 
-print(liste_cours)
 
 #on ne garde que les 4 premiers caractères de chaque élément de liste_cours
 liste_cours =  [x[0:4] for x in liste_cours]
@@ -152,12 +159,11 @@ if os.path.exists("Timetable/style.css"):
 
 #on crée un fichier css avec le contenu de style.css
 fichier = open("Timetable/style.css", "w")
-# pour chaque élément de liste_cours, on crée une classe css avec une couleur dans la liste random_color_palette
-print(len(liste_cours))
+# pour chaque élément de liste_cours, on crée une classe css avec une couleur dans la liste color_palette
 for i in range(len(liste_cours)):
     if liste_cours[i].count(' ') > 0:
         liste_cours[i] = liste_cours[i].replace(" ", "")
-    fichier.write(f".{liste_cours[i]} {{background-color: {random_color_palette[i]}; border: none;border-radius: 10px;padding: 10px;}}\n")
+    fichier.write(f".{liste_cours[i]} {{background-color: {color_palette[i]}; border: none;border-radius: 10px;padding: 10px;}}\n")
 fichier.close()
 
 
