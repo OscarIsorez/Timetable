@@ -6,6 +6,7 @@ import requests
 import os
 #bibliothèque pour récupérer la date d'aujourd'hui et le jour de la semaine
 from datetime  import date
+import subprocess
 
 # L'URL du fichier que vous souhaitez télécharger
 url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/9n94DDYP.shu'
@@ -200,6 +201,37 @@ for i in range(len(liste_cours)):
         liste_cours[i] = liste_cours[i].replace(" ", "")
     fichier.write(f".{liste_cours[i]} {{background-color: {color_palette[i]}; border: none;border-radius: 10px;padding: 10px;}}\n")
 fichier.close()
+
+
+#dans le terminal de commande, on lance les commandes suivantes pour mettre à jour le site web
+# cd Timetable/
+# git add .
+# git commit -m "update"
+# git push 
+
+
+# Spécifiez le répertoire dans lequel vous souhaitez exécuter les commandes Git
+repo_directory = 'C:/Users/Oscar/OneDrive/Documents/Timetable/Timetable'
+
+# Commande Git : git add .
+git_add_command = ['git', 'add', '.']
+
+# Commande Git : git commit -m "update"
+git_commit_command = ['git', 'commit', '-m', 'update']
+
+# Commande Git : git push
+git_push_command = ['git', 'push']
+
+# Exécutez les commandes Git dans le répertoire du dépôt
+try:
+    subprocess.run(git_add_command, cwd=repo_directory, check=True)
+    subprocess.run(git_commit_command, cwd=repo_directory, check=True)
+    subprocess.run(git_push_command, cwd=repo_directory, check=True)
+    print("Les commandes Git ont été exécutées avec succès.")
+except subprocess.CalledProcessError as e:
+    print("Une erreur s'est produite lors de l'exécution des commandes Git :", e)
+
+
 
 
 
