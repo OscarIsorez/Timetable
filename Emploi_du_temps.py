@@ -14,6 +14,8 @@ url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/9n94DDYP.sh
 # Envoyer une requête HTTP GET pour télécharger le fichier
 response = requests.get(url)
 
+acutal_date = datetime.datetime.now()
+
 # Vérifier si la requête a réussi
 if response.status_code == 200:
     # Obtenir le contenu du fichier
@@ -44,14 +46,26 @@ def count_events (week_data):
         all_events_text.append(event[2])
     return all_events_text
 
+#fonction qui prend en paramètre la date d'aujou'dhui et qui renvoie le jour, le mois et l'année du lundi de la semaine dans laquelle se trouve la date d'aujourd'hui
+def get_monday_date(date):
+    #on récupère le jour de la semaine de la date d'aujourd'hui
+    day = date.weekday()
+    #si le jour est lundi, on renvoie la date d'aujourd'hui
+    if day == 0:
+        return date
+    #sinon on renvoie la date d'aujourd'hui moins le nombre de jours qui sépare la date d'aujourd'hui du lundi de la semaine
+    else:
+        return date - datetime.timedelta(days=day)
 
+print(get_monday_date(date.today()))
 # Chargez le fichier .ics
 with open('Data.ics', 'rb') as f:
     cal = Calendar.from_ical(f.read())
 
 # Créez un dictionnaire pour stocker les données par jour de la semaine
 week_data = {'Monday': [], 'Tuesday': [],
-             'Wednesday': [], 'Thursday': [], 'Friday': []}
+            'Wednesday': [], 'Thursday': [], 'Friday': []}
+
 
 
 
@@ -78,12 +92,6 @@ for event in cal.walk('vevent'):
         # Ajoutez l'événement au dictionnaire de données correspondant au jour de la semaine
         week_data[day_of_week].append((start_time, end_time, event_text))
 
-
-
-#on affiche pour chaque élément de week data, le 3ème élément de la liste (event_text)
-
-
-
 # Créez un tableau HTML
 html_table = "<table border='1'>"
 html_table += f"<tr><th>Plage Horaire</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
@@ -93,19 +101,24 @@ start_hour = 8
 start_minute = 0
 
 # Définissez l'heure de fin (20h30 du soir, après avoir ajouté 2 heures)
-end_hour = 20
+end_hour = 18
 end_minute = 30
 
 # Parcourir les heures de 8h à 20h30 avec un intervalle de 15 minutes
+
+
+#on utilisera la bibliothèque datetime pour créer un objet datetime 
 current_time = datetime.datetime(
-    year=2023, month=9, day=3, hour=start_hour, minute=start_minute)
+    year= acutal_date.year, month= acutal_date.month, day=acutal_date.day , hour=start_hour, minute=start_minute)
 
 #mettre les heures que une fois sur deux
 one_or_two = True
 
 liste_cours = []
 
-# Tant que l'heure actuelle est inférieure à l'heure de fin
+#----------------------------------GESTION DU CODE HTML--------------------------------------------
+
+
 while current_time.hour < end_hour or (current_time.hour == end_hour and current_time.minute <= end_minute):
     html_table += "<tr>"
     
@@ -171,15 +184,13 @@ html_page += html_table
 html_page += '</head><body></body></html>'
 
 
+#----------------------------GESTION DES FICHIERS--------------------------------------------
+
+
 #on ne garde que les 4 premiers caractères de chaque élément de liste_cours
 liste_cours =  [x[0:4] for x in liste_cours]
 
-# Imprimer ou utiliser html_table comme bon vous semble sur votre site web
-# Mettre le HTML dans le presse-papiers
-pyperclip.copy(html_table)
-
 #on supprime le fichier html s'il existe déjà
-import os
 if os.path.exists("Timetable/index.html"):
     os.remove("Timetable/index.html")
 
@@ -197,10 +208,15 @@ if os.path.exists("Timetable/style.css"):
 fichier = open("Timetable/style.css", "w")
 # pour chaque élément de liste_cours, on crée une classe css avec une couleur dans la liste color_palette
 for i in range(len(liste_cours)):
+    print(i)
     if liste_cours[i].count(' ') > 0:
         liste_cours[i] = liste_cours[i].replace(" ", "")
-    fichier.write(f".{liste_cours[i]} {{background-color: {color_palette[i]}; border: none;border-radius: 10px;padding: 10px;}}\n")
+    fichier.write(f".{liste_cours[i]} {{background-color: {backup_color_palette[i]}; border: none;border-radius: 10px;padding: 10px;}}\n")
 fichier.close()
+
+
+
+#-------------------------------------------------------------------------------------------
 
 
 #dans le terminal de commande, on lance les commandes suivantes pour mettre à jour le site web
