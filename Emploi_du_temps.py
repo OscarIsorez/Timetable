@@ -73,7 +73,7 @@ week_data = {'Monday': [], 'Tuesday': [],
 for event in cal.walk('vevent'):
     
     #on ne va traiter que les éléments qui ont une date comprise entre le lundi de la semaine acutelle et le vendredi de la semaine actuelle
-    if event.get('dtstart').dt.date() >= date.today() and event.get('dtstart').dt.date() <= date.today() + datetime.timedelta(days=4):
+    if event.get('dtstart').dt.date() >= get_monday_date(date.today()) and event.get('dtstart').dt.date() <= date.today() + datetime.timedelta(days=4):
             # Récupérez les informations de l'événement
             
 
