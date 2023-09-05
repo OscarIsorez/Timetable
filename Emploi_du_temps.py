@@ -2,12 +2,41 @@ from icalendar import Calendar
 import datetime
 import pyperclip
 from random import randint
+import requests
+import os
+#bibliothèque pour récupérer la date d'aujourd'hui et le jour de la semaine
+from datetime  import date
+
+# L'URL du fichier que vous souhaitez télécharger
+url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/9n94DDYP.shu'
+
+# Envoyer une requête HTTP GET pour télécharger le fichier
+response = requests.get(url)
+
+# Vérifier si la requête a réussi
+if response.status_code == 200:
+    # Obtenir le contenu du fichier
+    content = response.content
+    
+    #si le fichier Data.ics existe déjà on le supprime
+    if os.path.exists("Data.ics"):
+        os.remove("Data.ics")
+        
+    # Écrire le contenu dans un fichier .ics nommé "Data.ics"
+    with open('Data.ics', 'wb') as file:
+        file.write(content)
+        
+    print("Le fichier a été téléchargé avec succès et enregistré sous 'Data.ics'.")
+else:
+    print("La requête a échoué.")
+
 
 
 #une liste de 50 strings de couleurs en hexadécimal dans la même gamme de couleurs
-color_palette = ["#ffd6ff","#f3ceff","#e7c6ff","#d8beff","#c8b6ff","#c0bbff","#b8c0ff","#bac8ff","#baccff","#bbd0ff", "#bbd6ff","#bbdaff"]
+color_palette = ["#ffd6ff","#f3ceff","#e7c6ff","#d8beff","#c8b6ff","#c0bbff","#b8c0ff","#bac8ff","#baccff","#bbd0ff", "#bbd6ff","#bbdaff", "#ffd6ff","#f3ceff","#e7c6ff","#d8beff","#c8b6ff","#c0bbff","#b8c0ff","#bac8ff","#baccff","#bbd0ff", "#bbd6ff","#bbdaff"]
 backup_color_palette = color_palette.copy()
-#fonction qui renvoie une liste contenant tous les event_text de la semaine
+
+
 def count_events (week_data):
     all_events_text = []
     for event in week_data:
@@ -15,9 +44,8 @@ def count_events (week_data):
     return all_events_text
 
 
-
 # Chargez le fichier .ics
-with open('Timetable/September.ics', 'rb') as f:
+with open('Data.ics', 'rb') as f:
     cal = Calendar.from_ical(f.read())
 
 # Créez un dictionnaire pour stocker les données par jour de la semaine
@@ -28,19 +56,26 @@ week_data = {'Monday': [], 'Tuesday': [],
 
 # Parcourez les événements du calendrier
 for event in cal.walk('vevent'):
-    summary = event.get('summary')
-    location = event.get('location')
-    start_time = event.get('dtstart').dt + datetime.timedelta(hours=2.5) 
-    end_time = event.get('dtend').dt + datetime.timedelta(hours=2.5)  
+    
+    #on ne va traiter que les éléments qui ont une date comprise entre le lundi de la semaine acutelle et le vendredi de la semaine actuelle
+    if event.get('dtstart').dt.date() >= date.today() and event.get('dtstart').dt.date() <= date.today() + datetime.timedelta(days=4):
+            # Récupérez les informations de l'événement
+            
 
-    # Obtenez le nom du jour de la semaine (Lundi, Mardi, etc.)
-    day_of_week = start_time.strftime('%A')
+        summary = event.get('summary')
+        location = event.get('location')
+        start_time = event.get('dtstart').dt + datetime.timedelta(hours=2.5) 
+        print(start_time)
+        end_time = event.get('dtend').dt + datetime.timedelta(hours=2.5)  
 
-    # Créez une chaîne de texte pour l'événement
-    event_text = f"{summary} ({location})"
+        # Obtenez le nom du jour de la semaine (Lundi, Mardi, etc.)
+        day_of_week = start_time.strftime('%A')
 
-    # Ajoutez l'événement au dictionnaire de données correspondant au jour de la semaine
-    week_data[day_of_week].append((start_time, end_time, event_text))
+        # Créez une chaîne de texte pour l'événement
+        event_text = f"{summary} ({location})"
+
+        # Ajoutez l'événement au dictionnaire de données correspondant au jour de la semaine
+        week_data[day_of_week].append((start_time, end_time, event_text))
 
 
 
