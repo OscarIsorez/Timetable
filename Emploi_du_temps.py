@@ -1,12 +1,33 @@
 from icalendar import Calendar
-import datetime
+from datetime import  date, timedelta, datetime
 import pyperclip
 from random import randint
 import requests
 import os
 #bibliothèque pour récupérer la date d'aujourd'hui et le jour de la semaine
-from datetime  import date
 import subprocess
+import pytz
+
+print(type(timedelta(hours=2.5)))
+
+def convertir_heure_gmt_vers_locale(heure_gmt, pays):
+    try:
+
+        heure_gmt = str(heure_gmt)[0:-6]
+
+        # Obtenez le fuseau horaire du pays spécifié
+        fuseau_pays = pytz.timezone(pays)
+
+        # Créez un objet datetime avec l'heure GMT
+        heure_gmt = datetime.strptime(heure_gmt, '%Y-%m-%d %H:%M:%S')
+        heure_gmt = pytz.utc.localize(heure_gmt)
+
+        # Convertissez l'heure GMT en heure locale du pays
+        heure_locale = heure_gmt.astimezone(fuseau_pays)
+
+        return heure_locale
+    except Exception as e:
+        return f"Erreur : {str(e)}"
 
 # L'URL du fichier que vous souhaitez télécharger
 url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/9n94DDYP.shu'
@@ -14,7 +35,7 @@ url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/9n94DDYP.sh
 # Envoyer une requête HTTP GET pour télécharger le fichier
 response = requests.get(url)
 
-acutal_date = datetime.datetime.now()
+acutal_date = date.today()
 
 # Vérifier si la requête a réussi
 if response.status_code == 200:
@@ -55,9 +76,7 @@ def get_monday_date(date):
         return date
     #sinon on renvoie la date d'aujourd'hui moins le nombre de jours qui sépare la date d'aujourd'hui du lundi de la semaine
     else:
-        return date - datetime.timedelta(days=day)
-
-print(get_monday_date(date.today()))
+        return date - timedelta(days=day)
 # Chargez le fichier .ics
 with open('Data.ics', 'rb') as f:
     cal = Calendar.from_ical(f.read())
@@ -73,15 +92,12 @@ week_data = {'Monday': [], 'Tuesday': [],
 for event in cal.walk('vevent'):
     
     #on ne va traiter que les éléments qui ont une date comprise entre le lundi de la semaine acutelle et le vendredi de la semaine actuelle
-    if event.get('dtstart').dt.date() >= get_monday_date(date.today()) and event.get('dtstart').dt.date() <= date.today() + datetime.timedelta(days=4):
-            # Récupérez les informations de l'événement
-            
+    if event.get('dtstart').dt.date() >= get_monday_date(date.today()) and event.get('dtstart').dt.date() <= get_monday_date(date.today()) + timedelta(days=4):
 
         summary = event.get('summary')
         location = event.get('location')
-        start_time = event.get('dtstart').dt + datetime.timedelta(hours=2.5) 
-        print(start_time)
-        end_time = event.get('dtend').dt + datetime.timedelta(hours=2.5)  
+        start_time = convertir_heure_gmt_vers_locale(event.get('dtstart').dt, 'Europe/Paris')
+        end_time = convertir_heure_gmt_vers_locale(event.get('dtend').dt, 'Europe/Paris')
 
         # Obtenez le nom du jour de la semaine (Lundi, Mardi, etc.)
         day_of_week = start_time.strftime('%A')
@@ -108,7 +124,7 @@ end_minute = 30
 
 
 #on utilisera la bibliothèque datetime pour créer un objet datetime 
-current_time = datetime.datetime(
+current_time = datetime(
     year= acutal_date.year, month= acutal_date.month, day=acutal_date.day , hour=start_hour, minute=start_minute)
 
 #mettre les heures que une fois sur deux
@@ -126,7 +142,7 @@ while current_time.hour < end_hour or (current_time.hour == end_hour and current
 
     # Calculer la plage horaire
     time_range_start = current_time.strftime('%H:%M')
-    current_time += datetime.timedelta(minutes=15)
+    current_time += timedelta(minutes=15)
     time_range = f"{time_range_start}"
 
     # Mettre les heures sur 2 cellules, une fois sur deux
@@ -208,7 +224,6 @@ if os.path.exists("Timetable/style.css"):
 fichier = open("Timetable/style.css", "w")
 # pour chaque élément de liste_cours, on crée une classe css avec une couleur dans la liste color_palette
 for i in range(len(liste_cours)):
-    print(i)
     if liste_cours[i].count(' ') > 0:
         liste_cours[i] = liste_cours[i].replace(" ", "")
     fichier.write(f".{liste_cours[i]} {{background-color: {backup_color_palette[i]}; border: none;border-radius: 10px;padding: 10px;}}\n")
@@ -246,8 +261,6 @@ try:
     print("Les commandes Git ont été exécutées avec succès.")
 except subprocess.CalledProcessError as e:
     print("Une erreur s'est produite lors de l'exécution des commandes Git :", e)
-
-
 
 
 
