@@ -99,6 +99,8 @@ for event in cal.walk('vevent'):
         start_time = convertir_heure_gmt_vers_locale(event.get('dtstart').dt, 'Europe/Paris')
         end_time = convertir_heure_gmt_vers_locale(event.get('dtend').dt, 'Europe/Paris')
 
+        #tests : affichage des dates et heures des événements et des summary
+        print(f"start_time : {start_time} ; end_time : {end_time} ; summary : {summary}")
         # Obtenez le nom du jour de la semaine (Lundi, Mardi, etc.)
         day_of_week = start_time.strftime('%A')
 
