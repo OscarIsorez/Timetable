@@ -43,11 +43,11 @@ if response.status_code == 200:
     content = response.content
 
     # si le fichier Data.ics existe déjà on le supprime
-    if os.path.exists("Data.ics"):
-        os.remove("Data.ics")
+    if os.path.exists("Timetable/Data.ics"):
+        os.remove("Timetable/Data.ics")
 
     # Écrire le contenu dans un fichier .ics nommé "Data.ics"
-    with open('Data.ics', 'wb') as file:
+    with open('Timetable/Data.ics', 'wb') as file:
         file.write(content)
 
     print("Le fichier a été téléchargé avec succès et enregistré sous 'Data.ics'.")
@@ -56,8 +56,22 @@ else:
 
 
 # une liste de 50 strings de couleurs en hexadécimal dans la même gamme de couleurs
-color_palette = ["#ffd6ff", "#f3ceff", "#e7c6ff", "#d8beff", "#c8b6ff", "#c0bbff", "#b8c0ff", "#bac8ff", "#baccff", "#bbd0ff", "#bbd6ff",
+old_color_palette = ["#ffd6ff", "#f3ceff", "#e7c6ff", "#d8beff", "#c8b6ff", "#c0bbff", "#b8c0ff", "#bac8ff", "#baccff", "#bbd0ff", "#bbd6ff",
                  "#bbdaff", "#ffd6ff", "#f3ceff", "#e7c6ff", "#d8beff", "#c8b6ff", "#c0bbff", "#b8c0ff", "#bac8ff", "#baccff", "#bbd0ff", "#bbd6ff", "#bbdaff"]
+
+color_palette =[
+    "#F3DE8A",  # 
+    "#F4D796",  # 
+    "#F4D0A2",  # 
+    "#F4C9AE",  # 
+    "#F4C1B9",  # 
+    "#D7B1B2",  # 
+    "#B9A0AA",  # 
+    "#9C90A2",  # 
+    "#8D889E",  # 
+    "#7E7F9A"   # 
+]
+
 backup_color_palette = color_palette.copy()
 
 
@@ -82,7 +96,7 @@ def get_monday_date(date):
 
 
 # Chargez le fichier .ics
-with open('Data.ics', 'rb') as f:
+with open('Timetable/Data.ics', 'rb') as f:
     cal = Calendar.from_ical(f.read())
 
 # Créez un dictionnaire pour stocker les données par jour de la semaine
@@ -205,6 +219,14 @@ html_page += '</head><body></body></html>'
 for i in range(len(liste_cours)):
     liste_cours[i][0] = liste_cours[i][0][0:4]
 
+# on supprime les doublons de liste_cours
+#la liste contenant elle meme des listes, on ne gardera que le premier élément de chaque élément
+liste_cours_uniques = []
+for i in range(len(liste_cours)):
+    liste_cours_uniques.append(liste_cours[i][0])
+liste_cours_uniques = list(set(liste_cours_uniques))
+
+
 # on supprime le fichier html s'il existe déjà
 if os.path.exists("Timetable/index.html"):
     os.remove("Timetable/index.html")
@@ -221,20 +243,21 @@ if os.path.exists("Timetable/style.css"):
 
 # on crée un fichier css avec le contenu de style.css
 fichier = open("Timetable/style.css", "w")
-# pour chaque élément de liste_cours, on crée une classe css avec une couleur dans la liste color_palette
+# pour chaque élément de liste_cours_uniques, on crée une classe css avec une couleur dans la liste color_palette
 
 fichier.write("th, td {width: 17vw;}\n")
-fichier.write("td:hover{border:1px solid};\n")
-fichier.write(".first_column {width:6vw;font: Montserrat;}\n")
+fichier.write("td:hover{border:1 px solid};\n")
+fichier.write(".first_column {width:6vw;}\n")
 fichier.write("table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
 fichier.write(".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;}\n")
-for i in range(len(liste_cours)):
-    # print(liste_cours[i])
+for i in range(len(liste_cours_uniques)):
+    # print(liste_cours_uniques[i])
     # print(i)
-    if liste_cours[i][0].count(' ') > 0:
-        liste_cours[i][0] = liste_cours[i][0].replace(" ", "")
+    if liste_cours_uniques[i].count(' ') > 0:
+        liste_cours_uniques[i] = liste_cours_uniques[i].replace(" ", "")
+    print(liste_cours_uniques[i])
     fichier.write(
-        f".{liste_cours[i][0]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 10px;}}\n")
+        f".{liste_cours_uniques[i]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 10px;}}\n")
 fichier.close()
 
 
@@ -262,9 +285,9 @@ git_push_command = ['git', 'push']
 
 # Exécutez les commandes Git dans le répertoire du dépôt
 try:
-    # subprocess.run(git_add_command, cwd=repo_directory, check=True)
-    # subprocess.run(git_commit_command, cwd=repo_directory, check=True)
-    # subprocess.run(git_push_command, cwd=repo_directory, check=True)
+    subprocess.run(git_add_command, cwd=repo_directory, check=True)
+    subprocess.run(git_commit_command, cwd=repo_directory, check=True)
+    subprocess.run(git_push_command, cwd=repo_directory, check=True)
     print("Les commandes Git ont été exécutées avec succès.")
 except subprocess.CalledProcessError as e:
     print("Une erreur s'est produite lors de l'exécution des commandes Git :", e)
