@@ -162,7 +162,7 @@ while current_time.hour < end_hour or (current_time.hour == end_hour and current
             color = color_palette[0]
             color_palette.pop(0)
 
-        html_table += f"<td rowspan='2'class='first_column' style='border:none;background-color: {color}'>{time_range} --------</td>"
+        html_table += f"<td rowspan='2'class='first_column' style='text-align: right;border:none;background-color: {color}'> {'   ' +  str(time_range) + '   '}  </td>"
         one_or_two = False
     else:
         one_or_two = True
@@ -191,7 +191,7 @@ while current_time.hour < end_hour or (current_time.hour == end_hour and current
                 #     html_table += "<tr></tr>"
         else:
             # Cellule vide
-            html_table += "<td style='color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;'>----------------------------------------</td>"
+            html_table += "<td class='empty'>----------------------------------------</td>"
 
     html_table += "</tr>"
 
@@ -227,7 +227,9 @@ fichier = open("Timetable/style.css", "w")
 # pour chaque élément de liste_cours, on crée une classe css avec une couleur dans la liste color_palette
 
 fichier.write("th, td {width: 17vw;}\n")
-fichier.write(".first_column {width:6vw}\n")
+fichier.write(".first_column {width:6vw;font: Montserrat;}\n")
+fichier.write("table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
+fichier.write(".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;}\n")
 for i in range(len(liste_cours)):
     # print(liste_cours[i])
     # print(i)
