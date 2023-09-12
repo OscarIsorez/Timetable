@@ -117,7 +117,7 @@ for event in cal.walk('vevent'):
 
 # Créez un tableau HTML
 html_table = "<table border='1'>"
-html_table += f"<tr><th>Plage Horaire</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
+html_table += f"<tr><th>Plage Horaire</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th  style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
 
 # Définissez l'heure de début (8h du matin, après avoir ajouté 2 heures)
 start_hour = 8
@@ -225,6 +225,8 @@ if os.path.exists("Timetable/style.css"):
 # on crée un fichier css avec le contenu de style.css
 fichier = open("Timetable/style.css", "w")
 # pour chaque élément de liste_cours, on crée une classe css avec une couleur dans la liste color_palette
+
+fichier.write("th, td {width: 15vw;}\n")
 for i in range(len(liste_cours)):
     # print(liste_cours[i])
     # print(i)

@@ -1,9 +1,10 @@
-.ALG2 {background-color: #bbd6ff; border: none;border-radius: 10px;padding: 10px;}
-.Trom {background-color: #bac8ff; border: none;border-radius: 10px;padding: 10px;}
-.AlgL {background-color: #c8b6ff; border: none;border-radius: 10px;padding: 10px;}
-.RES {background-color: #bbdaff; border: none;border-radius: 10px;padding: 10px;}
+th, td {width: 15vw;}
+.ALG2 {background-color: #baccff; border: none;border-radius: 10px;padding: 10px;}
+.Trom {background-color: #b8c0ff; border: none;border-radius: 10px;padding: 10px;}
+.AlgL {background-color: #bbdaff; border: none;border-radius: 10px;padding: 10px;}
+.RES {background-color: #c0bbff; border: none;border-radius: 10px;padding: 10px;}
 .POC {background-color: #baccff; border: none;border-radius: 10px;padding: 10px;}
-.Perm {background-color: #f3ceff; border: none;border-radius: 10px;padding: 10px;}
-.ALG2 {background-color: #bbd0ff; border: none;border-radius: 10px;padding: 10px;}
-.OFI {background-color: #d8beff; border: none;border-radius: 10px;padding: 10px;}
-.AlgL {background-color: #baccff; border: none;border-radius: 10px;padding: 10px;}
+.Perm {background-color: #ffd6ff; border: none;border-radius: 10px;padding: 10px;}
+.ALG2 {background-color: #baccff; border: none;border-radius: 10px;padding: 10px;}
+.OFI {background-color: #baccff; border: none;border-radius: 10px;padding: 10px;}
+.AlgL {background-color: #c0bbff; border: none;border-radius: 10px;padding: 10px;}
