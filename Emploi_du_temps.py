@@ -117,7 +117,7 @@ for event in cal.walk('vevent'):
 
 # Créez un tableau HTML
 html_table = "<table border='1'>"
-html_table += f"<tr><th>Plage Horaire</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th  style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
+html_table += f"<tr><th class='first_column'>Plage Horaire</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th  style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
 
 # Définissez l'heure de début (8h du matin, après avoir ajouté 2 heures)
 start_hour = 8
@@ -162,7 +162,7 @@ while current_time.hour < end_hour or (current_time.hour == end_hour and current
             color = color_palette[0]
             color_palette.pop(0)
 
-        html_table += f"<td rowspan='2' style='border:none;background-color: {color}'>{time_range} --------</td>"
+        html_table += f"<td rowspan='2'class='first_column' style='border:none;background-color: {color}'>{time_range} --------</td>"
         one_or_two = False
     else:
         one_or_two = True
@@ -227,6 +227,7 @@ fichier = open("Timetable/style.css", "w")
 # pour chaque élément de liste_cours, on crée une classe css avec une couleur dans la liste color_palette
 
 fichier.write("th, td {width: 15vw;}\n")
+fichier.write(".first_column {width:7vw}\n")
 for i in range(len(liste_cours)):
     # print(liste_cours[i])
     # print(i)
