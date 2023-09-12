@@ -1,13 +1,16 @@
 th, td {width: 17vw;}
+td:hover{border:1px solid};
 .first_column {width:6vw;font: Montserrat;}
 table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 .empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;}
-.ALG2 {background-color: #bbd6ff; border: none;border-radius: 10px;padding: 10px;}
+.ALG2 {background-color: #c8b6ff; border: none;border-radius: 10px;padding: 10px;}
 .Trom {background-color: #e7c6ff; border: none;border-radius: 10px;padding: 10px;}
-.AlgL {background-color: #f3ceff; border: none;border-radius: 10px;padding: 10px;}
-.RES {background-color: #c8b6ff; border: none;border-radius: 10px;padding: 10px;}
-.POC {background-color: #c8b6ff; border: none;border-radius: 10px;padding: 10px;}
-.Perm {background-color: #d8beff; border: none;border-radius: 10px;padding: 10px;}
-.ALG2 {background-color: #bbd0ff; border: none;border-radius: 10px;padding: 10px;}
-.OFI {background-color: #c0bbff; border: none;border-radius: 10px;padding: 10px;}
 .AlgL {background-color: #e7c6ff; border: none;border-radius: 10px;padding: 10px;}
+.RES {background-color: #ffd6ff; border: none;border-radius: 10px;padding: 10px;}
+.POC {background-color: #bbdaff; border: none;border-radius: 10px;padding: 10px;}
+.Perm {background-color: #bbdaff; border: none;border-radius: 10px;padding: 10px;}
+.ALG2 {background-color: #ffd6ff; border: none;border-radius: 10px;padding: 10px;}
+.OFI {background-color: #c8b6ff; border: none;border-radius: 10px;padding: 10px;}
+.RES {background-color: #bbd0ff; border: none;border-radius: 10px;padding: 10px;}
+.AlgL {background-color: #b8c0ff; border: none;border-radius: 10px;padding: 10px;}
+.AlgL {background-color: #c8b6ff; border: none;border-radius: 10px;padding: 10px;}

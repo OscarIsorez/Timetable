@@ -169,26 +169,22 @@ while current_time.hour < end_hour or (current_time.hour == end_hour and current
 
     # Parcourir les jours de la semaine
     for day, events in week_data.items():
-        event_texts = []
+        event_informations = []
         for event_start, event_end, event_desc in events:
 
             if event_start.time() <= current_time.time() < event_end.time():
-                event_texts.append(event_desc)
+                event_informations.append([event_desc, event_start])
         
-        #on vérifie si event_texts[0][0:5] est déjà dans liste_cours et également si les dates de départ et de fin sont les mêmes
-        if event_texts:
-            if event_texts[0] not in liste_cours: # and events[0][0].date() == events[0][1].date():
-                liste_cours.append(event_texts[0])
-                rowspan = len(event_texts[0])
-                event_desc = str(event_texts[0])
+        #on vérifie si event_informations[0][0:5] est déjà dans liste_cours et également si les dates de départ et de fin sont les mêmes
+        if event_informations:
+            if event_informations[0] not in liste_cours: # and events[0][0].date() == events[0][1].date():
+                liste_cours.append(event_informations[0])
+                event_desc = str(event_informations[0][0])
                 # on enleve les espces dans le nom de la classe   
-                n_classe = events[0][2][0:4].replace(" ", "")
+                n_classe = event_informations[0][0][0:4].replace(" ", "")
                 nbr_rowspan = (events[0][1] - events[0][0]) // timedelta(minutes=15)
 
                 html_table += f"<td  rowspan='{nbr_rowspan} 'class='{n_classe}';>{event_desc}</td>"
-                # Ignorer les lignes fusionnées suivantes pour ce cours
-                # for _ in range(1, rowspan):
-                #     html_table += "<tr></tr>"
         else:
             # Cellule vide
             html_table += "<td class='empty'>----------------------------------------</td>"
@@ -205,8 +201,9 @@ html_page += '</head><body></body></html>'
 # ----------------------------GESTION DES FICHIERS--------------------------------------------
 
 
-# on ne garde que les 4 premiers caractères de chaque élément de liste_cours
-liste_cours = [x[0:4] for x in liste_cours]
+# liste_cours contient des tableaux de 2 éléments. on souhaite garder uniquement les 4 premiers caractères de l'élément 0
+for i in range(len(liste_cours)):
+    liste_cours[i][0] = liste_cours[i][0][0:4]
 
 # on supprime le fichier html s'il existe déjà
 if os.path.exists("Timetable/index.html"):
@@ -227,16 +224,17 @@ fichier = open("Timetable/style.css", "w")
 # pour chaque élément de liste_cours, on crée une classe css avec une couleur dans la liste color_palette
 
 fichier.write("th, td {width: 17vw;}\n")
+fichier.write("td:hover{border:1px solid};\n")
 fichier.write(".first_column {width:6vw;font: Montserrat;}\n")
 fichier.write("table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
 fichier.write(".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;}\n")
 for i in range(len(liste_cours)):
     # print(liste_cours[i])
     # print(i)
-    if liste_cours[i].count(' ') > 0:
-        liste_cours[i] = liste_cours[i].replace(" ", "")
+    if liste_cours[i][0].count(' ') > 0:
+        liste_cours[i][0] = liste_cours[i][0].replace(" ", "")
     fichier.write(
-        f".{liste_cours[i]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 10px;}}\n")
+        f".{liste_cours[i][0]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 10px;}}\n")
 fichier.close()
 
 
@@ -264,9 +262,9 @@ git_push_command = ['git', 'push']
 
 # Exécutez les commandes Git dans le répertoire du dépôt
 try:
-    subprocess.run(git_add_command, cwd=repo_directory, check=True)
-    subprocess.run(git_commit_command, cwd=repo_directory, check=True)
-    subprocess.run(git_push_command, cwd=repo_directory, check=True)
+    # subprocess.run(git_add_command, cwd=repo_directory, check=True)
+    # subprocess.run(git_commit_command, cwd=repo_directory, check=True)
+    # subprocess.run(git_push_command, cwd=repo_directory, check=True)
     print("Les commandes Git ont été exécutées avec succès.")
 except subprocess.CalledProcessError as e:
     print("Une erreur s'est produite lors de l'exécution des commandes Git :", e)
