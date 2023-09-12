@@ -226,8 +226,8 @@ if os.path.exists("Timetable/style.css"):
 fichier = open("Timetable/style.css", "w")
 # pour chaque élément de liste_cours, on crée une classe css avec une couleur dans la liste color_palette
 
-fichier.write("th, td {width: 15vw;}\n")
-fichier.write(".first_column {width:7vw}\n")
+fichier.write("th, td {width: 17vw;}\n")
+fichier.write(".first_column {width:6vw}\n")
 for i in range(len(liste_cours)):
     # print(liste_cours[i])
     # print(i)
