@@ -30,7 +30,7 @@ def convertir_heure_gmt_vers_locale(heure_gmt, pays):
 
 
 # L'URL du fichier que vous souhaitez télécharger
-url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/M3MXG9WB.shu'
+url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/m32jRq3k.shu'
 
 # Envoyer une requête HTTP GET pour télécharger le fichier
 response = requests.get(url)
@@ -99,9 +99,9 @@ for event in cal.walk('vevent'):
         summary = event.get('summary')
         location = event.get('location')
         start_time = convertir_heure_gmt_vers_locale(
-            event.get('dtstart').dt, 'Europe/Paris')
+            event.get('dtstart').dt, 'Europe/Paris') + timedelta(hours=0.5)
         end_time = convertir_heure_gmt_vers_locale(
-            event.get('dtend').dt, 'Europe/Paris')
+            event.get('dtend').dt, 'Europe/Paris') + timedelta(hours=0.5)
 
         # tests : affichage des dates et heures des événements et des summary
         print(
@@ -110,10 +110,10 @@ for event in cal.walk('vevent'):
         day_of_week = start_time.strftime('%A')
 
         # Créez une chaîne de texte pour l'événement
-        event_text = f"{summary} ({location})"
+        event_texts = f"{summary} ({location})"
 
         # Ajoutez l'événement au dictionnaire de données correspondant au jour de la semaine
-        week_data[day_of_week].append((start_time, end_time, event_text))
+        week_data[day_of_week].append((start_time, end_time, event_texts))
 
 # Créez un tableau HTML
 html_table = "<table border='1'>"
@@ -170,21 +170,25 @@ while current_time.hour < end_hour or (current_time.hour == end_hour and current
     # Parcourir les jours de la semaine
     for day, events in week_data.items():
         event_texts = []
+        for event_start, event_end, event_desc in events:
 
+            if event_start.time() <= current_time.time() < event_end.time():
+                event_texts.append(event_desc)
+        
+        #on vérifie si event_texts[0][0:5] est déjà dans liste_cours et également si les dates de départ et de fin sont les mêmes
         if event_texts:
-            #on vérifie si event_texts[0][0:5] est déjà dans liste_cours et également si les dates de départ et de fin sont les mêmes
-            if e[0:5] not in liste_cours  and event_start.date() == event_end.date():
-                liste_cours.append(event_texts[0][0:5])
-                rowspan = len(event_texts)
-                event_text = '<br>'.join(event_texts)
-                # on enleve les espces dans le nom de la classe
-                n_classe = event_texts[0][0:4].replace(" ", "")
-                nbr_rowspan = (end_time - start_time) // timedelta(minutes=15)
+            if event_texts[0] not in liste_cours: # and events[0][0].date() == events[0][1].date():
+                liste_cours.append(event_texts[0])
+                rowspan = len(event_texts[0])
+                event_desc = str(event_texts[0])
+                # on enleve les espces dans le nom de la classe   
+                n_classe = events[0][2][0:4].replace(" ", "")
+                nbr_rowspan = (events[0][1] - events[0][0]) // timedelta(minutes=15)
 
-                html_table += f"<td  rowspan='{nbr_rowspan} 'class='{n_classe}';>{event_text}</td>"
+                html_table += f"<td  rowspan='{nbr_rowspan} 'class='{n_classe}';>{event_desc}</td>"
                 # Ignorer les lignes fusionnées suivantes pour ce cours
-                for _ in range(1, rowspan):
-                    html_table += "<tr></tr>"
+                # for _ in range(1, rowspan):
+                #     html_table += "<tr></tr>"
         else:
             # Cellule vide
             html_table += "<td style='color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;'>----------------------------------------</td>"
@@ -222,10 +226,12 @@ if os.path.exists("Timetable/style.css"):
 fichier = open("Timetable/style.css", "w")
 # pour chaque élément de liste_cours, on crée une classe css avec une couleur dans la liste color_palette
 for i in range(len(liste_cours)):
+    # print(liste_cours[i])
+    # print(i)
     if liste_cours[i].count(' ') > 0:
         liste_cours[i] = liste_cours[i].replace(" ", "")
     fichier.write(
-        f".{liste_cours[i]} {{background-color: {backup_color_palette[i]}; border: none;border-radius: 10px;padding: 10px;}}\n")
+        f".{liste_cours[i]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 10px;}}\n")
 fichier.close()
 
 
