@@ -4,7 +4,6 @@ import pyperclip
 from random import randint
 import requests
 import os
-# bibliothèque pour récupérer la date d'aujourd'hui et le jour de la semaine
 import subprocess
 import pytz
 
@@ -58,6 +57,10 @@ def get_monday_date(date):
 
 
 
+"""
+    fonction qui initialise le dictionnaire week_data avec les événements de la semaine
+    Exemple : week_data = {'Monday': [], 'Tuesday': [], 'Wednesday': [], 'Thursday': [], 'Friday': []}
+"""
 def treat_data(date_to_treat):
     # Parcourez les événements du calendrier
     for event in cal.walk('vevent'):
@@ -84,12 +87,12 @@ def treat_data(date_to_treat):
             week_data[day_of_week].append((start_time, end_time, event_texts))
 
 
-def generate_html_page(date_to_treat, color_palette, file_name, button_text):
+def generate_html_page(date_to_treat, color_palette, file_name, to_page):
 
     treat_data(date_to_treat)
 
     # Créez un tableau HTML
-    html_table = f"<a  class='button'href='{button_text}.html'>Switch Semaine</a>"
+    html_table = f"<a  class='button'href='{to_page}.html'>Switch Semaine</a>"
 
 
 
@@ -102,7 +105,7 @@ def generate_html_page(date_to_treat, color_palette, file_name, button_text):
     start_minute = 0
 
     # Définissez l'heure de fin (20h30 du soir, après avoir ajouté 2 heures)
-    end_hour = 21
+    end_hour = 19
     end_minute = 0
 
     # Parcourir les heures de 8h à 20h30 avec un intervalle de 15 minutes
@@ -117,6 +120,7 @@ def generate_html_page(date_to_treat, color_palette, file_name, button_text):
 
     liste_cours = []
     liste_cours_uniques = []
+
 
     # ----------------------------------GESTION DU CODE HTML--------------------------------------------
 
@@ -153,17 +157,16 @@ def generate_html_page(date_to_treat, color_palette, file_name, button_text):
             for event_start, event_end, event_desc in events:
 
                 if event_start.time() <= current_time.time() < event_end.time():
-                    event_informations.append([event_desc, event_start])
+                    event_informations.append([event_desc, event_start, event_end])
             
             #on vérifie si event_informations[0][0:5] est déjà dans liste_cours et également si les dates de départ et de fin sont les mêmes
             if event_informations:
-                if event_informations[0] not in liste_cours: # and events[0][0].date() == events[0][1].date():
+                if event_informations[0] not in liste_cours: 
                     liste_cours.append(event_informations[0])
                     event_desc = str(event_informations[0][0])
                     # on enleve les espces dans le nom de la classe   
                     n_classe = event_informations[0][0][0:4].replace(" ", "")
-                    nbr_rowspan = (events[0][1] - events[0][0]) // timedelta(minutes=15)
-
+                    nbr_rowspan = (event_informations[0][2] - event_informations[0][1]) // timedelta(minutes=15)
                     html_table += f"<td  rowspan='{nbr_rowspan} 'class='{n_classe}';>{event_desc}</td>"
             else:
                 # Cellule vide
@@ -173,12 +176,14 @@ def generate_html_page(date_to_treat, color_palette, file_name, button_text):
 
     html_table += "</table>"
 
-    html_page = f'<!DOCTYPE html><html lang="fr"><meta charset="UTF-8"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css"><head>'
+    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css"></head><body>    '
     html_page += html_table
-    html_page += '</head><body></body></html>'
+    html_page += '</body></html>'
 
     return html_page, liste_cours, liste_cours_uniques, color_palette, backup_color_palette
-    # ----------------------------GESTION DES FICHIERS--------------------------------------------
+
+
+# ----------------------------GESTION DES FICHIERS--------------------------------------------
 
 def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques, color_palette, backup_color_palette, file_name):
     # liste_cours contient des tableaux de 2 éléments. on souhaite garder uniquement les 4 premiers caractères de l'élément 0
@@ -193,42 +198,53 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     liste_cours_uniques = list(set(liste_cours_uniques))
 
 
+#--------------------------------------------HTML-----------------------------------------------
+
     # on supprime le fichier html s'il existe déjà
-    if os.path.exists(f"Timetable/{file_name}.html"):
-        os.remove(f"Timetable/{file_name}.html")
+        # Obtenir le répertoire du script
+    script_directory = os.path.dirname(__file__)
 
-    # on crée un fichier html avec le contenu de html_page
-    fichier = open(f"./{file_name}.html", "w")
-    fichier.write(html_page)
-    fichier.close()
+    # Chemin complet du fichier "index.html"
+    chemin_fichier = os.path.join(script_directory, f"{file_name}.html")
+
+    # Écriture du contenu HTML dans le fichier
+    try:
+        with open(chemin_fichier, "w") as fichier:
+            fichier.write(html_page)
+        print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
+    except Exception as e:
+        print(f"Une erreur s'est produite : {str(e)}")
+
+#--------------------------------------------CSS-----------------------------------------------
+
+    # Chemin complet du fichier
+    chemin_fichier = os.path.join(script_directory, f"{file_name}.css")
+    # Écriture du contenu HTML dans le fichier
+    try:
+        with open(chemin_fichier, "w") as fichier:        
+            fichier.write("th, td {width: 17vw;}\n")
+            fichier.write("td:hover{border:1 px solid};\n")
+            fichier.write(".first_column {width:6vw;}\n")
+            fichier.write("table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
+            fichier.write(".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;}\n")
+            fichier.write(".button {background-color: #ffffff;border: 2px solid #8D889EB9;color: #8D889EB9;padding: 10px 20px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 5px;cursor: pointer;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}\n .button:hover {background-color: #8D889EB9;border-color: #8D889EB9;color: #ffffff; }\n")
+            for i in range(len(liste_cours_uniques)):
+                # print(liste_cours_uniques[i])
+                # print(i)
+                if liste_cours_uniques[i].count(' ') > 0:
+                    liste_cours_uniques[i] = liste_cours_uniques[i].replace(" ", "")
+                # print(liste_cours_uniques[i])
+                fichier.write(
+                    f".{liste_cours_uniques[i]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 10px;}}\n")
+        print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
+    except Exception as e:
+        print(f"Une erreur s'est produite : {str(e)}")
 
 
-    if os.path.exists(f"Timetable/{file_name}.css"):
-        os.remove(f"Timetable/{file_name}.css")
 
 
-    # on crée un fichier css avec le contenu de style.css
-    fichier = open(f"./{file_name}.css", "w")
-    # pour chaque élément de liste_cours_uniques, on crée une classe css avec une couleur dans la liste color_palette
 
-    fichier.write("th, td {width: 17vw;}\n")
-    fichier.write("td:hover{border:1 px solid};\n")
-    fichier.write(".first_column {width:6vw;}\n")
-    fichier.write("table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
-    fichier.write(".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;}\n")
-    fichier.write(".button {background-color: #ffffff;border: 2px solid #8D889EB9;color: #8D889EB9;padding: 10px 20px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 5px;cursor: pointer;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}\n .button:hover {background-color: #8D889EB9;border-color: #8D889EB9;color: #ffffff; }\n")
-    for i in range(len(liste_cours_uniques)):
-        # print(liste_cours_uniques[i])
-        # print(i)
-        if liste_cours_uniques[i].count(' ') > 0:
-            liste_cours_uniques[i] = liste_cours_uniques[i].replace(" ", "")
-        # print(liste_cours_uniques[i])
-        fichier.write(
-            f".{liste_cours_uniques[i]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 10px;}}\n")
-    fichier.close()
-
-
-    # -------------------------------------------------------------------------------------------
+    # -----------------------------------------GIT--------------------------------------------------
 
     # Spécifiez le répertoire dans lequel vous souhaitez exécuter les commandes Git
     repo_directory = 'C:/Users/Oscar/OneDrive/Documents/Timetable/Timetable'
@@ -252,16 +268,19 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
         print("Une erreur s'est produite lors de l'exécution des commandes Git :", e)
 
     return html_page
+
+
 #--------------------------------------------MAIN-----------------------------------------------
 
 
 
-# L'URL du fichier que vous souhaitez télécharger
+# L'URL du fichier à télécharger disponible sur ADE
 url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/m32jRq3k.shu'
 
 # Envoyer une requête HTTP GET pour télécharger le fichier
 response = requests.get(url)
 
+# Récupérer la date d'aujourd'hui
 acutal_date = date.today()
 
 # Vérifier si la requête a réussi
@@ -269,54 +288,80 @@ if response.status_code == 200:
     # Obtenir le contenu du fichier
     content = response.content
 
-    # si le fichier Data.ics existe déjà on le supprime
-    if os.path.exists("Timetable/Data.ics"):
-        os.remove("Timetable/Data.ics")
+    script_directory = os.path.dirname(__file__)
 
-    # Écrire le contenu dans un fichier .ics nommé "Data.ics"
-    with open('./Data.ics', 'wb') as file:
-        file.write(content)
+    #si le fichier n'existe pas, on le crée dans le même répertoire que le script
+    if not os.path.exists(os.path.join(script_directory, f"Data.ics")):
+        with open(os.path.join(script_directory, f"Data.ics"), "w") as fichier:
+            fichier.write("")
 
+    # Chemin complet du fichier
+    chemin_fichier = os.path.join(script_directory, f"Data.ics")
+
+    # Écriture du contenu dans le fichier
+    with open(chemin_fichier, "wb") as fichier:
+        fichier.write(content)
+
+    
     print("Le fichier a été téléchargé avec succès et enregistré sous 'Data.ics'.")
 else:
     print("La requête a échoué.")
 
+# Obtenir le répertoire du script
+script_directory = os.path.dirname(__file__)
 
-# une liste de 50 strings de couleurs en hexadécimal dans la même gamme de couleurs
-old_color_palette = ["#ffd6ff", "#f3ceff", "#e7c6ff", "#d8beff", "#c8b6ff", "#c0bbff", "#b8c0ff", "#bac8ff", "#baccff", "#bbd0ff", "#bbd6ff",
-                "#bbdaff", "#ffd6ff", "#f3ceff", "#e7c6ff", "#d8beff", "#c8b6ff", "#c0bbff", "#b8c0ff", "#bac8ff", "#baccff", "#bbd0ff", "#bbd6ff", "#bbdaff"]
+# Construire le chemin relatif vers le fichier "Data.ics"
+fichier_relative_path = os.path.join(script_directory, "Data.ics")
 
-color_palette =[
-    "#F3DE8A",  # 
-    "#F4D796",  # 
-    "#F4D0A2",  # 
-    "#F4C9AE",  # 
-    "#F4C1B9",  # 
-    "#D7B1B2",  # 
-    "#B9A0AA",  # 
-    "#9C90A2",  # 
-    "#8D889E",  # 
-    "#7E7F9A"   # 
-]
+# Vérifier si le fichier existe
+if os.path.exists(fichier_relative_path):
+    # Ouvrir le fichier en lecture
+    with open(fichier_relative_path, "rb") as f:
+        cal = Calendar.from_ical(f.read())
+else:
+    print("Le fichier 'Data.ics' n'existe pas dans le répertoire du script.")
 
-#copie de la liste de couleurs, utile pour réinitialiser la liste de couleurs
-backup_color_palette = color_palette.copy()
 
-# Chargez le fichier .ics
-with open('./Data.ics', 'rb') as f:
-    cal = Calendar.from_ical(f.read())
 
 # Créez un dictionnaire pour stocker les données par jour de la semaine
 week_data = {'Monday': [], 'Tuesday': [],
             'Wednesday': [], 'Thursday': [], 'Friday': []}
 
 
+# Liste des couleurs pour les cours 
+color_palette =[
+    "#F3DE8A",  
+    "#F4DB90",
+    "#F4D796",  
+    "#F4D49C",
+    "#F4D0A2",  
+    "#F4CDA8",
+    "#F4C9AE",  
+    "#F4C5B4",
+    "#F4C1B9",  
+    "#D7B1B2",  
+    "#B9A0AA",  
+    "#AB98A6",
+    "#9C90A2",
+    "#958CA0", 
+    "#8D889E",
+    "#86849C", 
+    "#7E7F9A"   
+]
+
+#copie de la liste de couleurs, utile pour réinitialiser la liste de couleurs
+backup_color_palette = color_palette.copy()
+
+
+# SEMAINE COURANTE
 file_name = "index"
-button_text = "index_s2"
-html_and_css = generate_html_page(date.today(), color_palette, file_name, button_text)
+to_page = "index_s2"
+html_and_css = generate_html_page(date.today(), color_palette, file_name, to_page)
 generate_html_file_and_css_file(html_and_css[0], html_and_css[1], html_and_css[2], html_and_css[3], html_and_css[4], file_name)  
 
+
+# SEMAINE SUIVANTE
 file_name = "index_s2"
-button_text = "index"
-html_and_css_semaine2 = generate_html_page(get_monday_date(date.today()) + timedelta(days=7), color_palette, file_name, button_text)
+to_page = "index"
+html_and_css_semaine2 = generate_html_page(get_monday_date(date.today()) + timedelta(days=7), color_palette, file_name, to_page)
 generate_html_file_and_css_file(html_and_css_semaine2[0], html_and_css_semaine2[1], html_and_css_semaine2[2], html_and_css_semaine2[3], html_and_css_semaine2[4], file_name)
