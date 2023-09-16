@@ -62,11 +62,22 @@ def get_monday_date(date):
     Exemple : week_data = {'Monday': [], 'Tuesday': [], 'Wednesday': [], 'Thursday': [], 'Friday': []}
 """
 def treat_data(date_to_treat):
+
+    
+    # Créez un dictionnaire pour stocker les données par jour de la semaine
+    week_data = {'Monday': [], 'Tuesday': [],
+                'Wednesday': [], 'Thursday': [], 'Friday': []}
+
     # Parcourez les événements du calendrier
     for event in cal.walk('vevent'):
-        # on ne va traiter que les éléments qui ont une date comprise entre le lundi de la semaine acutelle et le vendredi de la semaine actuelle
-        if event.get('dtstart').dt.date() >= get_monday_date(date_to_treat) and event.get('dtstart').dt.date() <= get_monday_date(date_to_treat) + timedelta(days=4):
+        # si la date dstat est comprise entre date_to_treat et date_to_treat + 4 jours
+        if  event.get('dtstart').dt.date() >= date_to_treat and event.get('dtstart').dt.date() <=date_to_treat + timedelta(days=4):
+        # if event.get('dtstart').dt.date() >= date_to_treat and event.get('dtstart').dt.date() <=date_to_treat + timedelta(days=4):
+            # print("date_to_treat", date_to_treat)
+            # print("date_to_treat+4", date_to_treat + timedelta(days=4))
 
+
+            # Obtenez les informations de l'événement
             summary = event.get('summary')
             location = event.get('location')
             start_time = convertir_heure_gmt_vers_locale(
@@ -86,10 +97,12 @@ def treat_data(date_to_treat):
             # Ajoutez l'événement au dictionnaire de données correspondant au jour de la semaine
             week_data[day_of_week].append((start_time, end_time, event_texts))
 
+            #on affiche tous les event_texts dans la console
+    return week_data
 
 def generate_html_page(date_to_treat, color_palette, file_name, to_page):
 
-    treat_data(date_to_treat)
+    week_data = treat_data(date_to_treat)
 
     # Créez un tableau HTML
     html_table = f"<a  class='button'href='{to_page}.html'>Switch Semaine</a>"
@@ -168,6 +181,7 @@ def generate_html_page(date_to_treat, color_palette, file_name, to_page):
                     n_classe = event_informations[0][0][0:4].replace(" ", "")
                     nbr_rowspan = (event_informations[0][2] - event_informations[0][1]) // timedelta(minutes=15)
                     html_table += f"<td  rowspan='{nbr_rowspan} 'class='{n_classe}';>{event_desc}</td>"
+                    
             else:
                 # Cellule vide
                 html_table += "<td class='empty'>----------------------------------------</td>"
@@ -211,7 +225,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     try:
         with open(chemin_fichier, "w") as fichier:
             fichier.write(html_page)
-        print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
+        # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
     except Exception as e:
         print(f"Une erreur s'est produite : {str(e)}")
 
@@ -236,7 +250,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                 # print(liste_cours_uniques[i])
                 fichier.write(
                     f".{liste_cours_uniques[i]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 10px;}}\n")
-        print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
+        # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
     except Exception as e:
         print(f"Une erreur s'est produite : {str(e)}")
 
@@ -253,7 +267,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     git_add_command = ['git', 'add', '.']
 
     # Commande Git : git commit -m "update"
-    git_commit_command = ['git', 'commit', '-m', 'update']
+    git_commit_command = ['git', 'commit', '-m', 'v5']
 
     # Commande Git : git push
     git_push_command = ['git', 'push']
@@ -303,7 +317,7 @@ if response.status_code == 200:
         fichier.write(content)
 
     
-    print("Le fichier a été téléchargé avec succès et enregistré sous 'Data.ics'.")
+    # print("Le fichier a été téléchargé avec succès et enregistré sous 'Data.ics'.")
 else:
     print("La requête a échoué.")
 
@@ -320,12 +334,6 @@ if os.path.exists(fichier_relative_path):
         cal = Calendar.from_ical(f.read())
 else:
     print("Le fichier 'Data.ics' n'existe pas dans le répertoire du script.")
-
-
-
-# Créez un dictionnaire pour stocker les données par jour de la semaine
-week_data = {'Monday': [], 'Tuesday': [],
-            'Wednesday': [], 'Thursday': [], 'Friday': []}
 
 
 # Liste des couleurs pour les cours 
@@ -356,12 +364,15 @@ backup_color_palette = color_palette.copy()
 # SEMAINE COURANTE
 file_name = "index"
 to_page = "index_s2"
-html_and_css = generate_html_page(date.today(), color_palette, file_name, to_page)
+html_and_css = generate_html_page(get_monday_date(date.today()), color_palette, file_name, to_page)
 generate_html_file_and_css_file(html_and_css[0], html_and_css[1], html_and_css[2], html_and_css[3], html_and_css[4], file_name)  
 
+week_data = {}
 
 # SEMAINE SUIVANTE
 file_name = "index_s2"
 to_page = "index"
 html_and_css_semaine2 = generate_html_page(get_monday_date(date.today()) + timedelta(days=7), color_palette, file_name, to_page)
+# print(get_monday_date(date.today()) + timedelta(days=7))
+# print(html_and_css_semaine2[0])
 generate_html_file_and_css_file(html_and_css_semaine2[0], html_and_css_semaine2[1], html_and_css_semaine2[2], html_and_css_semaine2[3], html_and_css_semaine2[4], file_name)
