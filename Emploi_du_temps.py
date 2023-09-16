@@ -244,7 +244,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
             fichier.write(
                 "table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
             fichier.write(
-                ".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;}\n")
+                ".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;}\n")
             fichier.write("#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n")
             for i in range(len(liste_cours_uniques)):
                 # print(liste_cours_uniques[i])
@@ -254,7 +254,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                         " ", "")
                 # print(liste_cours_uniques[i])
                 fichier.write(
-                    f".{liste_cours_uniques[i]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 10px;}}\n")
+                    f".{liste_cours_uniques[i]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;}}\n")
         # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
             fichier.write("@media screen and (max-width: 1000px){#button-suivant {position: fixed;bottom:2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 4vw 4vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}}\n")
     except Exception as e:
