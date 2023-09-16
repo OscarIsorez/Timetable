@@ -5,10 +5,10 @@ table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-se
 .empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;}
 .button {background-color: #ffffff;border: 2px solid #8D889EB9;color: #8D889EB9;padding: 10px 20px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 5px;cursor: pointer;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}
  .button:hover {background-color: #8D889EB9;border-color: #8D889EB9;color: #ffffff; }
-.Evén {background-color: #8D889E; border: none;border-radius: 10px;padding: 10px;}
-.POC {background-color: #8D889E; border: none;border-radius: 10px;padding: 10px;}
-.POT {background-color: #F4C9AE; border: none;border-radius: 10px;padding: 10px;}
-.ALG2 {background-color: #F4DB90; border: none;border-radius: 10px;padding: 10px;}
-.Perm {background-color: #F4D49C; border: none;border-radius: 10px;padding: 10px;}
-.OFI {background-color: #D7B1B2; border: none;border-radius: 10px;padding: 10px;}
-.AlgL {background-color: #AB98A6; border: none;border-radius: 10px;padding: 10px;}
+.Perm {background-color: #AB98A6; border: none;border-radius: 10px;padding: 10px;}
+.Evén {background-color: #F4C9AE; border: none;border-radius: 10px;padding: 10px;}
+.OFI {background-color: #8D889E; border: none;border-radius: 10px;padding: 10px;}
+.ALG2 {background-color: #F4C1B9; border: none;border-radius: 10px;padding: 10px;}
+.POT {background-color: #F4C5B4; border: none;border-radius: 10px;padding: 10px;}
+.POC {background-color: #86849C; border: none;border-radius: 10px;padding: 10px;}
+.AlgL {background-color: #F4D0A2; border: none;border-radius: 10px;padding: 10px;}
