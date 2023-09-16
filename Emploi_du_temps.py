@@ -103,7 +103,7 @@ def treat_data(date_to_treat):
 
 
 def generate_html_page(date_to_treat, color_palette, file_name, to_page):
-
+    global button_text
     week_data = treat_data(date_to_treat)
 
     # Créez un tableau HTML
@@ -193,8 +193,10 @@ def generate_html_page(date_to_treat, color_palette, file_name, to_page):
 
     html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css"></head><body>    '
     html_page += html_table
-    html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">Swtich semaine</button>'
+    html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">{button_text}</button>'
     html_page += '</body></html>'
+
+    button_text = "Page precedente"
 
     return html_page, liste_cours, liste_cours_uniques, color_palette, backup_color_palette
 
@@ -288,6 +290,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
 
 # --------------------------------------------MAIN-----------------------------------------------
 
+button_text = "Semaine suivante" # Texte du bouton Semaine suivante / Semaine précédente
 
 # L'URL du fichier à télécharger disponible sur ADE
 url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/m32jRq3k.shu'

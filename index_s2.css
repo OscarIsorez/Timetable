@@ -4,11 +4,11 @@ td:hover{border:1 px solid};
 table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
 .empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;}
 #bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+.OFI {background-color: #8D889E; border: none;border-radius: 10px;padding: 1vw;}
+.ALG2 {background-color: #F4D796; border: none;border-radius: 10px;padding: 1vw;}
+.Evén {background-color: #D7B1B2; border: none;border-radius: 10px;padding: 1vw;}
+.Perm {background-color: #F4C9AE; border: none;border-radius: 10px;padding: 1vw;}
 .POT {background-color: #F4D0A2; border: none;border-radius: 10px;padding: 1vw;}
-.AlgL {background-color: #AB98A6; border: none;border-radius: 10px;padding: 1vw;}
-.Evén {background-color: #F4CDA8; border: none;border-radius: 10px;padding: 1vw;}
-.Perm {background-color: #7E7F9A; border: none;border-radius: 10px;padding: 1vw;}
-.POC {background-color: #8D889E; border: none;border-radius: 10px;padding: 1vw;}
-.OFI {background-color: #958CA0; border: none;border-radius: 10px;padding: 1vw;}
-.ALG2 {background-color: #AB98A6; border: none;border-radius: 10px;padding: 1vw;}
+.AlgL {background-color: #F4CDA8; border: none;border-radius: 10px;padding: 1vw;}
+.POC {background-color: #D7B1B2; border: none;border-radius: 10px;padding: 1vw;}
 @media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}}
