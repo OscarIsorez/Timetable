@@ -105,7 +105,7 @@ def generate_html_page(date_to_treat, color_palette, file_name, to_page):
     week_data = treat_data(date_to_treat)
 
     # Créez un tableau HTML
-    html_table = f"<a  class='button'href='{to_page}.html'>Switch Semaine</a>"
+    html_table = ""
 
 
 
@@ -192,6 +192,7 @@ def generate_html_page(date_to_treat, color_palette, file_name, to_page):
 
     html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css"></head><body>    '
     html_page += html_table
+    html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">Swtich semaine</button>'
     html_page += '</body></html>'
 
     return html_page, liste_cours, liste_cours_uniques, color_palette, backup_color_palette
@@ -241,7 +242,8 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
             fichier.write(".first_column {width:6vw;}\n")
             fichier.write("table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
             fichier.write(".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;}\n")
-            fichier.write(".button {background-color: #ffffff;border: 2px solid #8D889EB9;color: #8D889EB9;padding: 10px 20px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 5px;cursor: pointer;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}\n .button:hover {background-color: #8D889EB9;border-color: #8D889EB9;color: #ffffff; }\n")
+            fichier.write("#bouton-suivant {position: fixed;bottom: 20px;right: 20px;background-color: #ffffff;color: #8D889EB9;padding: 10px 20px;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n")
+            # fichier.write(".button {background-color: #ffffff;border: 2px solid #8D889EB9;color: #8D889EB9;padding: 10px 20px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 5px;cursor: pointer;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}\n .button:hover {background-color: #8D889EB9;border-color: #8D889EB9;color: #ffffff; }\n")
             for i in range(len(liste_cours_uniques)):
                 # print(liste_cours_uniques[i])
                 # print(i)
