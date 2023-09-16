@@ -245,8 +245,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                 "table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
             fichier.write(
                 ".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 10px;}\n")
-            fichier.write("#bouton-suivant {position: fixed;bottom: 20px;right: 20px;background-color: #ffffff;color: #8D889EB9;padding: 10px 20px;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n")
-            # fichier.write(".button {background-color: #ffffff;border: 2px solid #8D889EB9;color: #8D889EB9;padding: 10px 20px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 5px;cursor: pointer;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}\n .button:hover {background-color: #8D889EB9;border-color: #8D889EB9;color: #ffffff; }\n")
+            fichier.write("#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n")
             for i in range(len(liste_cours_uniques)):
                 # print(liste_cours_uniques[i])
                 # print(i)
@@ -257,6 +256,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                 fichier.write(
                     f".{liste_cours_uniques[i]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 10px;}}\n")
         # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
+            fichier.write("@media screen and (max-width: 1000px){#button-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 4vw 4vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}}\n")
     except Exception as e:
         print(f"Une erreur s'est produite : {str(e)}")
 
@@ -269,7 +269,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     git_add_command = ['git', 'add', '.']
 
     # Commande Git : git commit -m "update"
-    git_commit_command = ['git', 'commit', '-m', 'v6']
+    git_commit_command = ['git', 'commit', '-m', 'update']
 
     # Commande Git : git push
     git_push_command = ['git', 'push']
@@ -279,7 +279,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
         subprocess.run(git_add_command, cwd=repo_directory, check=True)
         subprocess.run(git_commit_command, cwd=repo_directory, check=True)
         subprocess.run(git_push_command, cwd=repo_directory, check=True)
-        print("Les commandes Git ont été exécutées avec succès. ")
+        # print("Les commandes Git ont été exécutées avec succès. ")
     except subprocess.CalledProcessError as e:
         print("Une erreur s'est produite lors de l'exécution des commandes Git :", e)
 
