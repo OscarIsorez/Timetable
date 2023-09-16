@@ -191,7 +191,7 @@ def generate_html_page(date_to_treat, color_palette, file_name, to_page):
 
     html_table += "</table>"
 
-    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css"></head><body>    '
+    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css">    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body>    '
     html_page += html_table
     html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">{button_text}</button>'
     html_page += '</body></html>'
