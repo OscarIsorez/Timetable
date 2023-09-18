@@ -158,7 +158,7 @@ def generate_html_page(date_to_treat, color_palette, file_name, to_page):
                 color_palette.pop(0)
                 color_palette.append(color)
 
-            html_table += f"<td rowspan='2' style='text-align: right;border:none;background-color: {color}' class='first_column' > {'   ' +  str(time_range) + '   '}  </td>"
+            html_table += f"<td rowspan='2' style='border:none;background-color: {color}' class='first_column' > {'   ' +  str(time_range) + '   '}  </td>"
             one_or_two = False
         else:
             one_or_two = True
@@ -242,7 +242,6 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
         with open(chemin_fichier, "w") as fichier:
             fichier.write("th, td {width: 17vw;}\n")
             fichier.write("td:hover{border:1 px solid};\n")
-            fichier.write(".first_column {width:6vw;}\n")
             fichier.write(
                 "table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
             fichier.write(
@@ -256,7 +255,9 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                         " ", "")
                 # print(liste_cours_uniques[i])
                 fichier.write(
-                    f".{liste_cours_uniques[i]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;}}\n")
+                    f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center;}}\n")
+            fichier.write(
+                ".first_column {width:10vw;text-align: right;height: 6vw;}\n")
         # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
             fichier.write(
                 "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}}\n")
@@ -385,3 +386,15 @@ html_and_css_semaine2 = generate_html_page(get_monday_date(
 # print(html_and_css_semaine2[0])
 generate_html_file_and_css_file(html_and_css_semaine2[0], html_and_css_semaine2[1],
                                 html_and_css_semaine2[2], html_and_css_semaine2[3], html_and_css_semaine2[4], file_name)
+
+# SEMAINE SUIVANTE
+
+file_name = "index_s3"
+to_page = "index_s2"
+html_and_css_semaine3 = generate_html_page(get_monday_date(
+    date.today()) + timedelta(days=14), color_palette, file_name, to_page)
+
+generate_html_file_and_css_file(html_and_css_semaine3[0], html_and_css_semaine3[1], 
+                                html_and_css_semaine3[2], html_and_css_semaine3[3], html_and_css_semaine3[4], file_name)
+
+
