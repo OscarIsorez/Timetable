@@ -158,7 +158,7 @@ def generate_html_page(date_to_treat, color_palette, file_name, to_page):
                 color_palette.pop(0)
                 color_palette.append(color)
 
-            html_table += f"<td rowspan='2'class='first_column' style='text-align: right;border:none;background-color: {color}'> {'   ' +  str(time_range) + '   '}  </td>"
+            html_table += f"<td rowspan='2' style='text-align: right;border:none;background-color: {color}' class='first_column' > {'   ' +  str(time_range) + '   '}  </td>"
             one_or_two = False
         else:
             one_or_two = True
