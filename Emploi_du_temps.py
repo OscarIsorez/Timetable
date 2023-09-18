@@ -114,7 +114,7 @@ def generate_html_page(date_to_treat, color_palette, file_name, to_page):
         str((date_to_treat + timedelta(days=4)).month) + \
         "-" + str((date_to_treat + timedelta(days=4)).year)
     html_table += f"<tr><th class='first_column'>Semaine du {top_left}</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th  style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
-
+    print(top_left)
     # Définissez l'heure de début (8h du matin, après avoir ajouté 2 heures)
     start_hour = 8
     start_minute = 0
@@ -258,7 +258,8 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                 fichier.write(
                     f".{liste_cours_uniques[i]} {{background-color: {backup_color_palette[randint(0,len(backup_color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;}}\n")
         # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
-            fichier.write("@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}}\n")
+            fichier.write(
+                "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}}\n")
     except Exception as e:
         print(f"Une erreur s'est produite : {str(e)}")
 
@@ -290,7 +291,8 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
 
 # --------------------------------------------MAIN-----------------------------------------------
 
-button_text = "Semaine suivante" # Texte du bouton Semaine suivante / Semaine précédente
+# Texte du bouton Semaine suivante / Semaine précédente
+button_text = "Semaine suivante"
 
 # L'URL du fichier à télécharger disponible sur ADE
 url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/m32jRq3k.shu'
