@@ -377,6 +377,7 @@ generate_html_file_and_css_file(
 
 week_data = {}
 
+
 # SEMAINE SUIVANTE
 file_name = "index_s2"
 to_page = "index"
