@@ -241,7 +241,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     try:
         with open(chemin_fichier, "w") as fichier:
             fichier.write("th, td {width: 17vw;}\n")
-            fichier.write("td:hover{border:1 px solid};\n")
+            fichier.write("td:hover{border:1px solid};\n")
             fichier.write(
                 "table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
             fichier.write(
@@ -283,6 +283,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
         subprocess.run(git_add_command, cwd=repo_directory, check=True)
         subprocess.run(git_commit_command, cwd=repo_directory, check=True)
         subprocess.run(git_push_command, cwd=repo_directory, check=True)
+
         print("Les commandes Git ont été exécutées avec succès. ")
     except subprocess.CalledProcessError as e:
         print("Une erreur s'est produite lors de l'exécution des commandes Git :", e)
