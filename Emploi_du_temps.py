@@ -185,13 +185,13 @@ def generate_html_page(date_to_treat, color_palette, file_name, to_page):
 
             else:
                 # Cellule vide
-                html_table += "<td class='empty'>----------------------------------------</td>"
+                html_table += "<td class='empty'></td>"
 
         html_table += "</tr>"
 
     html_table += "</table>"
 
-    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css">    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body>    '
+    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-16"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css">    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body>    '
     html_page += html_table
     html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">{button_text}</button>'
     html_page += '</body></html>'
@@ -245,7 +245,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
             fichier.write(
                 "table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
             fichier.write(
-                ".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;}\n")
+                ".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 1vw;}\n")
             fichier.write("#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n")
             for i in range(len(liste_cours_uniques)):
                 # print(liste_cours_uniques[i])
@@ -387,15 +387,5 @@ html_and_css_semaine2 = generate_html_page(get_monday_date(
 # print(html_and_css_semaine2[0])
 generate_html_file_and_css_file(html_and_css_semaine2[0], html_and_css_semaine2[1],
                                 html_and_css_semaine2[2], html_and_css_semaine2[3], html_and_css_semaine2[4], file_name)
-
-# SEMAINE SUIVANTE
-
-file_name = "index_s3"
-to_page = "index_s2"
-html_and_css_semaine3 = generate_html_page(get_monday_date(
-    date.today()) + timedelta(days=14), color_palette, file_name, to_page)
-
-generate_html_file_and_css_file(html_and_css_semaine3[0], html_and_css_semaine3[1], 
-                                html_and_css_semaine3[2], html_and_css_semaine3[3], html_and_css_semaine3[4], file_name)
 
 
