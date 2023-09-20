@@ -278,7 +278,6 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
 
             fichier.write(
                 "th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
-            fichier.write("td:hover{border:1px solid};\n")
             fichier.write(
                 "table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
             fichier.write(
@@ -294,7 +293,8 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                 # print(liste_cours_uniques[i])
                 fichier.write(
                     f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center;}}\n")
-
+                fichier.write(
+                    f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n")
             fichier.write(
                 ".first_column {width:15vw;text-align: right;height: 8vw;}\n")
             fichier.write(".top_left {width:15vw;text-align: center;}\n")
@@ -396,7 +396,6 @@ else:
 
 
 # Liste des couleurs pour les cours
-
 color_palette = [
     "#F3DE8A",
     "#F4DB90",
@@ -423,16 +422,14 @@ color_palette = [
     "#8D889E",
     "#86849C",
     "#7E7F9A"
-
 ]
 
 backup_color_palette = color_palette.copy()
 
 # SEMAINE COURANTE
 
-file_name = "index"
-
-to_page = "index_s2"
+file_name = "index" #le nom du fichier html et css
+to_page = "index_s2" #le nom de la page vers laquelle on ira en cliquant sur le bouton du site
 
 html_and_css = generate_html_data(get_monday_date(
     date.today()), color_palette, file_name, to_page)
@@ -448,9 +445,8 @@ color_palette = backup_color_palette.copy()
 
 # SEMAINE SUIVANTE
 
-file_name = "index_s2"
-
-to_page = "index"
+file_name = "index_s2" #le nom du fichier html et css
+to_page = "index" #le nom de la page vers laquelle on ira en cliquant sur le bouton du site
 
 html_and_css_semaine2 = generate_html_data(get_monday_date(
     date.today()) + timedelta(days=7), color_palette, file_name, to_page)
