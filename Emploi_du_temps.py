@@ -148,15 +148,9 @@ def generate_html_page(date_to_treat, color_palette, file_name, to_page):
         # Mettre les heures sur 2 cellules, une fois sur deux
         if one_or_two:
 
-            if color_palette != []:
-                color = color_palette[0]
-                color_palette.pop(0)
-                color_palette.append(color)
-            else:
-                color_palette = backup_color_palette.copy()
-                color = color_palette[0]
-                color_palette.pop(0)
-                color_palette.append(color)
+            color = color_palette[0]
+            color_palette.pop(0)
+            color_palette.append(color)
 
             html_table += f"<td rowspan='2' style='border:none;background-color: {color}' class='first_column' > {'   ' +  str(time_range) + '   '}  </td>"
             one_or_two = False
@@ -265,6 +259,9 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     except Exception as e:
         print(f"Une erreur s'est produite : {str(e)}")
 
+    return html_page
+
+def git_commands():
     # -----------------------------------------GIT--------------------------------------------------
 
     # Spécifiez le répertoire dans lequel vous souhaitez exécuter les commandes Git
@@ -284,12 +281,12 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
         subprocess.run(git_add_command, cwd=repo_directory, check=True)
         subprocess.run(git_commit_command, cwd=repo_directory, check=True)
         subprocess.run(git_push_command, cwd=repo_directory, check=True)
-
         print("Les commandes Git ont été exécutées avec succès. ")
+
+        print("")
     except subprocess.CalledProcessError as e:
         print("Une erreur s'est produite lors de l'exécution des commandes Git :", e)
 
-    return html_page
 
 
 # --------------------------------------------MAIN-----------------------------------------------
@@ -385,9 +382,9 @@ file_name = "index_s2"
 to_page = "index"
 html_and_css_semaine2 = generate_html_page(get_monday_date(
     date.today()) + timedelta(days=7), color_palette, file_name, to_page)
-# print(get_monday_date(date.today()) + timedelta(days=7))
-# print(html_and_css_semaine2[0])
 generate_html_file_and_css_file(html_and_css_semaine2[0], html_and_css_semaine2[1],
                                 html_and_css_semaine2[2], html_and_css_semaine2[3], html_and_css_semaine2[4], file_name)
 
 
+#on exécute les commandes git pour mettre à jour le repo
+git_commands()
