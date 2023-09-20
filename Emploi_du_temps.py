@@ -113,7 +113,7 @@ def generate_html_page(date_to_treat, color_palette, file_name, to_page):
     top_left = str(date_to_treat.day) + " \nau " + str((date_to_treat + timedelta(days=4)).day) + " 0" + \
         str((date_to_treat + timedelta(days=4)).month) + \
         "-" + str((date_to_treat + timedelta(days=4)).year)
-    html_table += f"<tr><th class='first_column'>Semaine du {top_left}</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th  style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
+    html_table += f"<tr><th class='top_left'>Semaine du {top_left}</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th  style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
     print(top_left)
     # Définissez l'heure de début (8h du matin, après avoir ajouté 2 heures)
     start_hour = 8
@@ -240,7 +240,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     # Écriture du contenu HTML dans le fichier
     try:
         with open(chemin_fichier, "w") as fichier:
-            fichier.write("th, td {width: 17vw;}\n")
+            fichier.write("th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
             fichier.write("td:hover{border:1px solid};\n")
             fichier.write(
                 "table {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
@@ -258,6 +258,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                     f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center;}}\n")
             fichier.write(
                 ".first_column {width:15vw;text-align: right;height: 8vw;}\n")
+            fichier.write(".top_left {width:15vw;text-align: center;}\n")
         # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
             fichier.write(
                 "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}}\n")
