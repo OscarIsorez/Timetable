@@ -297,7 +297,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                         " ", "")
                 # print(liste_cours_uniques[i])
                 fichier.write(
-                    f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center;}}\n")
+                    f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n")
                 fichier.write(
                     f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n")
                 fichier.write(
