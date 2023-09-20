@@ -109,7 +109,6 @@ def treat_data(date_to_treat):
             end_time = convertir_heure_gmt_vers_locale(
                 event.get('dtend').dt, 'Europe/Paris') + timedelta(hours=0.5)
 
-        
             # Obtenez le nom du jour de la semaine (Lundi, Mardi, etc.)
             day_of_week = start_time.strftime('%A')
 
@@ -123,8 +122,8 @@ def treat_data(date_to_treat):
 
     return week_data
 
-
     # ----------------------------------GESTION DU CODE HTML-------------------------------------------------------------------------------------------
+
 
 """
     fonction qui prend en paramètre la date du lundi de la semaine à traiter, la liste des couleurs pour les cours et le nom du fichier html à créer
@@ -140,7 +139,9 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page):
     # Créez un tableau HTML
     html_table = ""
     html_table += "<table border='1'>"
-    top_left = str(date_to_treat.day) + " \nau " + str((date_to_treat + timedelta(days=4)).day) + " 0" + str((date_to_treat + timedelta(days=4)).month) + "-" + str((date_to_treat + timedelta(days=4)).year)
+    top_left = str(date_to_treat.day) + " \nau " + str((date_to_treat + timedelta(days=4)).day) + " 0" + \
+        str((date_to_treat + timedelta(days=4)).month) + \
+        "-" + str((date_to_treat + timedelta(days=4)).year)
     html_table += f"<tr><th class='top_left'>Semaine du {top_left}</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th  style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
 
     # Définissez l'heure de début (8h du matin, après avoir ajouté 2 heures)
@@ -150,7 +151,6 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page):
     # Définissez l'heure de fin (20h30 du soir, après avoir ajouté 2 heures)
     end_hour = 19
     end_minute = 0
-
 
     # on utilisera la bibliothèque datetime pour créer un objet datetime
     current_time = datetime(
@@ -215,11 +215,11 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page):
         html_table += "</tr>"
 
     html_table += "</table>"
-    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-16"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css">    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body>    '
+    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="UTF-8"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css">    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body>    '
     html_page += html_table
     html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">{button_text}</button>'
     html_page += '</body></html>'
-    button_text = "Page precedente"
+    button_text = "Page précedente"
 
     return html_page, liste_cours, liste_cours_uniques, color_palette
 
@@ -237,7 +237,6 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     for i in range(len(liste_cours)):
         liste_cours[i][0] = liste_cours[i][0][0:4]
 
-
     # la liste contenant elle meme des listes, on ne gardera que le premier élément de chaque élément
     liste_cours_uniques = []
 
@@ -248,7 +247,6 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     liste_cours_uniques = list(set(liste_cours_uniques))
 
     # --------------------------------------------HTML----------------------------------------------------------------------------------------------
-
 
     # Obtenir le répertoire du script
     script_directory = os.path.dirname(__file__)
@@ -390,7 +388,7 @@ fichier_relative_path = os.path.join(script_directory, "Data.ics")
 if os.path.exists(fichier_relative_path):
 
     # Ouvrir le fichier en lecture
-    with open(fichier_relative_path, "rb") as f:
+    with open(fichier_relative_path, "r", encoding="iso-8859-1") as f:
         cal = Calendar.from_ical(f.read())
 
 else:
@@ -430,8 +428,9 @@ backup_color_palette = color_palette.copy()
 
 # SEMAINE COURANTE
 
-file_name = "index" #le nom du fichier html et css
-to_page = "index_s2" #le nom de la page vers laquelle on ira en cliquant sur le bouton du site
+file_name = "index"  # le nom du fichier html et css
+# le nom de la page vers laquelle on ira en cliquant sur le bouton du site
+to_page = "index_s2"
 
 html_and_css = generate_html_data(get_monday_date(
     date.today()), color_palette, file_name, to_page)
@@ -447,8 +446,8 @@ color_palette = backup_color_palette.copy()
 
 # SEMAINE SUIVANTE
 
-file_name = "index_s2" #le nom du fichier html et css
-to_page = "index" #le nom de la page vers laquelle on ira en cliquant sur le bouton du site
+file_name = "index_s2"  # le nom du fichier html et css
+to_page = "index"  # le nom de la page vers laquelle on ira en cliquant sur le bouton du site
 
 html_and_css_semaine2 = generate_html_data(get_monday_date(
     date.today()) + timedelta(days=7), color_palette, file_name, to_page)
