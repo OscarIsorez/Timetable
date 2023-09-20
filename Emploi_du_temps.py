@@ -402,8 +402,12 @@ color_palette = [
     "#F4DB90",
     "#F4D796",
     "#F4D49C",
+    "#F4D29F",
     "#F4D0A2",
+    "#F4CFA5",
     "#F4CDA8",
+    "#F4CBAB",
+    "#F4CAAD",
     "#F4C9AE",
     "#F4C5B4",
     "#F4C3B7",
@@ -422,6 +426,7 @@ color_palette = [
 
 ]
 
+backup_color_palette = color_palette.copy()
 
 # SEMAINE COURANTE
 
@@ -436,7 +441,9 @@ generate_html_file_and_css_file(
     html_and_css[0], html_and_css[1], html_and_css[2], html_and_css[3], file_name)
 
 
+# on réinitialise la liste des couleurs pour les cours et le dictionnaire week_data de données de la semaine courante
 week_data = {}
+color_palette = backup_color_palette.copy()
 
 
 # SEMAINE SUIVANTE
