@@ -257,7 +257,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                 fichier.write(
                     f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center;}}\n")
             fichier.write(
-                ".first_column {width:10vw;text-align: right;height: 6vw;}\n")
+                ".first_column {width:15vw;text-align: right;height: 8vw;}\n")
         # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succès.")
             fichier.write(
                 "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}}\n")
