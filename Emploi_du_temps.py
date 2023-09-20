@@ -15,8 +15,12 @@ import subprocess
 
 import pytz
 
+import sys
+
+sys.stdout.reconfigure(encoding='iso-8859-2')
+
 """
-    fonction qui prend en param√®tre l'heure GMT et le pays et qui renvoie l'heure locale du pays
+    fonction qui prend en param?tre l'heure GMT et le pays et qui renvoie l'heure locale du pays
 """
 
 
@@ -26,11 +30,11 @@ def convertir_heure_gmt_vers_locale(heure_gmt, pays):
 
         heure_gmt = str(heure_gmt)[0:-6]
 
-        # Obtenez le fuseau horaire du pays sp√©cifi√©
+        # Obtenez le fuseau horaire du pays spÈcifiÈ
 
         fuseau_pays = pytz.timezone(pays)
 
-        # Cr√©ez un objet datetime avec l'heure GMT
+        # CrÈez un objet datetime avec l'heure GMT
 
         heure_gmt = datetime.strptime(heure_gmt, '%Y-%m-%d %H:%M:%S')
 
@@ -47,8 +51,8 @@ def convertir_heure_gmt_vers_locale(heure_gmt, pays):
 
 
 """ 
-    fonction qui prend en param√®tre la liste des √©v√©nements de la semaine et
-    qui renvoie la liste des textes des √©v√©nements de la semaine
+    fonction qui prend en param?tre la liste des ÈvÈnements de la semaine et
+    qui renvoie la liste des textes des ÈvÈnements de la semaine
 """
 
 
@@ -63,45 +67,45 @@ def count_events(week_data):
 
 
 """ 
-    fonction qui prend en param√®tre la date d'aujourd'hui et
+    fonction qui prend en param?tre la date d'aujourd'hui et
     qui renvoie la date du lundi de la semaine dans laquelle se trouve la date d'aujourd'hui
 """
 
 
 def get_monday_date(date):
 
-    # on r√©cup√®re le jour de la semaine de la date d'aujourd'hui
+    # on rÈcup?re le jour de la semaine de la date d'aujourd'hui
     day = date.weekday()
 
     # si le jour est lundi, on renvoie la date d'aujourd'hui
     if day == 0:
         return date
 
-    # sinon on renvoie la date d'aujourd'hui moins le nombre de jours qui s√©pare la date d'aujourd'hui du lundi de la semaine
+    # sinon on renvoie la date d'aujourd'hui moins le nombre de jours qui sÈpare la date d'aujourd'hui du lundi de la semaine
 
     else:
         return date - timedelta(days=day)
 
 
 """
-    fonction qui initialise le dictionnaire week_data avec les √©v√©nements de la semaine
+    fonction qui initialise le dictionnaire week_data avec les ÈvÈnements de la semaine
     Exemple : week_data = {'Monday': [], 'Tuesday': [], 'Wednesday': [], 'Thursday': [], 'Friday': []}
 """
 
 
 def treat_data(date_to_treat):
 
-    # Cr√©ez un dictionnaire pour stocker les donn√©es par jour de la semaine
+    # CrÈez un dictionnaire pour stocker les donnÈes par jour de la semaine
     week_data = {'Monday': [], 'Tuesday': [],
                  'Wednesday': [], 'Thursday': [], 'Friday': []}
 
-    # Parcourez les √©v√©nements du calendrier
+    # Parcourez les ÈvÈnements du calendrier
 
     for event in cal.walk('vevent'):
 
         # si la date dstat est comprise entre date_to_treat et date_to_treat + 4 jours
         if event.get('dtstart').dt.date() >= date_to_treat and event.get('dtstart').dt.date() <= date_to_treat + timedelta(days=4):
-            # Obtenez les informations de l'√©v√©nement
+            # Obtenez les informations de l'ÈvÈnement
             summary = event.get('summary')
 
             location = event.get('location')
@@ -115,10 +119,10 @@ def treat_data(date_to_treat):
             # Obtenez le nom du jour de la semaine (Lundi, Mardi, etc.)
             day_of_week = start_time.strftime('%A')
 
-            # Cr√©ez une cha√Æne de texte pour l'√©v√©nement
+            # CrÈez une chaine de texte pour l'ÈvÈnement
             event_texts = f"{summary} ({location})"
 
-            # Ajoutez l'√©v√©nement au dictionnaire de donn√©es correspondant au jour de la semaine
+            # Ajoutez l'ÈvÈnement au dictionnaire de donnÈes correspondant au jour de la semaine
             week_data[day_of_week].append((start_time, end_time, event_texts))
 
             # on affiche tous les event_texts dans la console
@@ -129,7 +133,7 @@ def treat_data(date_to_treat):
 
 
 """
-    fonction qui prend en param√®tre la date du lundi de la semaine √† traiter, la liste des couleurs pour les cours et le nom du fichier html √† cr√©er
+    fonction qui prend en param?tre la date du lundi de la semaine a† traiter, la liste des couleurs pour les cours et le nom du fichier html a† crÈer
     et qui renvoie le code html de la page
 """
 
@@ -139,7 +143,7 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page):
 
     week_data = treat_data(date_to_treat)
 
-    # Cr√©ez un tableau HTML
+    # CrÈez un tableau HTML
     html_table = ""
     html_table += "<table border='1'>"
     top_left = str(date_to_treat.day) + " \nau " + str((date_to_treat + timedelta(days=4)).day) + " 0" + \
@@ -147,22 +151,22 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page):
         "-" + str((date_to_treat + timedelta(days=4)).year)
     html_table += f"<tr><th class='top_left'>Semaine du {top_left}</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th  style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
 
-    # D√©finissez l'heure de d√©but (8h du matin, apr√®s avoir ajout√© 2 heures)
+    # DÈfinissez l'heure de dÈbut (8h du matin, apr?s avoir ajoutÈ 2 heures)
     start_hour = 8
     start_minute = 0
 
-    # D√©finissez l'heure de fin (20h30 du soir, apr√®s avoir ajout√© 2 heures)
+    # DÈfinissez l'heure de fin (20h30 du soir, apr?s avoir ajoutÈ 2 heures)
     end_hour = 19
     end_minute = 0
 
-    # on utilisera la biblioth√®que datetime pour cr√©er un objet datetime
+    # on utilisera la biblioth?que datetime pour crÈer un objet datetime
     current_time = datetime(
         year=acutal_date.year, month=acutal_date.month, day=acutal_date.day, hour=start_hour, minute=start_minute)
 
     # mettre les heures que une fois sur deux
     one_or_two = True
 
-    # liste qui contiendra les cours de la semaine, avec les heures de d√©but et de fin
+    # liste qui contiendra les cours de la semaine, avec les heures de dÈbut et de fin
     liste_cours = []
 
     # liste qui contiendra les cours de la semaine sans les doublons
@@ -218,30 +222,29 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page):
         html_table += "</tr>"
 
     html_table += "</table>"
-    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-1"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css">    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body>    '
+    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css">    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body>    '
     html_page += html_table
     html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">{button_text}</button>'
     html_page += '</body></html>'
-    button_text = "Page prÈcedente"
 
-
+    button_text = "Page precedente"  # on change le texte du bouton pour la page suivante ? la page prÈcÈdente
     return html_page, liste_cours, liste_cours_uniques, color_palette
 
 
 # ----------------------------GESTION DES FICHIERS-------------------------------------------------------------------------------------------
 """
-    fonction qui cr√©e le fichier html et le fichier css si n√©cessaire ou 
-    √©crase les fichiers existants pour les mettre √† jour
+    fonction qui crÈe le fichier html et le fichier css si nÈcessaire ou 
+    Ècrase les fichiers existants pour les mettre a jour
 """
 
 
 def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques, color_palette, file_name):
 
-    # liste_cours contient des tableaux de 2 √©l√©ments. on souhaite garder uniquement les 4 premiers caract√®res de l'√©l√©ment 0
+    # liste_cours contient des tableaux de 2 ÈlÈments. on souhaite garder uniquement les 4 premiers caract?res de l'ÈlÈment 0
     for i in range(len(liste_cours)):
         liste_cours[i][0] = liste_cours[i][0][0:4]
 
-    # la liste contenant elle meme des listes, on ne gardera que le premier √©l√©ment de chaque √©l√©ment
+    # la liste contenant elle meme des listes, on ne gardera que le premier ÈlÈment de chaque ÈlÈment
     liste_cours_uniques = []
 
     for i in range(len(liste_cours)):
@@ -252,31 +255,31 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
 
     # --------------------------------------------HTML----------------------------------------------------------------------------------------------
 
-    # Obtenir le r√©pertoire du script
+    # Obtenir le rÈpertoire du script
     script_directory = os.path.dirname(__file__)
 
     # Chemin complet du fichier "index.html"
 
     chemin_fichier = os.path.join(script_directory, f"{file_name}.html")
 
-    # √âcriture du contenu HTML dans le fichier
+    # Ècriture du contenu HTML dans le fichier
     try:
-        with open(chemin_fichier, "w") as fichier:
+        with open(chemin_fichier, "w", encoding="iso-8859-2") as fichier:
             fichier.write(html_page)
 
-        # print(f"Le fichier '{chemin_fichier}' a √©t√© cr√©√© ou √©cras√© avec succ√®s.")
+        # print(f"Le fichier '{chemin_fichier}' a ÈtÈ crÈÈ ou ÈcrasÈ avec succ?s.")
 
     except Exception as e:
-        print(f"Une erreur s'est produite : {str(e)}")
+        print(f"Une erreur s'est produite lors de l'Ècriture dans le fichier: {str(e)}")
 
     # --------------------------------------------CSS----------------------------------------------------------------------------------------------
 
     # Chemin complet du fichier
     chemin_fichier = os.path.join(script_directory, f"{file_name}.css")
 
-    # √âcriture du contenu HTML dans le fichier
+    # Ècriture du contenu HTML dans le fichier
     try:
-        with open(chemin_fichier, "w") as fichier:
+        with open(chemin_fichier, "w", encoding="iso-8859-2") as fichier:
 
             fichier.write(
                 "th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n")
@@ -303,20 +306,20 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                 ".first_column {width:15vw;text-align: right;height: 8vw;}\n")
             fichier.write(".top_left {width:15vw;text-align: center;}\n")
 
-        # print(f"Le fichier '{chemin_fichier}' a √©t√© cr√©√© ou √©cras√© avec succ√®s.")
+        # print(f"Le fichier '{chemin_fichier}' a ÈtÈ crÈÈ ou ÈcrasÈ avec succ?s.")
 
             fichier.write(
                 "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}}\n")
 
     except Exception as e:
-        print(f"Une erreur s'est produite : {str(e)}")
+        print(f"Une erreur s'est produite lors de l'Ècriture du fichier CSS: {str(e)}")
 
 
 # -----------------------------------------GIT---------------------------------------------------------------------------------------
 
 def git_commands():
 
-    # Sp√©cifiez le r√©pertoire dans lequel vous souhaitez ex√©cuter les commandes Git
+    # SpÈcifiez le rÈpertoire dans lequel vous souhaitez exÈcuter les commandes Git
     repo_directory = 'C:/Users/Oscar/OneDrive/Documents/Timetable/Timetable'
 
     # Commande Git : git add .
@@ -328,42 +331,43 @@ def git_commands():
     # Commande Git : git push
     git_push_command = ['git', 'push']
 
-    # Ex√©cutez les commandes Git dans le r√©pertoire du d√©p√¥t
+    # ExÈcutez les commandes Git dans le rÈpertoire du dÈpat
 
     try:
         subprocess.run(git_add_command, cwd=repo_directory, check=True)
         subprocess.run(git_commit_command, cwd=repo_directory, check=True)
         subprocess.run(git_push_command, cwd=repo_directory, check=True)
-        print("Les commandes Git ont √©t√© ex√©cut√©es avec succ√®s. ")
+        print("Les commandes Git ont ÈtÈ exÈcutÈes avec succ?s. ")
         print("")
 
     except subprocess.CalledProcessError as e:
-        print("Une erreur s'est produite lors de l'ex√©cution des commandes Git :", e)
+        print("Une erreur s'est produite lors de l'exÈcution des commandes Git :", e)
 
 
 # --------------------------------------------MAIN---------------------------------------------------------------------------------------------
 
-# Texte du bouton Semaine suivante / Semaine pr√©c√©dente
+# Texte du bouton Semaine suivante / Semaine prÈcÈdente
 button_text = "Semaine suivante"
+button_text.encode("iso-8859-2")
 
 
-# L'URL du fichier √† t√©l√©charger disponible sur ADE
+# L'URL du fichier a† tÈlÈcharger disponible sur ADE
 url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/m32jRq3k.shu'
 
 
-# Envoyer une requ√™te HTTP GET pour t√©l√©charger le fichier
+# Envoyer une requete HTTP GET pour tÈlÈcharger le fichier
 response = requests.get(url)
 
-# R√©cup√©rer la date d'aujourd'hui
+# RÈcupÈrer la date d'aujourd'hui
 acutal_date = date.today()
 
-# V√©rifier si la requ√™te a r√©ussi
+# VÈrifier si la requete a rÈussi
 if response.status_code == 200:
     # Obtenir le contenu du fichier
     content = response.content
 
     script_directory = os.path.dirname(__file__)
-    # si le fichier n'existe pas, on le cr√©e dans le m√™me r√©pertoire que le script
+    # si le fichier n'existe pas, on le crÈe dans le meme rÈpertoire que le script
 
     if not os.path.exists(os.path.join(script_directory, f"Data.ics")):
         with open(os.path.join(script_directory, f"Data.ics"), "w") as fichier:
@@ -372,15 +376,15 @@ if response.status_code == 200:
     # Chemin complet du fichier
     chemin_fichier = os.path.join(script_directory, f"Data.ics")
 
-    # √âcriture du contenu dans le fichier
+    # Ècriture du contenu dans le fichier
     with open(chemin_fichier, "wb") as fichier:
         fichier.write(content)
-    # print("Le fichier a √©t√© t√©l√©charg√© avec succ√®s et enregistr√© sous 'Data.ics'.")
+    # print("Le fichier a ÈtÈ tÈlÈchargÈ avec succ?s et enregistrÈ sous 'Data.ics'.")
 
 else:
-    print("La requ√™te a √©chou√©.")
+    print("La requete a ÈchouÈ.")
 
-# Obtenir le r√©pertoire du script
+# Obtenir le rÈpertoire du script
 
 script_directory = os.path.dirname(__file__)
 
@@ -388,15 +392,15 @@ script_directory = os.path.dirname(__file__)
 
 fichier_relative_path = os.path.join(script_directory, "Data.ics")
 
-# V√©rifier si le fichier existe
+# VÈrifier si le fichier existe
 if os.path.exists(fichier_relative_path):
 
     # Ouvrir le fichier en lecture
-    with open(fichier_relative_path, "r", encoding="iso-8859-1") as f:
+    with open(fichier_relative_path, "r", encoding="iso-8859-2") as f:
         cal = Calendar.from_ical(f.read())
 
 else:
-    print("Le fichier 'Data.ics' n'existe pas dans le r√©pertoire du script.")
+    print("Le fichier 'Data.ics' n'existe pas dans le rÈpertoire du script.")
 
 
 # Liste des couleurs pour les cours
@@ -443,7 +447,7 @@ generate_html_file_and_css_file(
     html_and_css[0], html_and_css[1], html_and_css[2], html_and_css[3], file_name)
 
 
-# on r√©initialise la liste des couleurs pour les cours et le dictionnaire week_data de donn√©es de la semaine courante
+# on rÈinitialise la liste des couleurs pour les cours et le dictionnaire week_data de donnÈes de la semaine courante
 week_data = {}
 color_palette = backup_color_palette.copy()
 
@@ -460,6 +464,6 @@ generate_html_file_and_css_file(html_and_css_semaine2[0], html_and_css_semaine2[
                                 html_and_css_semaine2[2], html_and_css_semaine2[3], file_name)
 
 
-# on ex√©cute les commandes git pour mettre √† jour le repo
+# on exÈcute les commandes git pour mettre a† jour le repo
 
 git_commands()
