@@ -486,6 +486,9 @@ generate_html_file_and_css_file(html_and_css_semaine2[0], html_and_css_semaine2[
                                 html_and_css_semaine2[2], html_and_css_semaine2[3], file_name)
 
 
+week_data = {}
+color_palette = backup_color_palette.copy()
+
 # SEMINE SUIVANTE
 
 file_name = "index_s3"  # le nom du fichier html et css
@@ -499,6 +502,10 @@ generate_html_file_and_css_file(html_and_css_semaine3[0], html_and_css_semaine3[
                                 html_and_css_semaine3[2], html_and_css_semaine3[3], file_name)
 
 
+
+week_data = {}
+color_palette = backup_color_palette.copy()
+
 # SEMAINE SUIVANTE
 
 file_name = "index_s4"  # le nom du fichier html et css
@@ -511,6 +518,8 @@ html_and_css_semaine4 = generate_html_data(get_monday_date(
 generate_html_file_and_css_file(html_and_css_semaine4[0], html_and_css_semaine4[1],
                                 html_and_css_semaine4[2], html_and_css_semaine4[3], file_name)
 
+week_data = {}
+color_palette = backup_color_palette.copy()
 
 
 # SEMAINE SUIVANTE  
