@@ -138,7 +138,7 @@ def treat_data(date_to_treat):
 """
 
 
-def generate_html_data(date_to_treat, color_palette, file_name, to_page):
+def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_page=None):
     global button_text
 
     week_data = treat_data(date_to_treat)
@@ -224,10 +224,14 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page):
     html_table += "</table>"
     html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css">    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body>    '
     html_page += html_table
-    html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">{button_text}</button>'
+    if to_page != "None":
+        html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">Page suivante</button>'
+    if from_page:
+        html_page += f'<button id="bouton-precedent" onclick="window.location.href=\'./{from_page}.html\'">Page precedente</button>'
     html_page += '</body></html>'
 
-    button_text = "Page precedente"  # on change le texte du bouton pour la page suivante ? la page précédente
+    # on change le texte du bouton pour la page suivante ? la page pr?c?dente
+    button_text = "Page precedente"
     return html_page, liste_cours, liste_cours_uniques, color_palette
 
 
@@ -270,7 +274,8 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
         # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succ?s.")
 
     except Exception as e:
-        print(f"Une erreur s'est produite lors de l'écriture dans le fichier: {str(e)}")
+        print(
+            f"Une erreur s'est produite lors de l'?criture dans le fichier: {str(e)}")
 
     # --------------------------------------------CSS----------------------------------------------------------------------------------------------
 
@@ -288,7 +293,8 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
             fichier.write(
                 ".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}\n")
             fichier.write("#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n")
-
+            fichier.write(
+                "#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n")
             for i in range(len(liste_cours_uniques)):
                 # print(liste_cours_uniques[i])
                 # print(i)
@@ -309,10 +315,11 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
         # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succ?s.")
 
             fichier.write(
-                "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}}\n")
+                "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}}\n")
 
     except Exception as e:
-        print(f"Une erreur s'est produite lors de l'écriture du fichier CSS: {str(e)}")
+        print(
+            f"Une erreur s'est produite lors de l'?criture du fichier CSS: {str(e)}")
 
 
 # -----------------------------------------GIT---------------------------------------------------------------------------------------
@@ -455,13 +462,27 @@ color_palette = backup_color_palette.copy()
 # SEMAINE SUIVANTE
 
 file_name = "index_s2"  # le nom du fichier html et css
-to_page = "index"  # le nom de la page vers laquelle on ira en cliquant sur le bouton du site
+to_page = "index_s3"
+from_page = "index"
 
 html_and_css_semaine2 = generate_html_data(get_monday_date(
-    date.today()) + timedelta(days=7), color_palette, file_name, to_page)
+    date.today()) + timedelta(days=7), color_palette, file_name, to_page, from_page=from_page)
 
 generate_html_file_and_css_file(html_and_css_semaine2[0], html_and_css_semaine2[1],
                                 html_and_css_semaine2[2], html_and_css_semaine2[3], file_name)
+
+
+# SEMINE SUIVANTE
+
+file_name = "index_s3"  # le nom du fichier html et css
+to_page = "None"  # s'il n'y a pas de page suivante, mettre to_page = "None"
+from_page = "index_s2"
+
+html_and_css_semaine3 = generate_html_data(get_monday_date(
+    date.today()) + timedelta(days=14), color_palette, file_name, to_page, from_page=from_page)
+
+generate_html_file_and_css_file(html_and_css_semaine3[0], html_and_css_semaine3[1],
+                                html_and_css_semaine3[2], html_and_css_semaine3[3], file_name)
 
 
 # on exécute les commandes git pour mettre a  jour le repo
