@@ -211,6 +211,8 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
                     event_desc = str(event_informations[0][0])
                     # on enleve les espces dans le nom de la classe
                     n_classe = event_informations[0][0][0:4].replace(" ", "")
+                    if "CC" in event_desc:
+                        n_classe += "-Controle-Continu"
                     nbr_rowspan = (
                         event_informations[0][2] - event_informations[0][1]) // timedelta(minutes=15)
                     html_table += f"<td  rowspan='{nbr_rowspan} 'class='{n_classe}';>{event_desc}</td>"
@@ -222,7 +224,7 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
         html_table += "</tr>"
 
     html_table += "</table>"
-    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./{file_name}.css">    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body>    '
+    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./style-{file_name[-2] + file_name[-1]}.css">    <link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body>    '
     html_page += html_table
     if to_page != "None":
         html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">Page suivante</button>'
@@ -243,10 +245,13 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
 
 
 def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques, color_palette, file_name):
-
     # liste_cours contient des tableaux de 2 éléments. on souhaite garder uniquement les 4 premiers caract?res de l'élément 0
     for i in range(len(liste_cours)):
-        liste_cours[i][0] = liste_cours[i][0][0:4]
+        if "CC" in liste_cours[i][0]:
+            liste_cours[i][0] = liste_cours[i][0][0:4] + "-Controle-Continu"
+        else : 
+            liste_cours[i][0] = liste_cours[i][0][0:4]
+
 
     # la liste contenant elle meme des listes, on ne gardera que le premier élément de chaque élément
     liste_cours_uniques = []
@@ -280,8 +285,9 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     # --------------------------------------------CSS----------------------------------------------------------------------------------------------
 
     # Chemin complet du fichier
-    chemin_fichier = os.path.join(script_directory, f"{file_name}.css")
+    chemin_fichier = os.path.join(script_directory, f"style-{file_name[-2] + file_name[-1]}.css")
 
+ 
     # écriture du contenu HTML dans le fichier
     try:
         with open(chemin_fichier, "w", encoding="iso-8859-2") as fichier:
@@ -301,13 +307,22 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                 if liste_cours_uniques[i].count(' ') > 0:
                     liste_cours_uniques[i] = liste_cours_uniques[i].replace(
                         " ", "")
-                # print(liste_cours_uniques[i])
-                fichier.write(
-                    f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n")
-                fichier.write(
-                    f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n")
-                fichier.write(
-                    f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;}}\n")
+                print(liste_cours_uniques[i])
+                if "-Controle-Continu" in liste_cours_uniques[i]:
+                    fichier.write(
+                    f".{liste_cours_uniques[i]} {{background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n")
+                    fichier.write(
+                        f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n")
+                    fichier.write(
+                        f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;}}\n")
+
+                else : 
+                    fichier.write(
+                        f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n")
+                    fichier.write(
+                        f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n")
+                    fichier.write(
+                        f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;}}\n")
             fichier.write(
                 ".first_column {width:15vw;text-align: right;height: 8vw;}\n")
             fichier.write(".top_left {width:15vw;text-align: center;}\n")
