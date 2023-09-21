@@ -490,7 +490,7 @@ generate_html_file_and_css_file(html_and_css_semaine2[0], html_and_css_semaine2[
 # SEMINE SUIVANTE
 
 file_name = "index_s3"  # le nom du fichier html et css
-to_page = "None"  # s'il n'y a pas de page suivante, mettre to_page = "None"
+to_page = "index_s4"  # s'il n'y a pas de page suivante, mettre to_page = "None"
 from_page = "index_s2"
 
 html_and_css_semaine3 = generate_html_data(get_monday_date(
@@ -498,6 +498,34 @@ html_and_css_semaine3 = generate_html_data(get_monday_date(
 
 generate_html_file_and_css_file(html_and_css_semaine3[0], html_and_css_semaine3[1],
                                 html_and_css_semaine3[2], html_and_css_semaine3[3], file_name)
+
+
+# SEMAINE SUIVANTE
+
+file_name = "index_s4"  # le nom du fichier html et css
+to_page = "index_s5"  # s'il n'y a pas de page suivante, mettre to_page = "None"
+from_page = "index_s3"
+
+html_and_css_semaine4 = generate_html_data(get_monday_date(
+    date.today()) + timedelta(days=21), color_palette, file_name, to_page, from_page=from_page)
+
+generate_html_file_and_css_file(html_and_css_semaine4[0], html_and_css_semaine4[1],
+                                html_and_css_semaine4[2], html_and_css_semaine4[3], file_name)
+
+
+
+# SEMAINE SUIVANTE  
+
+file_name = "index_s5"  # le nom du fichier html et css
+to_page = "None"  # s'il n'y a pas de page suivante, mettre to_page = "None"
+from_page = "index_s4"
+
+html_and_css_semaine5 = generate_html_data(get_monday_date(
+    date.today()) + timedelta(days=28), color_palette, file_name, to_page, from_page=from_page)
+
+generate_html_file_and_css_file(html_and_css_semaine5[0], html_and_css_semaine5[1],
+                                html_and_css_semaine5[2], html_and_css_semaine5[3], file_name)
+
 
 
 # on exécute les commandes git pour mettre a  jour le repo
