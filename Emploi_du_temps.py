@@ -146,7 +146,7 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
     # Créez un tableau HTML
     html_table = ""
     html_table += "<table border='1'>"
-    top_left = str(date_to_treat.day) + " \nau " + str((date_to_treat + timedelta(days=4)).day) + " 0" + \
+    top_left = str(date_to_treat.day) + " \nau " + str((date_to_treat + timedelta(days=4)).day) + " " + \
         str((date_to_treat + timedelta(days=4)).month) + \
         "-" + str((date_to_treat + timedelta(days=4)).year)
     html_table += f"<tr><th class='top_left'>Semaine du {top_left}</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th  style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
@@ -307,7 +307,6 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                 if liste_cours_uniques[i].count(' ') > 0:
                     liste_cours_uniques[i] = liste_cours_uniques[i].replace(
                         " ", "")
-                print(liste_cours_uniques[i])
                 if "-Controle-Continu" in liste_cours_uniques[i]:
                     fichier.write(
                     f".{liste_cours_uniques[i]} {{background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n")
