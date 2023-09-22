@@ -233,7 +233,7 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
     html_page += '</body></html>'
 
     # on change le texte du bouton pour la page suivante ? la page pr?c?dente
-    button_text = "Page precedente"
+    button_text = "Page preceedente"
     return html_page, liste_cours, liste_cours_uniques, color_palette
 
 
@@ -249,9 +249,8 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     for i in range(len(liste_cours)):
         if "CC" in liste_cours[i][0]:
             liste_cours[i][0] = liste_cours[i][0][0:4] + "-Controle-Continu"
-        else : 
+        else:
             liste_cours[i][0] = liste_cours[i][0][0:4]
-
 
     # la liste contenant elle meme des listes, on ne gardera que le premier élément de chaque élément
     liste_cours_uniques = []
@@ -285,9 +284,9 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     # --------------------------------------------CSS----------------------------------------------------------------------------------------------
 
     # Chemin complet du fichier
-    chemin_fichier = os.path.join(script_directory, f"style-{file_name[-2] + file_name[-1]}.css")
+    chemin_fichier = os.path.join(
+        script_directory, f"style-{file_name[-2] + file_name[-1]}.css")
 
- 
     # écriture du contenu HTML dans le fichier
     try:
         with open(chemin_fichier, "w", encoding="iso-8859-2") as fichier:
@@ -309,13 +308,13 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                         " ", "")
                 if "-Controle-Continu" in liste_cours_uniques[i]:
                     fichier.write(
-                    f".{liste_cours_uniques[i]} {{background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n")
+                        f".{liste_cours_uniques[i]} {{background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n")
                     fichier.write(
                         f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n")
                     fichier.write(
                         f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;}}\n")
 
-                else : 
+                else:
                     fichier.write(
                         f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n")
                     fichier.write(
@@ -502,7 +501,6 @@ generate_html_file_and_css_file(html_and_css_semaine3[0], html_and_css_semaine3[
                                 html_and_css_semaine3[2], html_and_css_semaine3[3], file_name)
 
 
-
 week_data = {}
 color_palette = backup_color_palette.copy()
 
@@ -522,7 +520,7 @@ week_data = {}
 color_palette = backup_color_palette.copy()
 
 
-# SEMAINE SUIVANTE  
+# SEMAINE SUIVANTE
 
 file_name = "index_s5"  # le nom du fichier html et css
 to_page = "None"  # s'il n'y a pas de page suivante, mettre to_page = "None"
@@ -539,16 +537,15 @@ generate_html_file_and_css_file(html_and_css_semaine5[0], html_and_css_semaine5[
     fonction qui prend en param?tre un entier n, nombre de semaines et gén?re n pages affichant l'emploi du temps, semaine par semaine
 """
 
+
 def main(n):
-   
+
     week_data = {}
     color_palette = backup_color_palette.copy()
     n_fichier_courant = 2
     n_fichier_precedent = 1
     n_fichier_suivant = 3
 
-    
 
 # on exécute les commandes git pour mettre a  jour le repo
-
 git_commands()
