@@ -233,7 +233,7 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
     html_page += '</body></html>'
 
     # on change le texte du bouton pour la page suivante ? la page pr?c?dente
-    button_text = "Page precedente"
+    button_text = "Page preceedente"
     return html_page, liste_cours, liste_cours_uniques, color_palette
 
 
