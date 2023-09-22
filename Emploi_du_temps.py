@@ -535,6 +535,19 @@ generate_html_file_and_css_file(html_and_css_semaine5[0], html_and_css_semaine5[
                                 html_and_css_semaine5[2], html_and_css_semaine5[3], file_name)
 
 
+""" 
+    fonction qui prend en param?tre un entier n, nombre de semaines et gén?re n pages affichant l'emploi du temps, semaine par semaine
+"""
+
+def main(n):
+   
+    week_data = {}
+    color_palette = backup_color_palette.copy()
+    n_fichier_courant = 2
+    n_fichier_precedent = 1
+    n_fichier_suivant = 3
+
+    
 
 # on exécute les commandes git pour mettre a  jour le repo
 
