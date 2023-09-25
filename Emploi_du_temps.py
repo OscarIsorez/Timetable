@@ -372,7 +372,7 @@ button_text.encode("iso-8859-2")
 
 
 # L'URL du fichier a  télécharger disponible sur ADE
-url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/m32jRq3k.shu'
+url = 'https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/o35ex53R.shu'
 
 
 # Envoyer une requete HTTP GET pour télécharger le fichier
