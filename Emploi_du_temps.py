@@ -205,17 +205,14 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
                         [event_desc, event_start, event_end])
 
             if event_informations:
-
                 if event_informations[0] not in liste_cours:
                     n_classe = event_informations[0][0][0:4].replace(" ", "")
-                    if day == "Friday":
-                        print( "last column")
-                        n_classe += "-last_column"
-                        event_informations[0][0] = str(
-                            event_informations[0][0]) + '-last_column'
-                        liste_cours.append(event_informations[0])
-                    else : 
-                        liste_cours.append(event_informations[0])
+                    # if day == "Friday":
+                    #     n_classe += "-last_column"
+                    #     # event_informations[0] = [str(event_informations[0][0]) + '-last_column', event_informations[0][1], event_informations[0][2]]
+                    #     liste_cours.append(event_informations[0])
+                    # else : 
+                    liste_cours.append(event_informations[0])
                     event_desc = str(event_informations[0][0])
                     # on enleve les espces dans le nom de la classe
                     if "CC" in event_desc:
@@ -223,7 +220,6 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
                     nbr_rowspan = (
                         event_informations[0][2] - event_informations[0][1]) // timedelta(minutes=15)
                     html_table += f"<td  rowspan='{nbr_rowspan} 'class='{n_classe}';>{event_desc}</td>"
-
             else:
                 # Cellule vide
                 html_table += "<td class='empty'></td>"
@@ -234,6 +230,9 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
 
     # date actuelle, en arrondissant les secondes ? l'entier pret
     actual_date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
+
+    for i in range(len(liste_cours)):
+        print(liste_cours[i][0])
 
     html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./style-{file_name[-2] + file_name[-1]}.css"><link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body><p class="date"> Mise a jour : {actual_date}</p>   '
     html_page += html_table
