@@ -318,9 +318,9 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                     fichier.write(
                         f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n")
                     fichier.write(
-                        f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 2;transition: 0.5s}}\n")
+                        f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n")
                     fichier.write(
-                        f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 2.2;}}\n")
+                        f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;}}\n")
             fichier.write(
                 ".first_column {width:15vw;text-align: right;height: 8vw;}\n")
             fichier.write(".top_left {width:15vw;text-align: center;}\n")
@@ -329,10 +329,16 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
 
             fichier.write(
                 "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}}\n")
+            for i in range(len(liste_cours_uniques)):
+                    fichier.write(
+                        f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 2;transition: 0.5s}}\n")
+                    fichier.write(
+                        f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 2.2;}}\n")
 
+            
     except Exception as e:
         print(
-            f"Une erreur s'est produite lors de l'?criture du fichier CSS: {str(e)}")
+            f"Une erreur s'est produite lors de l'ecriture du fichier CSS: {str(e)}")
 
 
 # -----------------------------------------GIT---------------------------------------------------------------------------------------
