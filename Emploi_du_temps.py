@@ -207,14 +207,18 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
             if event_informations:
 
                 if event_informations[0] not in liste_cours:
-                    liste_cours.append(event_informations[0])
+                    n_classe = event_informations[0][0][0:4].replace(" ", "")
+                    if day == "Friday":
+                        n_classe += "-last_column"
+                        event_informations[0][0] = str(
+                            event_informations[0][0]) + '-last_column'
+                        liste_cours.append(event_informations[0])
+                    else : 
+                        liste_cours.append(event_informations[0])
                     event_desc = str(event_informations[0][0])
                     # on enleve les espces dans le nom de la classe
-                    n_classe = event_informations[0][0][0:4].replace(" ", "")
                     if "CC" in event_desc:
                         n_classe += "-Controle-Continu"
-                    if day == "Friday":
-                        n_classe += " last_column"
                     nbr_rowspan = (
                         event_informations[0][2] - event_informations[0][1]) // timedelta(minutes=15)
                     html_table += f"<td  rowspan='{nbr_rowspan} 'class='{n_classe}';>{event_desc}</td>"
@@ -227,7 +231,7 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
 
     html_table += "</table>"
 
-    #date actuelle, en arrondissant les secondes ? l'entier pret
+    # date actuelle, en arrondissant les secondes ? l'entier pret
     actual_date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
     html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./style-{file_name[-2] + file_name[-1]}.css"><link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body><p class="date"> Mise a jour : {actual_date}</p>   '
@@ -253,8 +257,14 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
 def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques, color_palette, file_name):
     # liste_cours contient des tableaux de 2 éléments. on souhaite garder uniquement les 4 premiers caract?res de l'élément 0
     for i in range(len(liste_cours)):
+
+
         if "CC" in liste_cours[i][0]:
             liste_cours[i][0] = liste_cours[i][0][0:4] + "-Controle-Continu"
+            continue
+        if "-last_column" in liste_cours[i][0][0]:
+            liste_cours[i][0] = liste_cours[i][0][0:4] + "-last_column"
+            continue
         else:
             liste_cours[i][0] = liste_cours[i][0][0:4]
 
@@ -284,7 +294,7 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
 
     except Exception as e:
         print(
-            f"Une erreur s'est produite lors de l'?criture dans le fichier: {str(e)}")
+            f"Une erreur s'est produite lors de l'ecriture dans le fichier: {str(e)}")
 
     # --------------------------------------------CSS----------------------------------------------------------------------------------------------
 
@@ -318,12 +328,18 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                         f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n")
                     fichier.write(
                         f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;}}\n")
-
-                else:
+                elif "-last_column" in liste_cours_uniques[i]:
                     fichier.write(
                         f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n")
                     fichier.write(
                         f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n")
+                    fichier.write(
+                        f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;    translate: -8vw;}}\n")
+                else:
+                    fichier.write(
+                        f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n")
+                    fichier.write(
+                        f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s;}}\n")
                     fichier.write(
                         f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;}}\n")
             fichier.write(
@@ -335,13 +351,13 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
             fichier.write(
                 "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}\n")
             for i in range(len(liste_cours_uniques)):
-                    fichier.write(
-                        f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 2;transition: 0.5s}}\n")
-                    fichier.write(
-                        f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 2.2;}}\n")
-            fichier.write(  
+                fichier.write(
+                    f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 2;transition: 0.5s}}\n")
+                fichier.write(
+                    f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 2.2;}}\n")
+            fichier.write(
                 "}\n")
-            
+
     except Exception as e:
         print(
             f"Une erreur s'est produite lors de l'ecriture du fichier CSS: {str(e)}")
