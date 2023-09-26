@@ -226,7 +226,7 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
     html_table += "</table>"
 
     #date actuelle, en arrondissant les secondes ? l'entier pret
-    actual_date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")[:-3]
+    actual_date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")[:-2]
 
     html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./style-{file_name[-2] + file_name[-1]}.css"><link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body><p id="date"> Mise a jour : {actual_date}</p>   '
     html_page += html_table
