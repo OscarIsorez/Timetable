@@ -261,10 +261,8 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
 
         if "CC" in liste_cours[i][0]:
             liste_cours[i][0] = liste_cours[i][0][0:4] + "-Controle-Continu"
-            continue
-        if "-last_column" in liste_cours[i][0][0]:
+        elif "-last_column" in liste_cours[i][0][0]:
             liste_cours[i][0] = liste_cours[i][0][0:4] + "-last_column"
-            continue
         else:
             liste_cours[i][0] = liste_cours[i][0][0:4]
 
