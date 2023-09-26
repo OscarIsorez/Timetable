@@ -168,7 +168,7 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
 
     # liste qui contiendra les cours de la semaine, avec les heures de début et de fin
     liste_cours = []
-
+    liste_cours_vendredi = []
     # liste qui contiendra les cours de la semaine sans les doublons
     liste_cours_uniques = []
 
@@ -205,13 +205,16 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
                         [event_desc, event_start, event_end])
 
             if event_informations:
+                if day == "Friday":
+                    liste_cours_vendredi.append(event_informations[0])
+
                 if event_informations[0] not in liste_cours:
                     n_classe = event_informations[0][0][0:4].replace(" ", "")
                     # if day == "Friday":
                     #     n_classe += "-last_column"
                     #     # event_informations[0] = [str(event_informations[0][0]) + '-last_column', event_informations[0][1], event_informations[0][2]]
                     #     liste_cours.append(event_informations[0])
-                    # else : 
+                    # else :
                     liste_cours.append(event_informations[0])
                     event_desc = str(event_informations[0][0])
                     # on enleve les espces dans le nom de la classe
@@ -230,9 +233,6 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
 
     # date actuelle, en arrondissant les secondes ? l'entier pret
     actual_date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
-
-    for i in range(len(liste_cours)):
-        print(liste_cours[i][0])
 
     html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./style-{file_name[-2] + file_name[-1]}.css"><link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body><p class="date"> Mise a jour : {actual_date}</p>   '
     html_page += html_table
@@ -257,7 +257,6 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
 def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques, color_palette, file_name):
     # liste_cours contient des tableaux de 2 éléments. on souhaite garder uniquement les 4 premiers caract?res de l'élément 0
     for i in range(len(liste_cours)):
-
 
         if "CC" in liste_cours[i][0]:
             liste_cours[i][0] = liste_cours[i][0][0:4] + "-Controle-Continu"
