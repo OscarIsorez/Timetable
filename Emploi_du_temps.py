@@ -328,13 +328,14 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
         # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succ?s.")
 
             fichier.write(
-                "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}}\n")
+                "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}\n")
             for i in range(len(liste_cours_uniques)):
                     fichier.write(
                         f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 2;transition: 0.5s}}\n")
                     fichier.write(
                         f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 2.2;}}\n")
-
+            fichier.write(  
+                "}\n")
             
     except Exception as e:
         print(
