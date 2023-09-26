@@ -213,6 +213,8 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
                     n_classe = event_informations[0][0][0:4].replace(" ", "")
                     if "CC" in event_desc:
                         n_classe += "-Controle-Continu"
+                    if day == "Friday":
+                        n_classe += " last_column"
                     nbr_rowspan = (
                         event_informations[0][2] - event_informations[0][1]) // timedelta(minutes=15)
                     html_table += f"<td  rowspan='{nbr_rowspan} 'class='{n_classe}';>{event_desc}</td>"
@@ -271,7 +273,6 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
     script_directory = os.path.dirname(__file__)
 
     # Chemin complet du fichier "index.html"
-
     chemin_fichier = os.path.join(script_directory, f"{file_name}.html")
 
     # écriture du contenu HTML dans le fichier
