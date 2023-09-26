@@ -209,6 +209,7 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
                 if event_informations[0] not in liste_cours:
                     n_classe = event_informations[0][0][0:4].replace(" ", "")
                     if day == "Friday":
+                        print( "last column")
                         n_classe += "-last_column"
                         event_informations[0][0] = str(
                             event_informations[0][0]) + '-last_column'
