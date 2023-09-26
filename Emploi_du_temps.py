@@ -225,7 +225,7 @@ def generate_html_data(date_to_treat, color_palette, file_name, to_page, from_pa
 
     html_table += "</table>"
     actual_date = datetime.now()
-    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./style-{file_name[-2] + file_name[-1]}.css"><link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body><p id="date">Derniere Maj (date + heure+ minutes ): {actual_date}</p>   '
+    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./style-{file_name[-2] + file_name[-1]}.css"><link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body><p id="date"> Mise a jour : {actual_date}</p>   '
     html_page += html_table
     if to_page != "None":
         html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">Page suivante</button>'
