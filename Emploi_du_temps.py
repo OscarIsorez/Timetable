@@ -93,6 +93,8 @@ def get_monday_date(date):
     @return true si le jour est un vendredi et false sinon
 
 """
+
+
 def is_friday(date) -> bool:
     return date.weekday() == 4
 
@@ -581,7 +583,8 @@ def main(n):
     n_fichier_precedent = 1
     n_fichier_suivant = 3
 
+
 print(is_friday(date.today()))
 
-# on exécute les commandes git pour mettre a  jour le repo
+# on exécute les commandes git pour mettre a  jour le repository
 git_commands()
