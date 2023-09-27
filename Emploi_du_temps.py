@@ -88,6 +88,16 @@ def get_monday_date(date):
 
 
 """
+
+    @param un objet date de la classe datetime
+    @return true si le jour est un vendredi et false sinon
+
+"""
+def is_friday(date) -> bool:
+    return date.weekday() == 4
+
+
+"""
     fonction qui initialise le dictionnaire week_data avec les événements de la semaine
     Exemple : week_data = {'Monday': [], 'Tuesday': [], 'Wednesday': [], 'Thursday': [], 'Friday': []}
 """
@@ -571,6 +581,7 @@ def main(n):
     n_fichier_precedent = 1
     n_fichier_suivant = 3
 
+print(is_friday(date.today()))
 
 # on exécute les commandes git pour mettre a  jour le repo
 git_commands()
