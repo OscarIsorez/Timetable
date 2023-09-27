@@ -16,10 +16,12 @@ def read_ics_file(url):
             return response.read()
             print("file read")
     except Exception as e:
-        return json.dumps({'error': str(e)}, indent=4)
+        return json.dumps({'ERror': str(e)}, indent=4)
 
 def ics_to_json(ics_content):
+    print("ics to json")
     try:
+
         cal = icalendar.Calendar.from_ical(ics_content)
         events = []
 
@@ -33,10 +35,11 @@ def ics_to_json(ics_content):
             }
             events.append(event_data)
 
+        print("json generated")
         return json.dumps(events, indent=4)
 
     except Exception as e:
-        return json.dumps({'error': str(e)}, indent=4)
+        return json.dumps({'ERROR': str(e)}, indent=4)
 
 
 
@@ -45,10 +48,12 @@ def generate_json_file(url, file_name):
     json_content = ics_to_json(ics_content)
     with open(file_name, 'w') as f:
         f.write(json_content)
+        print("file generated")
 
 
 #------
 
 url = "https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/o35ex53R.shu"
 
-generate_json_file(url, "timetable.json")
+# generate_json_file(url, "timetable.json")
+print()
