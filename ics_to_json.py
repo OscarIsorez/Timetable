@@ -22,17 +22,17 @@ def read_ics_file(url):
         script_directory = os.path.dirname(__file__)
         # si le fichier n'existe pas, on le crée dans le meme répertoire que le script
 
-        if not os.path.exists(os.path.join(script_directory, f"Data.ics")):
-            with open(os.path.join(script_directory, f"Data.ics"), "w") as fichier:
+        if not os.path.exists(os.path.join(script_directory, f"JSON.ics")):
+            with open(os.path.join(script_directory, f"JSON.ics"), "w") as fichier:
                 fichier.write("")
 
         # Chemin complet du fichier
-        chemin_fichier = os.path.join(script_directory, f"Data.ics")
+        chemin_fichier = os.path.join(script_directory, f"JSON.ics")
 
         # écriture du contenu dans le fichier
         with open(chemin_fichier, "wb") as fichier:
             fichier.write(content)
-        # print("Le fichier a été téléchargé avec succ?s et enregistré sous 'Data.ics'.")
+        # print("Le fichier a été téléchargé avec succ?s et enregistré sous 'JSON.ics'.")
 
     else:
         print("La requete a échoué.")
@@ -41,9 +41,9 @@ def read_ics_file(url):
 
     script_directory = os.path.dirname(__file__)
 
-    # Construire le chemin relatif vers le fichier "Data.ics"
+    # Construire le chemin relatif vers le fichier "JSON.ics"
 
-    fichier_relative_path = os.path.join(script_directory, "Data.ics")
+    fichier_relative_path = os.path.join(script_directory, "JSON.ics")
 
     # Vérifier si le fichier existe
     if os.path.exists(fichier_relative_path):
@@ -53,7 +53,7 @@ def read_ics_file(url):
             cal = Calendar.from_ical(f.read())
 
     else:   
-        print("Le fichier 'Data.ics' n'existe pas dans le répertoire du script.")
+        print("Le fichier 'JSON.ics' n'existe pas dans le répertoire du script.")
 
 
 def ics_to_json(ics_content):
@@ -62,14 +62,14 @@ def ics_to_json(ics_content):
         events = []
 
         for event in cal.walk('vevent'):
-            event_data = {
+            event_JSON = {
                 'summary': str(event.get('summary', '')),
                 'description': str(event.get('description', '')),
                 'start': str(event.get('dtstart', '')),
                 'end': str(event.get('dtend', '')),
                 'location': str(event.get('location', '')),
             }
-            events.append(event_data)
+            events.append(event_JSON)
 
         return json.dumps(events, indent=4, ensure_ascii=False).encode('iso-8859-2').decode('iso-8859-2')
 
