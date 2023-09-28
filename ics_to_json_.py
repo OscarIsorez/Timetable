@@ -5,25 +5,20 @@ import os
 
 
 """
-fonction qui prend en param?tre un lien qui pointe vers un fichier ics et qui retourne les �l�ments dans le format json
+    @param url: lien qui pointe vers un fichier ics
+    @return content: contenu du fichier ics
 """
-
-
 def read_ics_file(url):
     response = requests.get(url)
-
-    # V�rifier si la requete a r�ussi
     if response.status_code == 200:
-        # Obtenir le contenu du fichier
         content = response.content
-
     return content
 
 
 
 """
-    fonction qui prend en paramètre du contenu d'un fichier ics et qui retourne les éléments dans le format json
-
+    @param ics_content: contenu du fichier ics
+    @return json_content: contenu du fichier ics converti en json
 """
 def ics_to_json(ics_content): 
     try:
@@ -43,12 +38,14 @@ def ics_to_json(ics_content):
         return json.dumps(events, indent=4, ensure_ascii=False)
 
     except Exception as e:
-        return json.dumps({'error': str(e)}, indent=4)
+        return json.dumps({'Error': str(e)}, indent=4)
 
 
 
 """
-    fonction qui prend en paramètre un lien qui pointe vers un fichier ics et qui génère un fichier json  
+    @param url: lien qui pointe vers un fichier ics
+    @param file_name: nom du fichier json à générer
+    @return vide
 """
 def generate_json_file(url, file_name):
     ics_content = read_ics_file(url)
@@ -56,8 +53,10 @@ def generate_json_file(url, file_name):
     with open(file_name+".json", 'w') as f:
         f.write(json_content)
 
+    
 
-# ------
+
+# ------MAIN------
 
 url = "https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/o35ex53R.shu"
 
