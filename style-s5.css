@@ -3,52 +3,52 @@ th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuch
 .empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}
 #bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
 #bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
-.POT {background-color: #F4DB90; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
-.POT:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
-.POT:active {border: 1px solid;scale: 1.2;}
-.INTM {background-color: #9C90A2; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.INTM {background-color: #F3DE8A; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
 .INTM:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
 .INTM:active {border: 1px solid;scale: 1.2;}
+.WEB {background-color: #F4DB90; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.WEB:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.WEB:active {border: 1px solid;scale: 1.2;}
+.EN2 {background-color: #F4C3B7; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.EN2:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.EN2:active {border: 1px solid;scale: 1.2;}
+.Angl {background-color: #F4C1B9; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.Angl:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.Angl:active {border: 1px solid;scale: 1.2;}
+.OFI {background-color: #F4D29F; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.OFI:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.OFI:active {border: 1px solid;scale: 1.2;}
 .ALG2-Controle-Continu {background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
 .ALG2-Controle-Continu:hover { border: 1px solid;scale: 1.05;transition: 0.5s}
 .ALG2-Controle-Continu:active {border: 1px solid;scale: 1.2;}
-.POC {background-color: #F4D29F; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
-.POC:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
-.POC:active {border: 1px solid;scale: 1.2;}
-.OFI {background-color: #E6B9B6; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
-.OFI:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
-.OFI:active {border: 1px solid;scale: 1.2;}
-.Angl {background-color: #AB98A6; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
-.Angl:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
-.Angl:active {border: 1px solid;scale: 1.2;}
-.AlgL {background-color: #F4D796; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.POT {background-color: #D7B1B2; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.POT:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.POT:active {border: 1px solid;scale: 1.2;}
+.AlgL {background-color: #86849C; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
 .AlgL:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
 .AlgL:active {border: 1px solid;scale: 1.2;}
-.WEB {background-color: #86849C; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
-.WEB:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
-.WEB:active {border: 1px solid;scale: 1.2;}
-.EN2 {background-color: #F4CFA5; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
-.EN2:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
-.EN2:active {border: 1px solid;scale: 1.2;}
+.POC {background-color: #8D889E; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.POC:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.POC:active {border: 1px solid;scale: 1.2;}
 .first_column {width:15vw;text-align: right;height: 8vw;}
 .top_left {width:15vw;text-align: center;}
 @media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}
-.POT:hover { border: 1px solid;scale: 2;transition: 0.5s}
-.POT:active {border: 1px solid;scale: 2.2;}
 .INTM:hover { border: 1px solid;scale: 2;transition: 0.5s}
 .INTM:active {border: 1px solid;scale: 2.2;}
-.ALG2-Controle-Continu:hover { border: 1px solid;scale: 2;transition: 0.5s}
-.ALG2-Controle-Continu:active {border: 1px solid;scale: 2.2;}
-.POC:hover { border: 1px solid;scale: 2;transition: 0.5s}
-.POC:active {border: 1px solid;scale: 2.2;}
-.OFI:hover { border: 1px solid;scale: 2;transition: 0.5s}
-.OFI:active {border: 1px solid;scale: 2.2;}
-.Angl:hover { border: 1px solid;scale: 2;transition: 0.5s}
-.Angl:active {border: 1px solid;scale: 2.2;}
-.AlgL:hover { border: 1px solid;scale: 2;transition: 0.5s}
-.AlgL:active {border: 1px solid;scale: 2.2;}
 .WEB:hover { border: 1px solid;scale: 2;transition: 0.5s}
 .WEB:active {border: 1px solid;scale: 2.2;}
 .EN2:hover { border: 1px solid;scale: 2;transition: 0.5s}
 .EN2:active {border: 1px solid;scale: 2.2;}
+.Angl:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.Angl:active {border: 1px solid;scale: 2.2;}
+.OFI:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.OFI:active {border: 1px solid;scale: 2.2;}
+.ALG2-Controle-Continu:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.ALG2-Controle-Continu:active {border: 1px solid;scale: 2.2;}
+.POT:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.POT:active {border: 1px solid;scale: 2.2;}
+.AlgL:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.AlgL:active {border: 1px solid;scale: 2.2;}
+.POC:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.POC:active {border: 1px solid;scale: 2.2;}
 }
