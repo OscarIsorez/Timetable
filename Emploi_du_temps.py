@@ -299,7 +299,6 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
         with open(chemin_fichier, "w", encoding="iso-8859-2") as fichier:
             fichier.write(html_page)
 
-        # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succ?s.")
 
     except Exception as e:
         print(
@@ -355,7 +354,6 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
                 ".first_column {width:15vw;text-align: right;height: 8vw;}\n")
             fichier.write(".top_left {width:15vw;text-align: center;}\n")
 
-        # print(f"Le fichier '{chemin_fichier}' a été créé ou écrasé avec succ?s.")
 
             fichier.write(
                 "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}\n")
@@ -376,19 +374,13 @@ def generate_html_file_and_css_file(html_page, liste_cours, liste_cours_uniques,
 
 def git_commands():
 
-    # Spécifiez le répertoire dans lequel vous souhaitez exécuter les commandes Git
     repo_directory = 'C:/Users/Oscar/OneDrive/Documents/Timetable/Timetable'
 
-    # Commande Git : git add .
     git_add_command = ['git', 'add', '.']
 
-    # Commande Git : git commit -m "update"
     git_commit_command = ['git', 'commit', '-m', 'update']
 
-    # Commande Git : git push
     git_push_command = ['git', 'push']
-
-    # Exécutez les commandes Git dans le répertoire du dépat
 
     try:
         subprocess.run(git_add_command, cwd=repo_directory, check=True)
