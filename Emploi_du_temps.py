@@ -514,6 +514,89 @@ color_palette = [
 
 backup_color_palette = color_palette.copy()
 
+"""
+fonction qui prend en entrée un n, nombre de semaine ? afficher et qui gén?re les pages et le code html associé
+"""
+
+
+def generate_weeks(n):
+    if n <= 0:
+        print("Le nombre de semaines doit etre positif")
+        return
+    if n == 1:
+        generate_first_week(to_page="None")
+    if n == 2:
+        generate_first_week()
+        generate_last_week()
+    else:
+        generate_first_week()
+        generate_mid_weeks(n - 2)
+        generate_last_week(n)
+
+
+def generate_first_week(to_page="index_s2"):
+    file_name = "index"
+
+    html_and_css = generate_html_data(
+        get_monday_date(date.today()), color_palette, file_name, to_page
+    )
+
+    generate_html_file_and_css_file(
+        html_and_css[0], html_and_css[1], html_and_css[2], html_and_css[3], file_name
+    )
+
+
+""" 
+
+@param : n, nombre de semaines ? afficher, qui sera utile car égal au numéro de la derni?re page ? créer
+ """
+
+
+def generate_last_week(n):
+    file_name = f"index_s{n}"
+    to_page = "None"
+    from_page = f"index_s{n-1}"
+
+    html_and_css_semaine = generate_html_data(
+        get_monday_date(date.today()) + timedelta(days=7 * n),
+        color_palette,
+        file_name,
+        to_page,
+        from_page=from_page,
+    )
+
+    generate_html_file_and_css_file(
+        html_and_css_semaine[0],
+        html_and_css_semaine[1],
+        html_and_css_semaine[2],
+        html_and_css_semaine[3],
+        file_name,
+    )
+
+
+def generate_mid_weeks(n):
+    for i in range(2, n):
+        file_name = f"index_s{i}"
+        to_page = f"index_s{i+1}"
+        from_page = f"index_s{i-1}"
+
+        html_and_css_semaine = generate_html_data(
+            get_monday_date(date.today()) + timedelta(days=7 * i),
+            color_palette,
+            file_name,
+            to_page,
+            from_page=from_page,
+        )
+
+        generate_html_file_and_css_file(
+            html_and_css_semaine[0],
+            html_and_css_semaine[1],
+            html_and_css_semaine[2],
+            html_and_css_semaine[3],
+            file_name,
+        )
+
+
 # SEMAINE COURANTE
 
 file_name = "index"  # le nom du fichier html et css
