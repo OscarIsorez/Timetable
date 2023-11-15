@@ -530,7 +530,7 @@ def generate_weeks(n):
         generate_last_week()
     else:
         generate_first_week()
-        generate_mid_weeks(n - 2)
+        generate_mid_weeks(n)
         generate_last_week(n)
 
 
@@ -579,9 +579,11 @@ def generate_mid_weeks(n):
         file_name = f"index_s{i}"
         to_page = f"index_s{i+1}"
         from_page = f"index_s{i-1}"
+        if i == 2:
+            from_page = "index"
 
         html_and_css_semaine = generate_html_data(
-            get_monday_date(date.today()) + timedelta(days=7 * i),
+            get_monday_date(date.today()) + timedelta(days=7 * (i - 1)),
             color_palette,
             file_name,
             to_page,
@@ -597,125 +599,126 @@ def generate_mid_weeks(n):
         )
 
 
-# SEMAINE COURANTE
+# # SEMAINE COURANTE
 
-file_name = "index"  # le nom du fichier html et css
-# le nom de la page vers laquelle on ira en cliquant sur le bouton du site
-to_page = "index_s2"
+# file_name = "index"  # le nom du fichier html et css
+# # le nom de la page vers laquelle on ira en cliquant sur le bouton du site
+# to_page = "index_s2"
 
-html_and_css = generate_html_data(
-    get_monday_date(date.today()), color_palette, file_name, to_page
-)
+# html_and_css = generate_html_data(
+#     get_monday_date(date.today()), color_palette, file_name, to_page
+# )
 
-generate_html_file_and_css_file(
-    html_and_css[0], html_and_css[1], html_and_css[2], html_and_css[3], file_name
-)
-
-
-# on réinitialise la liste des couleurs pour les cours et le dictionnaire week_data de données de la semaine courante
-week_data = {}
-color_palette = backup_color_palette.copy()
+# generate_html_file_and_css_file(
+#     html_and_css[0], html_and_css[1], html_and_css[2], html_and_css[3], file_name
+# )
 
 
-# SEMAINE SUIVANTE
-
-file_name = "index_s2"  # le nom du fichier html et css
-to_page = "index_s3"
-from_page = "index"
-
-html_and_css_semaine2 = generate_html_data(
-    get_monday_date(date.today()) + timedelta(days=7),
-    color_palette,
-    file_name,
-    to_page,
-    from_page=from_page,
-)
-
-generate_html_file_and_css_file(
-    html_and_css_semaine2[0],
-    html_and_css_semaine2[1],
-    html_and_css_semaine2[2],
-    html_and_css_semaine2[3],
-    file_name,
-)
+# # on réinitialise la liste des couleurs pour les cours et le dictionnaire week_data de données de la semaine courante
+# week_data = {}
+# color_palette = backup_color_palette.copy()
 
 
-week_data = {}
-color_palette = backup_color_palette.copy()
+# # SEMAINE SUIVANTE
 
-# SEMINE SUIVANTE
+# file_name = "index_s2"  # le nom du fichier html et css
+# to_page = "index_s3"
+# from_page = "index"
 
-file_name = "index_s3"  # le nom du fichier html et css
-to_page = "index_s4"  # s'il n'y a pas de page suivante, mettre to_page = "None"
-from_page = "index_s2"
+# html_and_css_semaine2 = generate_html_data(
+#     get_monday_date(date.today()) + timedelta(days=7),
+#     color_palette,
+#     file_name,
+#     to_page,
+#     from_page=from_page,
+# )
 
-html_and_css_semaine3 = generate_html_data(
-    get_monday_date(date.today()) + timedelta(days=14),
-    color_palette,
-    file_name,
-    to_page,
-    from_page=from_page,
-)
-
-generate_html_file_and_css_file(
-    html_and_css_semaine3[0],
-    html_and_css_semaine3[1],
-    html_and_css_semaine3[2],
-    html_and_css_semaine3[3],
-    file_name,
-)
+# generate_html_file_and_css_file(
+#     html_and_css_semaine2[0],
+#     html_and_css_semaine2[1],
+#     html_and_css_semaine2[2],
+#     html_and_css_semaine2[3],
+#     file_name,
+# )
 
 
-week_data = {}
-color_palette = backup_color_palette.copy()
+# week_data = {}
+# color_palette = backup_color_palette.copy()
 
-# SEMAINE SUIVANTE
+# # SEMINE SUIVANTE
 
-file_name = "index_s4"  # le nom du fichier html et css
-to_page = "index_s5"  # s'il n'y a pas de page suivante, mettre to_page = "None"
-from_page = "index_s3"
+# file_name = "index_s3"  # le nom du fichier html et css
+# to_page = "index_s4"  # s'il n'y a pas de page suivante, mettre to_page = "None"
+# from_page = "index_s2"
 
-html_and_css_semaine4 = generate_html_data(
-    get_monday_date(date.today()) + timedelta(days=21),
-    color_palette,
-    file_name,
-    to_page,
-    from_page=from_page,
-)
+# html_and_css_semaine3 = generate_html_data(
+#     get_monday_date(date.today()) + timedelta(days=14),
+#     color_palette,
+#     file_name,
+#     to_page,
+#     from_page=from_page,
+# )
 
-generate_html_file_and_css_file(
-    html_and_css_semaine4[0],
-    html_and_css_semaine4[1],
-    html_and_css_semaine4[2],
-    html_and_css_semaine4[3],
-    file_name,
-)
-
-week_data = {}
-color_palette = backup_color_palette.copy()
+# generate_html_file_and_css_file(
+#     html_and_css_semaine3[0],
+#     html_and_css_semaine3[1],
+#     html_and_css_semaine3[2],
+#     html_and_css_semaine3[3],
+#     file_name,
+# )
 
 
-# SEMAINE SUIVANTE
+# week_data = {}
+# color_palette = backup_color_palette.copy()
 
-file_name = "index_s5"  # le nom du fichier html et css
-to_page = "None"  # s'il n'y a pas de page suivante, mettre to_page = "None"
-from_page = "index_s4"
+# # SEMAINE SUIVANTE
 
-html_and_css_semaine5 = generate_html_data(
-    get_monday_date(date.today()) + timedelta(days=28),
-    color_palette,
-    file_name,
-    to_page,
-    from_page=from_page,
-)
+# file_name = "index_s4"  # le nom du fichier html et css
+# to_page = "index_s5"  # s'il n'y a pas de page suivante, mettre to_page = "None"
+# from_page = "index_s3"
 
-generate_html_file_and_css_file(
-    html_and_css_semaine5[0],
-    html_and_css_semaine5[1],
-    html_and_css_semaine5[2],
-    html_and_css_semaine5[3],
-    file_name,
-)
+# html_and_css_semaine4 = generate_html_data(
+#     get_monday_date(date.today()) + timedelta(days=21),
+#     color_palette,
+#     file_name,
+#     to_page,
+#     from_page=from_page,
+# )
+
+# generate_html_file_and_css_file(
+#     html_and_css_semaine4[0],
+#     html_and_css_semaine4[1],
+#     html_and_css_semaine4[2],
+#     html_and_css_semaine4[3],
+#     file_name,
+# )
+
+# week_data = {}
+# color_palette = backup_color_palette.copy()
+
+
+# # SEMAINE SUIVANTE
+
+# file_name = "index_s5"  # le nom du fichier html et css
+# to_page = "None"  # s'il n'y a pas de page suivante, mettre to_page = "None"
+# from_page = "index_s4"
+
+# html_and_css_semaine5 = generate_html_data(
+#     get_monday_date(date.today()) + timedelta(days=28),
+#     color_palette,
+#     file_name,
+#     to_page,
+#     from_page=from_page,
+# )
+
+# generate_html_file_and_css_file(
+#     html_and_css_semaine5[0],
+#     html_and_css_semaine5[1],
+#     html_and_css_semaine5[2],
+#     html_and_css_semaine5[3],
+#     file_name,
+# )
 
 
 git_commands()
+generate_weeks(10)
