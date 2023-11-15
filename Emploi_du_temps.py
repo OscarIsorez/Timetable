@@ -266,7 +266,7 @@ def generate_html_data(
     # date actuelle, en arrondissant les secondes ? l'entier pret
     actual_date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
-    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./style-{file_name[-2] + file_name[-1]}.css"><link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body><p class="date"> Mise a jour : {actual_date}</p>   '
+    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./style.css"><link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body><p class="date"> Mise a jour : {actual_date}</p>   '
     html_page += html_table
     if to_page != "None":
         html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">Page suivante</button>'
@@ -327,12 +327,13 @@ def generate_html_file_and_css_file(
 
     # Chemin complet du fichier
     chemin_fichier = os.path.join(
-        script_directory, f"style-{file_name[-2] + file_name[-1]}.css"
+        script_directory,
+        f"style.css",  # a modifier plus tard pour n'avoir qu'un CSS commun /{file_name[-2] + file_name[-1]}
     )
 
     # écriture du contenu HTML dans le fichier
     try:
-        with open(chemin_fichier, "w", encoding="iso-8859-2") as fichier:
+        with open(chemin_fichier, "a", encoding="iso-8859-2") as fichier:
             fichier.write(
                 "th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n"
             )
@@ -349,8 +350,6 @@ def generate_html_file_and_css_file(
                 "#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n"
             )
             for i in range(len(liste_cours_uniques)):
-                # print(liste_cours_uniques[i])
-                # print(i)
                 if liste_cours_uniques[i].count(" ") > 0:
                     liste_cours_uniques[i] = liste_cours_uniques[i].replace(" ", "")
                 if "-Controle-Continu" in liste_cours_uniques[i]:
@@ -374,7 +373,12 @@ def generate_html_file_and_css_file(
                         f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;    translate: -8vw;}}\n"
                     )
                 else:
+                    print(liste_cours_uniques[i])
                     fichier.write(
+                        f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n"
+                    )
+                    # le contenu du fichuer
+                    print(
                         f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n"
                     )
                     fichier.write(
@@ -427,37 +431,28 @@ def git_commands():
 
 # --------------------------------------------MAIN---------------------------------------------------------------------------------------------
 
-# Texte du bouton Semaine suivante / Semaine précédente
 button_text = "Semaine suivante"
 button_text.encode("iso-8859-2")
 
 
-# L'URL du fichier a  télécharger disponible sur ADE
 url = "https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/o35ex53R.shu"
 
 
-# Envoyer une requete HTTP GET pour télécharger le fichier
 response = requests.get(url)
 
-# Récupérer la date d'aujourd'hui
 acutal_date = date.today()
 
-# Vérifier si la requete a réussi
 if response.status_code == 200:
-    # Obtenir le contenu du fichier
     content = response.content
 
     script_directory = os.path.dirname(__file__)
-    # si le fichier n'existe pas, on le crée dans le meme répertoire que le script
 
     if not os.path.exists(os.path.join(script_directory, f"Data.ics")):
         with open(os.path.join(script_directory, f"Data.ics"), "w") as fichier:
             fichier.write("")
 
-    # Chemin complet du fichier
     chemin_fichier = os.path.join(script_directory, f"Data.ics")
 
-    # écriture du contenu dans le fichier
     with open(chemin_fichier, "wb") as fichier:
         fichier.write(content)
     # print("Le fichier a été téléchargé avec succ?s et enregistré sous 'Data.ics'.")
@@ -465,17 +460,13 @@ if response.status_code == 200:
 else:
     print("La requete a échoué.")
 
-# Obtenir le répertoire du script
 
 script_directory = os.path.dirname(__file__)
 
-# Construire le chemin relatif vers le fichier "Data.ics"
 
 fichier_relative_path = os.path.join(script_directory, "Data.ics")
 
-# Vérifier si le fichier existe
 if os.path.exists(fichier_relative_path):
-    # Ouvrir le fichier en lecture
     with open(fichier_relative_path, "r", encoding="iso-8859-2") as f:
         cal = Calendar.from_ical(f.read())
 
@@ -483,7 +474,6 @@ else:
     print("Le fichier 'Data.ics' n'existe pas dans le répertoire du script.")
 
 
-# Liste des couleurs pour les cours
 color_palette = [
     "#F3DE8A",
     "#F4DB90",
@@ -525,9 +515,6 @@ def generate_weeks(n):
         return
     if n == 1:
         generate_first_week(to_page="None")
-    if n == 2:
-        generate_first_week()
-        generate_last_week()
     else:
         generate_first_week()
         generate_mid_weeks(n)
@@ -546,10 +533,9 @@ def generate_first_week(to_page="index_s2"):
     )
 
 
-""" 
-
+"""
 @param : n, nombre de semaines ? afficher, qui sera utile car égal au numéro de la derni?re page ? créer
- """
+"""
 
 
 def generate_last_week(n):
@@ -599,126 +585,32 @@ def generate_mid_weeks(n):
         )
 
 
-# # SEMAINE COURANTE
+def supprimer_lignes_en_doublon(chemin_fichier_entree, chemin_fichier_sortie):
+    try:
+        # Ouverture du fichier d'entrée en mode lecture
+        with open(chemin_fichier_entree, "r") as fichier_entree:
+            # Lecture des lignes du fichier d'entrée et suppression des doublons
+            lignes_uniques = set(fichier_entree.readlines())
 
-# file_name = "index"  # le nom du fichier html et css
-# # le nom de la page vers laquelle on ira en cliquant sur le bouton du site
-# to_page = "index_s2"
+        # Ouverture du fichier de sortie en mode écriture
+        with open(chemin_fichier_sortie, "w") as fichier_sortie:
+            # Écriture des lignes uniques dans le fichier de sortie
+            fichier_sortie.writelines(lignes_uniques)
 
-# html_and_css = generate_html_data(
-#     get_monday_date(date.today()), color_palette, file_name, to_page
-# )
+        print(
+            f"Les lignes en doublon ont été supprimées. Le fichier modifié est disponible ? l'emplacement : {chemin_fichier_sortie}"
+        )
 
-# generate_html_file_and_css_file(
-#     html_and_css[0], html_and_css[1], html_and_css[2], html_and_css[3], file_name
-# )
-
-
-# # on réinitialise la liste des couleurs pour les cours et le dictionnaire week_data de données de la semaine courante
-# week_data = {}
-# color_palette = backup_color_palette.copy()
-
-
-# # SEMAINE SUIVANTE
-
-# file_name = "index_s2"  # le nom du fichier html et css
-# to_page = "index_s3"
-# from_page = "index"
-
-# html_and_css_semaine2 = generate_html_data(
-#     get_monday_date(date.today()) + timedelta(days=7),
-#     color_palette,
-#     file_name,
-#     to_page,
-#     from_page=from_page,
-# )
-
-# generate_html_file_and_css_file(
-#     html_and_css_semaine2[0],
-#     html_and_css_semaine2[1],
-#     html_and_css_semaine2[2],
-#     html_and_css_semaine2[3],
-#     file_name,
-# )
+    except FileNotFoundError:
+        print(f"Le fichier {chemin_fichier_entree} n'existe pas.")
+    except Exception as e:
+        print(f"Une erreur s'est produite : {e}")
 
 
-# week_data = {}
-# color_palette = backup_color_palette.copy()
-
-# # SEMINE SUIVANTE
-
-# file_name = "index_s3"  # le nom du fichier html et css
-# to_page = "index_s4"  # s'il n'y a pas de page suivante, mettre to_page = "None"
-# from_page = "index_s2"
-
-# html_and_css_semaine3 = generate_html_data(
-#     get_monday_date(date.today()) + timedelta(days=14),
-#     color_palette,
-#     file_name,
-#     to_page,
-#     from_page=from_page,
-# )
-
-# generate_html_file_and_css_file(
-#     html_and_css_semaine3[0],
-#     html_and_css_semaine3[1],
-#     html_and_css_semaine3[2],
-#     html_and_css_semaine3[3],
-#     file_name,
-# )
-
-
-# week_data = {}
-# color_palette = backup_color_palette.copy()
-
-# # SEMAINE SUIVANTE
-
-# file_name = "index_s4"  # le nom du fichier html et css
-# to_page = "index_s5"  # s'il n'y a pas de page suivante, mettre to_page = "None"
-# from_page = "index_s3"
-
-# html_and_css_semaine4 = generate_html_data(
-#     get_monday_date(date.today()) + timedelta(days=21),
-#     color_palette,
-#     file_name,
-#     to_page,
-#     from_page=from_page,
-# )
-
-# generate_html_file_and_css_file(
-#     html_and_css_semaine4[0],
-#     html_and_css_semaine4[1],
-#     html_and_css_semaine4[2],
-#     html_and_css_semaine4[3],
-#     file_name,
-# )
-
-# week_data = {}
-# color_palette = backup_color_palette.copy()
-
-
-# # SEMAINE SUIVANTE
-
-# file_name = "index_s5"  # le nom du fichier html et css
-# to_page = "None"  # s'il n'y a pas de page suivante, mettre to_page = "None"
-# from_page = "index_s4"
-
-# html_and_css_semaine5 = generate_html_data(
-#     get_monday_date(date.today()) + timedelta(days=28),
-#     color_palette,
-#     file_name,
-#     to_page,
-#     from_page=from_page,
-# )
-
-# generate_html_file_and_css_file(
-#     html_and_css_semaine5[0],
-#     html_and_css_semaine5[1],
-#     html_and_css_semaine5[2],
-#     html_and_css_semaine5[3],
-#     file_name,
-# )
+# Exemple d'utilisation :
+# Supprimer les lignes en doublon du fichier 'exemple.txt' et enregistrer le résultat dans 'exemple_modifie.txt'
 
 
 git_commands()
 generate_weeks(10)
+supprimer_lignes_en_doublon("style.css", "style_m.css")
