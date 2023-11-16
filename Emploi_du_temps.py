@@ -613,4 +613,4 @@ def supprimer_lignes_en_doublon(chemin_fichier_entree, chemin_fichier_sortie):
 
 git_commands()
 generate_weeks(10)
-supprimer_lignes_en_doublon("style.css", "style_m.css")
+# supprimer_lignes_en_doublon("style.css", "style_m.css")
