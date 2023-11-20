@@ -334,6 +334,7 @@ def generate_html_file_and_css_file(
     # écriture du contenu HTML dans le fichier
     try:
         with open(chemin_fichier, "a", encoding="iso-8859-2") as fichier:
+            
             fichier.write(
                 "th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n"
             )
@@ -373,14 +374,6 @@ def generate_html_file_and_css_file(
                         f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;    translate: -8vw;}}\n"
                     )
                 else:
-                    print(liste_cours_uniques[i])
-                    fichier.write(
-                        f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n"
-                    )
-                    # le contenu du fichuer
-                    print(
-                        f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n"
-                    )
                     fichier.write(
                         f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s;}}\n"
                     )
@@ -585,26 +578,34 @@ def generate_mid_weeks(n):
         )
 
 
-def supprimer_lignes_en_doublon(chemin_fichier_entree, chemin_fichier_sortie):
+def supprimer_lignes_en_doublon(file_name):
     try:
-        # Ouverture du fichier d'entrée en mode lecture
-        with open(chemin_fichier_entree, "r") as fichier_entree:
-            # Lecture des lignes du fichier d'entrée et suppression des doublons
-            lignes_uniques = set(fichier_entree.readlines())
+        script_directory = os.path.dirname(__file__)
 
-        # Ouverture du fichier de sortie en mode écriture
-        with open(chemin_fichier_sortie, "w") as fichier_sortie:
-            # Écriture des lignes uniques dans le fichier de sortie
-            fichier_sortie.writelines(lignes_uniques)
+        fichier_relative_path = os.path.join(script_directory, file_name)
+        # pour toutes les lignes du fichier css, on supprime les doublmons
+        with open(fichier_relative_path, "r", encoding="iso-8859-2") as f:
+            lines = f.readlines()
+            lines_set = set(lines)
+            with open(fichier_relative_path, "w", encoding="iso-8859-2") as f:
+                for line in lines_set:
+                    f.write(line)
 
-        print(
-            f"Les lignes en doublon ont été supprimées. Le fichier modifié est disponible ? l'emplacement : {chemin_fichier_sortie}"
-        )
-
-    except FileNotFoundError:
-        print(f"Le fichier {chemin_fichier_entree} n'existe pas.")
     except Exception as e:
-        print(f"Une erreur s'est produite : {e}")
+        print(f"Une erreur s'est produite lors du traitement du fichier : {str(e)}")
+
+
+# def test_fichier(string) -> None:
+#     # on récup?re le chemin du script
+#     script_directory = os.path.dirname(__file__)
+#     # on récup?re le chemin du fichier
+#     fichier_relative_path = os.path.join(script_directory, string)
+#     # on vérifie si le fichier existe
+#     if os.path.exists(fichier_relative_path):
+#         with open(fichier_relative_path, "r", encoding="iso-8859-2") as f:
+#             print(f.read())
+#     else:
+#         print("Le fichier n'existe pas")
 
 
 # Exemple d'utilisation :
@@ -613,4 +614,4 @@ def supprimer_lignes_en_doublon(chemin_fichier_entree, chemin_fichier_sortie):
 
 git_commands()
 generate_weeks(10)
-# supprimer_lignes_en_doublon("style.css", "style_m.css")
+# supprimer_lignes_en_doublon("style.css")
