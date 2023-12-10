@@ -27478,3 +27478,305 @@ th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuch
 .CAL--Controle-Continu:hover { border: 1px solid;scale: 2;transition: 0.5s}
 .CAL--Controle-Continu:active {border: 1px solid;scale: 2.2;}
 }
+th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+* {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}
+#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+.AlgL-Controle-Continu {background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.AlgL-Controle-Continu:hover { border: 1px solid;scale: 1.05;transition: 0.5s}
+.AlgL-Controle-Continu:active {border: 1px solid;scale: 1.2;}
+.AlgL:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.AlgL:active {border: 1px solid;scale: 1.2;}
+.INTM:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.INTM:active {border: 1px solid;scale: 1.2;}
+.EN2:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.EN2:active {border: 1px solid;scale: 1.2;}
+.OFI:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.OFI:active {border: 1px solid;scale: 1.2;}
+.WEB:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.WEB:active {border: 1px solid;scale: 1.2;}
+.first_column {width:15vw;text-align: right;height: 8vw;}
+.top_left {width:15vw;text-align: center;}
+@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}
+.AlgL-Controle-Continu:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.AlgL-Controle-Continu:active {border: 1px solid;scale: 2.2;}
+.AlgL:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.AlgL:active {border: 1px solid;scale: 2.2;}
+.INTM:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.INTM:active {border: 1px solid;scale: 2.2;}
+.EN2:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.EN2:active {border: 1px solid;scale: 2.2;}
+.OFI:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.OFI:active {border: 1px solid;scale: 2.2;}
+.WEB:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.WEB:active {border: 1px solid;scale: 2.2;}
+}
+th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+* {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}
+#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+.EN2:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.EN2:active {border: 1px solid;scale: 1.2;}
+.OFI:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.OFI:active {border: 1px solid;scale: 1.2;}
+.WEB:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.WEB:active {border: 1px solid;scale: 1.2;}
+.WEB-Controle-Continu {background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.WEB-Controle-Continu:hover { border: 1px solid;scale: 1.05;transition: 0.5s}
+.WEB-Controle-Continu:active {border: 1px solid;scale: 1.2;}
+.first_column {width:15vw;text-align: right;height: 8vw;}
+.top_left {width:15vw;text-align: center;}
+@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}
+.EN2:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.EN2:active {border: 1px solid;scale: 2.2;}
+.OFI:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.OFI:active {border: 1px solid;scale: 2.2;}
+.WEB:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.WEB:active {border: 1px solid;scale: 2.2;}
+.WEB-Controle-Continu:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.WEB-Controle-Continu:active {border: 1px solid;scale: 2.2;}
+}
+th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+* {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}
+#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+.first_column {width:15vw;text-align: right;height: 8vw;}
+.top_left {width:15vw;text-align: center;}
+@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}
+}
+th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+* {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}
+#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+.first_column {width:15vw;text-align: right;height: 8vw;}
+.top_left {width:15vw;text-align: center;}
+@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}
+}
+th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+* {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}
+#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+.EN2:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.EN2:active {border: 1px solid;scale: 1.2;}
+.WEB:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.WEB:active {border: 1px solid;scale: 1.2;}
+.OFI:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.OFI:active {border: 1px solid;scale: 1.2;}
+.first_column {width:15vw;text-align: right;height: 8vw;}
+.top_left {width:15vw;text-align: center;}
+@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}
+.EN2:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.EN2:active {border: 1px solid;scale: 2.2;}
+.WEB:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.WEB:active {border: 1px solid;scale: 2.2;}
+.OFI:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.OFI:active {border: 1px solid;scale: 2.2;}
+}
+th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+* {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}
+#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+.AN2-:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.AN2-:active {border: 1px solid;scale: 1.2;}
+.OFI-Controle-Continu {background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.OFI-Controle-Continu:hover { border: 1px solid;scale: 1.05;transition: 0.5s}
+.OFI-Controle-Continu:active {border: 1px solid;scale: 1.2;}
+.CAL-:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.CAL-:active {border: 1px solid;scale: 1.2;}
+.POC-Controle-Continu {background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.POC-Controle-Continu:hover { border: 1px solid;scale: 1.05;transition: 0.5s}
+.POC-Controle-Continu:active {border: 1px solid;scale: 1.2;}
+.EN2-Controle-Continu {background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.EN2-Controle-Continu:hover { border: 1px solid;scale: 1.05;transition: 0.5s}
+.EN2-Controle-Continu:active {border: 1px solid;scale: 1.2;}
+.BDD-:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.BDD-:active {border: 1px solid;scale: 1.2;}
+.first_column {width:15vw;text-align: right;height: 8vw;}
+.top_left {width:15vw;text-align: center;}
+@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}
+.AN2-:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.AN2-:active {border: 1px solid;scale: 2.2;}
+.OFI-Controle-Continu:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.OFI-Controle-Continu:active {border: 1px solid;scale: 2.2;}
+.CAL-:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.CAL-:active {border: 1px solid;scale: 2.2;}
+.POC-Controle-Continu:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.POC-Controle-Continu:active {border: 1px solid;scale: 2.2;}
+.EN2-Controle-Continu:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.EN2-Controle-Continu:active {border: 1px solid;scale: 2.2;}
+.BDD-:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.BDD-:active {border: 1px solid;scale: 2.2;}
+}
+th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+* {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}
+#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+.Angl:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.Angl:active {border: 1px solid;scale: 1.2;}
+.BDD:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.BDD:active {border: 1px solid;scale: 1.2;}
+.CAL-:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.CAL-:active {border: 1px solid;scale: 1.2;}
+.AN2:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.AN2:active {border: 1px solid;scale: 1.2;}
+.WEB-Controle-Continu {background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.WEB-Controle-Continu:hover { border: 1px solid;scale: 1.05;transition: 0.5s}
+.WEB-Controle-Continu:active {border: 1px solid;scale: 1.2;}
+.BDD-:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.BDD-:active {border: 1px solid;scale: 1.2;}
+.GEN:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.GEN:active {border: 1px solid;scale: 1.2;}
+.CAL:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.CAL:active {border: 1px solid;scale: 1.2;}
+.first_column {width:15vw;text-align: right;height: 8vw;}
+.top_left {width:15vw;text-align: center;}
+@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}
+.Angl:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.Angl:active {border: 1px solid;scale: 2.2;}
+.BDD:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.BDD:active {border: 1px solid;scale: 2.2;}
+.CAL-:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.CAL-:active {border: 1px solid;scale: 2.2;}
+.AN2:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.AN2:active {border: 1px solid;scale: 2.2;}
+.WEB-Controle-Continu:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.WEB-Controle-Continu:active {border: 1px solid;scale: 2.2;}
+.BDD-:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.BDD-:active {border: 1px solid;scale: 2.2;}
+.GEN:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.GEN:active {border: 1px solid;scale: 2.2;}
+.CAL:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.CAL:active {border: 1px solid;scale: 2.2;}
+}
+th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+* {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}
+#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+.Angl:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.Angl:active {border: 1px solid;scale: 1.2;}
+.BDD:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.BDD:active {border: 1px solid;scale: 1.2;}
+.CAL-:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.CAL-:active {border: 1px solid;scale: 1.2;}
+.AN2:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.AN2:active {border: 1px solid;scale: 1.2;}
+.BDD-:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.BDD-:active {border: 1px solid;scale: 1.2;}
+.GEN:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.GEN:active {border: 1px solid;scale: 1.2;}
+.CAL:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.CAL:active {border: 1px solid;scale: 1.2;}
+.first_column {width:15vw;text-align: right;height: 8vw;}
+.top_left {width:15vw;text-align: center;}
+@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}
+.Angl:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.Angl:active {border: 1px solid;scale: 2.2;}
+.BDD:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.BDD:active {border: 1px solid;scale: 2.2;}
+.CAL-:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.CAL-:active {border: 1px solid;scale: 2.2;}
+.AN2:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.AN2:active {border: 1px solid;scale: 2.2;}
+.BDD-:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.BDD-:active {border: 1px solid;scale: 2.2;}
+.GEN:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.GEN:active {border: 1px solid;scale: 2.2;}
+.CAL:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.CAL:active {border: 1px solid;scale: 2.2;}
+}
+th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+* {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}
+#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+.Angl:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.Angl:active {border: 1px solid;scale: 1.2;}
+.BDD:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.BDD:active {border: 1px solid;scale: 1.2;}
+.CAL-:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.CAL-:active {border: 1px solid;scale: 1.2;}
+.AN2:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.AN2:active {border: 1px solid;scale: 1.2;}
+.BDD-:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.BDD-:active {border: 1px solid;scale: 1.2;}
+.GEN:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.GEN:active {border: 1px solid;scale: 1.2;}
+.CAL:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.CAL:active {border: 1px solid;scale: 1.2;}
+.first_column {width:15vw;text-align: right;height: 8vw;}
+.top_left {width:15vw;text-align: center;}
+@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}
+.Angl:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.Angl:active {border: 1px solid;scale: 2.2;}
+.BDD:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.BDD:active {border: 1px solid;scale: 2.2;}
+.CAL-:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.CAL-:active {border: 1px solid;scale: 2.2;}
+.AN2:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.AN2:active {border: 1px solid;scale: 2.2;}
+.BDD-:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.BDD-:active {border: 1px solid;scale: 2.2;}
+.GEN:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.GEN:active {border: 1px solid;scale: 2.2;}
+.CAL:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.CAL:active {border: 1px solid;scale: 2.2;}
+}
+th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+* {font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+.empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}
+#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}
+.OM-C:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.OM-C:active {border: 1px solid;scale: 1.2;}
+.CAL--Controle-Continu {background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.CAL--Controle-Continu:hover { border: 1px solid;scale: 1.05;transition: 0.5s}
+.CAL--Controle-Continu:active {border: 1px solid;scale: 1.2;}
+.Angl:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.Angl:active {border: 1px solid;scale: 1.2;}
+.BDD:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.BDD:active {border: 1px solid;scale: 1.2;}
+.AN2--Controle-Continu {background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}
+.AN2--Controle-Continu:hover { border: 1px solid;scale: 1.05;transition: 0.5s}
+.AN2--Controle-Continu:active {border: 1px solid;scale: 1.2;}
+.AN2:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.AN2:active {border: 1px solid;scale: 1.2;}
+.BDD-:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.BDD-:active {border: 1px solid;scale: 1.2;}
+.GEN:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.GEN:active {border: 1px solid;scale: 1.2;}
+.DSD-:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.DSD-:active {border: 1px solid;scale: 1.2;}
+.CAL:hover { border: 1px solid;scale: 1.05;transition: 0.5s;}
+.CAL:active {border: 1px solid;scale: 1.2;}
+.first_column {width:15vw;text-align: right;height: 8vw;}
+.top_left {width:15vw;text-align: center;}
+@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}
+.OM-C:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.OM-C:active {border: 1px solid;scale: 2.2;}
+.CAL--Controle-Continu:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.CAL--Controle-Continu:active {border: 1px solid;scale: 2.2;}
+.Angl:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.Angl:active {border: 1px solid;scale: 2.2;}
+.BDD:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.BDD:active {border: 1px solid;scale: 2.2;}
+.AN2--Controle-Continu:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.AN2--Controle-Continu:active {border: 1px solid;scale: 2.2;}
+.AN2:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.AN2:active {border: 1px solid;scale: 2.2;}
+.BDD-:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.BDD-:active {border: 1px solid;scale: 2.2;}
+.GEN:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.GEN:active {border: 1px solid;scale: 2.2;}
+.DSD-:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.DSD-:active {border: 1px solid;scale: 2.2;}
+.CAL:hover { border: 1px solid;scale: 2;transition: 0.5s}
+.CAL:active {border: 1px solid;scale: 2.2;}
+}
