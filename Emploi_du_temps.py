@@ -28,11 +28,11 @@ def convertir_heure_gmt_vers_locale(heure_gmt, pays):
     try:
         heure_gmt = str(heure_gmt)[0:-6]
 
-        # Obtenez le fuseau horaire du pays spécifié
+        # Obtenez le fuseau horaire du pays spï¿½cifiï¿½
 
         fuseau_pays = pytz.timezone(pays)
 
-        # Créez un objet datetime avec l'heure GMT
+        # Crï¿½ez un objet datetime avec l'heure GMT
 
         heure_gmt = datetime.strptime(heure_gmt, "%Y-%m-%d %H:%M:%S")
 
@@ -49,8 +49,8 @@ def convertir_heure_gmt_vers_locale(heure_gmt, pays):
 
 
 """ 
-    fonction qui prend en param?tre la liste des événements de la semaine et
-    qui renvoie la liste des textes des événements de la semaine
+    fonction qui prend en param?tre la liste des ï¿½vï¿½nements de la semaine et
+    qui renvoie la liste des textes des ï¿½vï¿½nements de la semaine
 """
 
 
@@ -70,7 +70,7 @@ def count_events(week_data):
 
 
 def get_monday_date(date):
-    # on récup?re le jour de la semaine de la date d'aujourd'hui
+    # on rï¿½cup?re le jour de la semaine de la date d'aujourd'hui
     day = date.weekday()
 
     # si le jour est lundi, on renvoie la date d'aujourd'hui
@@ -83,7 +83,7 @@ def get_monday_date(date):
     elif day == 6:
         return date + timedelta(days=1)
 
-    # sinon on renvoie la date d'aujourd'hui moins le nombre de jours qui sépare la date d'aujourd'hui du lundi de la semaine
+    # sinon on renvoie la date d'aujourd'hui moins le nombre de jours qui sï¿½pare la date d'aujourd'hui du lundi de la semaine
     else:
         return date - timedelta(days=day)
 
@@ -101,13 +101,13 @@ def is_friday(date) -> bool:
 
 
 """
-    fonction qui initialise le dictionnaire week_data avec les événements de la semaine
+    fonction qui initialise le dictionnaire week_data avec les ï¿½vï¿½nements de la semaine
     Exemple : week_data = {'Monday': [], 'Tuesday': [], 'Wednesday': [], 'Thursday': [], 'Friday': []}
 """
 
 
 def treat_data(date_to_treat):
-    # Créez un dictionnaire pour stocker les données par jour de la semaine
+    # Crï¿½ez un dictionnaire pour stocker les donnï¿½es par jour de la semaine
     week_data = {
         "Monday": [],
         "Tuesday": [],
@@ -116,14 +116,14 @@ def treat_data(date_to_treat):
         "Friday": [],
     }
 
-    # Parcourez les événements du calendrier
+    # Parcourez les ï¿½vï¿½nements du calendrier
 
     for event in cal.walk("vevent"):
         # si la date dstat est comprise entre date_to_treat et date_to_treat + 4 jours
         if event.get("dtstart").dt.date() >= date_to_treat and event.get(
             "dtstart"
         ).dt.date() <= date_to_treat + timedelta(days=4):
-            # Obtenez les informations de l'événement
+            # Obtenez les informations de l'ï¿½vï¿½nement
             summary = event.get("summary")
 
             location = event.get("location")
@@ -139,10 +139,10 @@ def treat_data(date_to_treat):
             # Obtenez le nom du jour de la semaine (Lundi, Mardi, etc.)
             day_of_week = start_time.strftime("%A")
 
-            # Créez une chaine de texte pour l'événement
+            # Crï¿½ez une chaine de texte pour l'ï¿½vï¿½nement
             event_texts = f"{summary} ({location})"
 
-            # Ajoutez l'événement au dictionnaire de données correspondant au jour de la semaine
+            # Ajoutez l'ï¿½vï¿½nement au dictionnaire de donnï¿½es correspondant au jour de la semaine
             week_data[day_of_week].append((start_time, end_time, event_texts))
 
             # on affiche tous les event_texts dans la console
@@ -153,7 +153,7 @@ def treat_data(date_to_treat):
 
 
 """
-    fonction qui prend en param?tre la date du lundi de la semaine a  traiter, la liste des couleurs pour les cours et le nom du fichier html a  créer
+    fonction qui prend en param?tre la date du lundi de la semaine aï¿½ traiter, la liste des couleurs pour les cours et le nom du fichier html aï¿½ crï¿½er
     et qui renvoie le code html de la page
 """
 
@@ -165,7 +165,7 @@ def generate_html_data(
 
     week_data = treat_data(date_to_treat)
 
-    # Créez un tableau HTML
+    # Crï¿½ez un tableau HTML
     html_table = ""
     html_table += "<table border='1'>"
     top_left = (
@@ -179,15 +179,15 @@ def generate_html_data(
     )
     html_table += f"<tr><th class='top_left'>Semaine du {top_left}</th><th style='border: none; background-color:{color_palette[0]};'>Lundi</th><th style='border: none;background-color: {color_palette[1]};'>Mardi</th><th style='border: none;background-color: {color_palette[2]};'>Mercredi</th><th style='border: none;background-color: {color_palette[3]};'>Jeudi</th><th  style='border: none;background-color: {color_palette[4]};'>Vendredi</th></tr>"
 
-    # Définissez l'heure de début (8h du matin, apr?s avoir ajouté 2 heures)
+    # Dï¿½finissez l'heure de dï¿½but (8h du matin, apr?s avoir ajoutï¿½ 2 heures)
     start_hour = 8
     start_minute = 0
 
-    # Définissez l'heure de fin (20h30 du soir, apr?s avoir ajouté 2 heures)
+    # Dï¿½finissez l'heure de fin (20h30 du soir, apr?s avoir ajoutï¿½ 2 heures)
     end_hour = 19
     end_minute = 0
 
-    # on utilisera la biblioth?que datetime pour créer un objet datetime
+    # on utilisera la biblioth?que datetime pour crï¿½er un objet datetime
     current_time = datetime(
         year=acutal_date.year,
         month=acutal_date.month,
@@ -199,7 +199,7 @@ def generate_html_data(
     # mettre les heures que une fois sur deux
     one_or_two = True
 
-    # liste qui contiendra les cours de la semaine, avec les heures de début et de fin
+    # liste qui contiendra les cours de la semaine, avec les heures de dï¿½but et de fin
     liste_cours = []
     liste_cours_vendredi = []
     # liste qui contiendra les cours de la semaine sans les doublons
@@ -281,15 +281,15 @@ def generate_html_data(
 
 # ----------------------------GESTION DES FICHIERS-------------------------------------------------------------------------------------------
 """
-    fonction qui crée le fichier html et le fichier css si nécessaire ou 
-    écrase les fichiers existants pour les mettre a jour
+    fonction qui crï¿½e le fichier html et le fichier css si nï¿½cessaire ou 
+    ï¿½crase les fichiers existants pour les mettre a jour
 """
 
 
 def generate_html_file_and_css_file(
     html_page, liste_cours, liste_cours_uniques, color_palette, file_name
 ):
-    # liste_cours contient des tableaux de 2 éléments. on souhaite garder uniquement les 4 premiers caract?res de l'élément 0
+    # liste_cours contient des tableaux de 2 ï¿½lï¿½ments. on souhaite garder uniquement les 4 premiers caract?res de l'ï¿½lï¿½ment 0
     for i in range(len(liste_cours)):
         if "CC" in liste_cours[i][0]:
             liste_cours[i][0] = liste_cours[i][0][0:4] + "-Controle-Continu"
@@ -298,7 +298,7 @@ def generate_html_file_and_css_file(
         else:
             liste_cours[i][0] = liste_cours[i][0][0:4]
 
-    # la liste contenant elle meme des listes, on ne gardera que le premier élément de chaque élément
+    # la liste contenant elle meme des listes, on ne gardera que le premier ï¿½lï¿½ment de chaque ï¿½lï¿½ment
     liste_cours_uniques = []
 
     for i in range(len(liste_cours)):
@@ -309,13 +309,13 @@ def generate_html_file_and_css_file(
 
     # --------------------------------------------HTML----------------------------------------------------------------------------------------------
 
-    # Obtenir le répertoire du script
+    # Obtenir le rï¿½pertoire du script
     script_directory = os.path.dirname(__file__)
 
     # Chemin complet du fichier "index.html"
     chemin_fichier = os.path.join(script_directory, f"{file_name}.html")
 
-    # écriture du contenu HTML dans le fichier
+    # ï¿½criture du contenu HTML dans le fichier
     try:
         with open(chemin_fichier, "w", encoding="iso-8859-2") as fichier:
             fichier.write(html_page)
@@ -331,10 +331,9 @@ def generate_html_file_and_css_file(
         f"style.css",  # a modifier plus tard pour n'avoir qu'un CSS commun /{file_name[-2] + file_name[-1]}
     )
 
-    # écriture du contenu HTML dans le fichier
+    # ï¿½criture du contenu HTML dans le fichier
     try:
         with open(chemin_fichier, "a", encoding="iso-8859-2") as fichier:
-            
             fichier.write(
                 "th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n"
             )
@@ -415,11 +414,11 @@ def git_commands():
         subprocess.run(git_add_command, cwd=repo_directory, check=True)
         subprocess.run(git_commit_command, cwd=repo_directory, check=True)
         subprocess.run(git_push_command, cwd=repo_directory, check=True)
-        print("Les commandes Git ont été exécutées avec succ?s. ")
+        print("Les commandes Git ont ï¿½tï¿½ exï¿½cutï¿½es avec succ?s. ")
         print("")
 
     except subprocess.CalledProcessError as e:
-        print("Une erreur s'est produite lors de l'exécution des commandes Git :", e)
+        print("Une erreur s'est produite lors de l'exï¿½cution des commandes Git :", e)
 
 
 # --------------------------------------------MAIN---------------------------------------------------------------------------------------------
@@ -428,7 +427,7 @@ button_text = "Semaine suivante"
 button_text.encode("iso-8859-2")
 
 
-url = "https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/o35ex53R.shu"
+url = "https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/.shu"
 
 
 response = requests.get(url)
@@ -448,10 +447,10 @@ if response.status_code == 200:
 
     with open(chemin_fichier, "wb") as fichier:
         fichier.write(content)
-    # print("Le fichier a été téléchargé avec succ?s et enregistré sous 'Data.ics'.")
+    # print("Le fichier a ï¿½tï¿½ tï¿½lï¿½chargï¿½ avec succ?s et enregistrï¿½ sous 'Data.ics'.")
 
 else:
-    print("La requete a échoué.")
+    print("La requete a ï¿½chouï¿½.")
 
 
 script_directory = os.path.dirname(__file__)
@@ -464,7 +463,7 @@ if os.path.exists(fichier_relative_path):
         cal = Calendar.from_ical(f.read())
 
 else:
-    print("Le fichier 'Data.ics' n'existe pas dans le répertoire du script.")
+    print("Le fichier 'Data.ics' n'existe pas dans le rï¿½pertoire du script.")
 
 
 color_palette = [
@@ -498,7 +497,7 @@ color_palette = [
 backup_color_palette = color_palette.copy()
 
 """
-fonction qui prend en entrée un n, nombre de semaine ? afficher et qui gén?re les pages et le code html associé
+fonction qui prend en entrï¿½e un n, nombre de semaine ? afficher et qui gï¿½n?re les pages et le code html associï¿½
 """
 
 
@@ -527,7 +526,7 @@ def generate_first_week(to_page="index_s2"):
 
 
 """
-@param : n, nombre de semaines ? afficher, qui sera utile car égal au numéro de la derni?re page ? créer
+@param : n, nombre de semaines ? afficher, qui sera utile car ï¿½gal au numï¿½ro de la derni?re page ? crï¿½er
 """
 
 
@@ -596,11 +595,11 @@ def supprimer_lignes_en_doublon(file_name):
 
 
 # def test_fichier(string) -> None:
-#     # on récup?re le chemin du script
+#     # on rï¿½cup?re le chemin du script
 #     script_directory = os.path.dirname(__file__)
-#     # on récup?re le chemin du fichier
+#     # on rï¿½cup?re le chemin du fichier
 #     fichier_relative_path = os.path.join(script_directory, string)
-#     # on vérifie si le fichier existe
+#     # on vï¿½rifie si le fichier existe
 #     if os.path.exists(fichier_relative_path):
 #         with open(fichier_relative_path, "r", encoding="iso-8859-2") as f:
 #             print(f.read())
@@ -609,7 +608,7 @@ def supprimer_lignes_en_doublon(file_name):
 
 
 # Exemple d'utilisation :
-# Supprimer les lignes en doublon du fichier 'exemple.txt' et enregistrer le résultat dans 'exemple_modifie.txt'
+# Supprimer les lignes en doublon du fichier 'exemple.txt' et enregistrer le rï¿½sultat dans 'exemple_modifie.txt'
 
 
 git_commands()
