@@ -18,6 +18,7 @@ import pytz
 import sys
 
 sys.stdout.reconfigure(encoding="iso-8859-2")
+sys.stdout.reconfigure(encoding="iso-8859-2")
 
 """
     fonction qui prend en param?tre l'heure GMT et le pays et qui renvoie l'heure locale du pays
@@ -25,9 +26,7 @@ sys.stdout.reconfigure(encoding="iso-8859-2")
 
 
 def convertir_heure_gmt_vers_locale(heure_gmt, pays):
-
     try:
-
         heure_gmt = str(heure_gmt)[0:-6]
 
         # Obtenez le fuseau horaire du pays sp�cifi�
@@ -36,6 +35,7 @@ def convertir_heure_gmt_vers_locale(heure_gmt, pays):
 
         # Cr�ez un objet datetime avec l'heure GMT
 
+        heure_gmt = datetime.strptime(heure_gmt, "%Y-%m-%d %H:%M:%S")
         heure_gmt = datetime.strptime(heure_gmt, "%Y-%m-%d %H:%M:%S")
 
         heure_gmt = pytz.utc.localize(heure_gmt)
@@ -57,7 +57,6 @@ def convertir_heure_gmt_vers_locale(heure_gmt, pays):
 
 
 def count_events(week_data):
-
     all_events_text = []
 
     for event in week_data:
@@ -73,7 +72,6 @@ def count_events(week_data):
 
 
 def get_monday_date(date):
-
     # on r�cup?re le jour de la semaine de la date d'aujourd'hui
     day = date.weekday()
 
@@ -81,8 +79,13 @@ def get_monday_date(date):
     if day == 0:
         return date
 
-    # sinon on renvoie la date d'aujourd'hui moins le nombre de jours qui s�pare la date d'aujourd'hui du lundi de la semaine
+    # si le jour est samedi ou dimanche, on renvoit la date du lundi suivant
+    elif day == 5:
+        return date + timedelta(days=2)
+    elif day == 6:
+        return date + timedelta(days=1)
 
+    # sinon on renvoie la date d'aujourd'hui moins le nombre de jours qui s�pare la date d'aujourd'hui du lundi de la semaine
     else:
         return date - timedelta(days=day)
 
@@ -93,6 +96,8 @@ def get_monday_date(date):
     @return true si le jour est un vendredi et false sinon
 
 """
+
+
 
 
 def is_friday(date) -> bool:
@@ -106,8 +111,14 @@ def is_friday(date) -> bool:
 
 
 def treat_data(date_to_treat):
-
     # Cr�ez un dictionnaire pour stocker les donn�es par jour de la semaine
+    week_data = {
+        "Monday": [],
+        "Tuesday": [],
+        "Wednesday": [],
+        "Thursday": [],
+        "Friday": [],
+    }
     week_data = {
         "Monday": [],
         "Tuesday": [],
@@ -124,20 +135,30 @@ def treat_data(date_to_treat):
         if event.get("dtstart").dt.date() >= date_to_treat and event.get(
             "dtstart"
         ).dt.date() <= date_to_treat + timedelta(days=4):
+        if event.get("dtstart").dt.date() >= date_to_treat and event.get(
+            "dtstart"
+        ).dt.date() <= date_to_treat + timedelta(days=4):
             # Obtenez les informations de l'�v�nement
+            summary = event.get("summary")
             summary = event.get("summary")
 
             location = event.get("location")
+            location = event.get("location")
 
             start_time = convertir_heure_gmt_vers_locale(
+                event.get("dtstart").dt, "Europe/Paris"
+            ) + timedelta(hours=0.5)
                 event.get("dtstart").dt, "Europe/Paris"
             ) + timedelta(hours=0.5)
 
             end_time = convertir_heure_gmt_vers_locale(
                 event.get("dtend").dt, "Europe/Paris"
             ) + timedelta(hours=0.5)
+                event.get("dtend").dt, "Europe/Paris"
+            ) + timedelta(hours=0.5)
 
             # Obtenez le nom du jour de la semaine (Lundi, Mardi, etc.)
+            day_of_week = start_time.strftime("%A")
             day_of_week = start_time.strftime("%A")
 
             # Cr�ez une chaine de texte pour l'�v�nement
@@ -162,6 +183,9 @@ def treat_data(date_to_treat):
 def generate_html_data(
     date_to_treat, color_palette, file_name, to_page, from_page=None
 ):
+def generate_html_data(
+    date_to_treat, color_palette, file_name, to_page, from_page=None
+):
     global button_text
 
     week_data = treat_data(date_to_treat)
@@ -169,6 +193,15 @@ def generate_html_data(
     # Cr�ez un tableau HTML
     html_table = ""
     html_table += "<table border='1'>"
+    top_left = (
+        str(date_to_treat.day)
+        + " \nau "
+        + str((date_to_treat + timedelta(days=4)).day)
+        + "<br>"
+        + str((date_to_treat + timedelta(days=4)).month)
+        + "-"
+        + str((date_to_treat + timedelta(days=4)).year)
+    )
     top_left = (
         str(date_to_treat.day)
         + " \nau "
@@ -196,6 +229,12 @@ def generate_html_data(
         hour=start_hour,
         minute=start_minute,
     )
+        year=acutal_date.year,
+        month=acutal_date.month,
+        day=acutal_date.day,
+        hour=start_hour,
+        minute=start_minute,
+    )
 
     # mettre les heures que une fois sur deux
     one_or_two = True
@@ -214,6 +253,7 @@ def generate_html_data(
 
         # Calculer la plage horair
         time_range_start = current_time.strftime("%H:%M")
+        time_range_start = current_time.strftime("%H:%M")
         current_time += timedelta(minutes=15)
         time_range = f"{time_range_start}"
 
@@ -231,12 +271,11 @@ def generate_html_data(
         # Parcourir les jours de la semaine
 
         for day, events in week_data.items():
-
             event_informations = []
 
             for event_start, event_end, event_desc in events:
-
                 if event_start.time() <= current_time.time() < event_end.time():
+                    event_informations.append([event_desc, event_start, event_end])
                     event_informations.append([event_desc, event_start, event_end])
 
             if event_informations:
@@ -258,6 +297,8 @@ def generate_html_data(
                     nbr_rowspan = (
                         event_informations[0][2] - event_informations[0][1]
                     ) // timedelta(minutes=15)
+                        event_informations[0][2] - event_informations[0][1]
+                    ) // timedelta(minutes=15)
                     html_table += f"<td  rowspan='{nbr_rowspan} 'class='{n_classe}';>{event_desc}</td>"
             else:
                 # Cellule vide
@@ -270,12 +311,13 @@ def generate_html_data(
     # date actuelle, en arrondissant les secondes ? l'entier pret
     actual_date = datetime.now().strftime("%d/%m/%Y %H:%M:%S")
 
-    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./style-{file_name[-2] + file_name[-1]}.css"><link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body><p class="date"> Mise a jour : {actual_date}</p>   '
+    html_page = f'<!DOCTYPE html><html lang="fr"><head><meta charset="iso-8859-2"><title>Emploi du temps</title><link rel="stylesheet" href="./style.css"><link rel="icon" href="./favicon.ico" type="image/x-icon" sizes="32x32"></head><body><p class="date"> Mise a jour : {actual_date}</p>   '
     html_page += html_table
     if to_page != "None":
         html_page += f'<button id="bouton-suivant" onclick="window.location.href=\'./{to_page}.html\'">Page suivante</button>'
     if from_page:
         html_page += f'<button id="bouton-precedent" onclick="window.location.href=\'./{from_page}.html\'">Page precedente</button>'
+    html_page += "</body></html>"
     html_page += "</body></html>"
 
     # on change le texte du bouton pour la page suivante ? la page pr?c?dente
@@ -293,9 +335,11 @@ def generate_html_data(
 def generate_html_file_and_css_file(
     html_page, liste_cours, liste_cours_uniques, color_palette, file_name
 ):
+def generate_html_file_and_css_file(
+    html_page, liste_cours, liste_cours_uniques, color_palette, file_name
+):
     # liste_cours contient des tableaux de 2 �l�ments. on souhaite garder uniquement les 4 premiers caract?res de l'�l�ment 0
     for i in range(len(liste_cours)):
-
         if "CC" in liste_cours[i][0]:
             liste_cours[i][0] = liste_cours[i][0][0:4] + "-Controle-Continu"
         elif "-last_column" in liste_cours[i][0][0]:
@@ -325,9 +369,8 @@ def generate_html_file_and_css_file(
         with open(chemin_fichier, "w", encoding="iso-8859-2") as fichier:
             fichier.write(html_page)
 
-        # print(f"Le fichier '{chemin_fichier}' a �t� cr�� ou �cras� avec succ?s.")
-
     except Exception as e:
+        print(f"Une erreur s'est produite lors de l'ecriture dans le fichier: {str(e)}")
         print(f"Une erreur s'est produite lors de l'ecriture dans le fichier: {str(e)}")
 
     # --------------------------------------------CSS----------------------------------------------------------------------------------------------
@@ -339,8 +382,10 @@ def generate_html_file_and_css_file(
 
     # �criture du contenu HTML dans le fichier
     try:
-        with open(chemin_fichier, "w", encoding="iso-8859-2") as fichier:
-
+        with open(chemin_fichier, "a", encoding="iso-8859-2") as fichier:
+            fichier.write(
+                "th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n"
+            )
             fichier.write(
                 "th, td {width: 17vw; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}\n"
             )
@@ -350,10 +395,16 @@ def generate_html_file_and_css_file(
             fichier.write(
                 ".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}\n"
             )
+                ".empty {color: RGBa(128,0,128, 0);background-color: #f1f1f1;border: none;border-radius: 10px;padding: 1vw;height: 20px;}\n"
+            )
             fichier.write(
                 "#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n"
             )
+                "#bouton-suivant {position: fixed;bottom: 2vw;right: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-suivant:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n"
+            )
             fichier.write(
+                "#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n"
+            )
                 "#bouton-precedent {position: fixed;bottom: 2vw;left: 2vw;background-color: #ffffff;color: #8D889EB9;padding: 1vw 2vw;border: 2px solid #8D889EB9;border-radius: 5px;cursor: pointer; text-align: center;text-decoration: none;display: inline-block;font-size: 1vw;border-radius: 7px;transition: background-color 0.3s, border-color 0.3s, color 0.3s;}#bouton-precedent:hover {background-color: #8D889EB9;border-color: #8D889EB9;    color: #ffffff;}\n"
             )
             for i in range(len(liste_cours_uniques)):
@@ -365,20 +416,32 @@ def generate_html_file_and_css_file(
                     fichier.write(
                         f".{liste_cours_uniques[i]} {{background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n"
                     )
+                        f".{liste_cours_uniques[i]} {{background-color: #B81717; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n"
+                    )
                     fichier.write(
                         f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n"
                     )
+                        f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n"
+                    )
                     fichier.write(
+                        f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;}}\n"
+                    )
                         f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;}}\n"
                     )
                 elif "-last_column" in liste_cours_uniques[i]:
                     fichier.write(
                         f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n"
                     )
+                        f".{liste_cours_uniques[i]} {{background-color: {color_palette[randint(0,len(color_palette) -1)]}; border: none;border-radius: 10px;padding: 1vw;text-align: center; user-select:none;}}\n"
+                    )
                     fichier.write(
                         f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n"
                     )
+                        f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 1.05;transition: 0.5s}}\n"
+                    )
                     fichier.write(
+                        f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;    translate: -8vw;}}\n"
+                    )
                         f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 1.2;    translate: -8vw;}}\n"
                     )
                 else:
@@ -399,20 +462,29 @@ def generate_html_file_and_css_file(
             fichier.write(
                 "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}\n"
             )
+                "@media (max-width: 1000px) {#bouton-suivant {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */right: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}#bouton-precedent {padding: 4vw 5vw;/* Augmenter le padding */bottom: 4vw;/* Augmenter la distance depuis le bas */left: 4vw;/* Augmenter la distance depuis la droite *//*on arrondie les angles*/border-radius: 30px;font-size: 3vw;}\n"
+            )
             for i in range(len(liste_cours_uniques)):
                 fichier.write(
+                    f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 2;transition: 0.5s}}\n"
+                )
                     f".{liste_cours_uniques[i]}:hover {{ border: 1px solid;scale: 2;transition: 0.5s}}\n"
                 )
                 fichier.write(
                     f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 2.2;}}\n"
                 )
             fichier.write("}\n")
+                    f".{liste_cours_uniques[i]}:active {{border: 1px solid;scale: 2.2;}}\n"
+                )
+            fichier.write("}\n")
 
     except Exception as e:
+        print(f"Une erreur s'est produite lors de l'ecriture du fichier CSS: {str(e)}")
         print(f"Une erreur s'est produite lors de l'ecriture du fichier CSS: {str(e)}")
 
 
 # -----------------------------------------GIT---------------------------------------------------------------------------------------
+
 
 
 def git_commands():
@@ -444,7 +516,6 @@ def git_commands():
 
 # --------------------------------------------MAIN---------------------------------------------------------------------------------------------
 
-# Texte du bouton Semaine suivante / Semaine pr�c�dente
 button_text = "Semaine suivante"
 button_text.encode("iso-8859-2")
 
@@ -453,28 +524,21 @@ button_text.encode("iso-8859-2")
 url = "https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/6YP8G1Yv.shu"
 
 
-# Envoyer une requete HTTP GET pour t�l�charger le fichier
 response = requests.get(url)
 
-# R�cup�rer la date d'aujourd'hui
 acutal_date = date.today()
 
-# V�rifier si la requete a r�ussi
 if response.status_code == 200:
-    # Obtenir le contenu du fichier
     content = response.content
 
     script_directory = os.path.dirname(__file__)
-    # si le fichier n'existe pas, on le cr�e dans le meme r�pertoire que le script
 
     if not os.path.exists(os.path.join(script_directory, f"Data.ics")):
         with open(os.path.join(script_directory, f"Data.ics"), "w") as fichier:
             fichier.write("")
 
-    # Chemin complet du fichier
     chemin_fichier = os.path.join(script_directory, f"Data.ics")
 
-    # �criture du contenu dans le fichier
     with open(chemin_fichier, "wb") as fichier:
         fichier.write(content)
     # print("Le fichier a �t� t�l�charg� avec succ?s et enregistr� sous 'Data.ics'.")
@@ -482,18 +546,13 @@ if response.status_code == 200:
 else:
     print("La requete a �chou�.")
 
-# Obtenir le r�pertoire du script
 
 script_directory = os.path.dirname(__file__)
 
-# Construire le chemin relatif vers le fichier "Data.ics"
 
 fichier_relative_path = os.path.join(script_directory, "Data.ics")
 
-# V�rifier si le fichier existe
 if os.path.exists(fichier_relative_path):
-
-    # Ouvrir le fichier en lecture
     with open(fichier_relative_path, "r", encoding="iso-8859-2") as f:
         cal = Calendar.from_ical(f.read())
 
@@ -501,7 +560,6 @@ else:
     print("Le fichier 'Data.ics' n'existe pas dans le r�pertoire du script.")
 
 
-# Liste des couleurs pour les cours
 color_palette = [
     "#F3DE8A",
     "#F4DB90",
@@ -527,6 +585,7 @@ color_palette = [
     "#958CA0",
     "#8D889E",
     "#86849C",
+    "#7E7F9A",
     "#7E7F9A",
 ]
 
@@ -671,3 +730,5 @@ print(is_friday(date.today()))
 
 # on ex�cute les commandes git pour mettre a� jour le repository
 git_commands()
+generate_weeks(10)
+# supprimer_lignes_en_doublon("style.css")

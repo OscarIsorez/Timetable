@@ -1,0 +1,1647 @@
+[
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D6170>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D6200>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nL2 ISTN-G4\nAlgLin-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D6560>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D65F0>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D6950>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D69E0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:34)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D6D40>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D6DD0>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "EN2 CC",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\nCC (beaulieu)\n\n(Modifié le:05/07/2023 13:23)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D7130>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D71C0>",
+        "location": "on cherche la salle pour evaluation"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D7550>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D75E0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "WEB Projet G4",
+        "description": "\n\nL2 ISTN-G4\nWEB-G4\nGRANIER Pierre\n\n(Modifié le:14/09/2023 19:09)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D7940>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D79D0>",
+        "location": "B02A - D22 Linux ISTIC (022),B02A - D20 Linux ISTIC (020)"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D7D30>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5D7DC0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "Journées Entreprises Licences",
+        "description": "\n\nLicence 1\nLicence 2\nL3 INFO-Parcours Informatique\nL3 INFO-Parcours MIAGE\nL3 INFO-Parcours SIF\nL3 EEEA-Parcours Électronique\nLicence 1-2\nManifestation\n\n(Modifié le:22/09/2023 14:12)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F4160>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F41F0>",
+        "location": "B12D - Amphi P (001) -200,B02A - Amphi D (106)"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F4580>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F4610>",
+        "location": "B02A - 202"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F4970>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F4A00>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "EN2 TP G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\nTOUHAMI Abdellah\n\n(Modifié le:13/07/2023 17:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F4D60>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F4DF0>",
+        "location": "B06 - L3 Elec 1 et 2 (013)"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F5150>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F51E0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "ALG2 CM",
+        "description": "\n\nALG2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nANBERREE Thomas\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F5540>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F55D0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "PO TD G4",
+        "description": "\n\nPO-G4\nL2 ISTN-G4\nMUCHERINO Antonio\n\n(Modifié le:29/08/2023 12:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F5930>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F59C0>",
+        "location": "B12D - i-56 (010) -44"
+    },
+    {
+        "summary": "ALG2 TP G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nLAURENT Mathieu\nGIRARD Nathalie\n\n(Modifié le:11/09/2023 17:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F5D20>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F5DB0>",
+        "location": "B40 - Linux ISTIC/ESIR (011),B40 - Linux ISTIC/ESIR (013)"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F6110>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F61A0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "EN2 CM",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F6500>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F6590>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "Anglais L2 ISTN G5",
+        "description": "\n\nAnglais L2 G5 ISTIC\nMORALI Olivier\n\n(Modifié le:10/07/2023 12:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F68F0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F6980>",
+        "location": "B26-203 (14 places)"
+    },
+    {
+        "summary": "Permanence L2 - Salle HERM Bât 12D",
+        "description": "\n\nLicence 2\nRIDOUX Olivier\nFORET Annie\n\n(Modifié le:28/08/2023 19:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F6CE0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F6D70>",
+        "location": "Distanciel (cf services numériques)"
+    },
+    {
+        "summary": "PO TD G4",
+        "description": "\n\nPO-G4\nL2 ISTN-G4\nLAJOU Dimitri\n\n(Modifié le:18/09/2023 15:47)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F7130>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F71C0>",
+        "location": "B12D - i-52 (007) -44"
+    },
+    {
+        "summary": "ALG2 TD G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nGARCIA BOURREE Jade\n\n(Modifié le:19/09/2023 18:57)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F7520>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F75B0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "RES CM",
+        "description": "\n\nRES\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nVIHO César\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F7910>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F79A0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:39)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F7D00>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD4F7D90>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD520130>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5201C0>",
+        "location": "B02A - 204"
+    },
+    {
+        "summary": "INTM CM",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:14/06/2023 22:08)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD520550>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5205E0>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:24/05/2023 23:50)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD520940>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5209D0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "PO CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nPO\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nTERMIER Alexandre\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD520D30>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD520DC0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD521120>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5211B0>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD521510>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5215A0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nL2 ISTN-G4\nAlgLin-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD521900>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD521990>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "RES TP G4",
+        "description": "\n\nL2 ISTN-G4\nRES-G4\nVIHO César\nLAMDANI Wilem\n\n(Modifié le:26/09/2023 15:55)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD521CF0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD521D80>",
+        "location": "B02A - D26 Linux ISTIC (026),B02A - D24 Linux ISTIC (024)"
+    },
+    {
+        "summary": "PO TP G4",
+        "description": "\n\nL2 ISTN-G4\nPO-G4\nMUCHERINO Antonio\nCHABOT Hector\n\n(Modifié le:29/08/2023 12:24)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5220E0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD522170>",
+        "location": "B02A - D24 Linux ISTIC (024),B02A - D26 Linux ISTIC (026)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:37)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5224D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD522560>",
+        "location": "B02A - 204"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5228C0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD522950>",
+        "location": "B02A - 202"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:19/05/2023 17:02)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD522CB0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD522D40>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "PO TP G4",
+        "description": "\n\nL2 ISTN-G4\nPO-G4\nMUCHERINO Antonio\nCHABOT Hector\n\n(Modifié le:29/08/2023 12:24)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5230A0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD523130>",
+        "location": "B02A - D24 Linux ISTIC (024),B02A - D26 Linux ISTIC (026)"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD523490>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD523520>",
+        "location": "B12D - i-57 (008) -44"
+    },
+    {
+        "summary": "Journées Entreprises Licences",
+        "description": "\n\nLicence 1\nLicence 2\nL3 INFO-Parcours Informatique\nL3 INFO-Parcours MIAGE\nL3 INFO-Parcours SIF\nL3 EEEA-Parcours Électronique\nLicence 1-2\nManifestation\n\n(Modifié le:22/09/2023 14:12)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD523880>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD523910>",
+        "location": "B12D - Amphi P (001) -200,B02A - Amphi D (106)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:38)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD523CA0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD523D30>",
+        "location": "B12D - i-58 (006) -44"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E80D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E8160>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "ALG2 CM",
+        "description": "\n\nALG2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nANBERREE Thomas\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E84C0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E8550>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "EN2 CM",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E88B0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E8940>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "ALG2 CC",
+        "description": "\n\nALG2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nANBERREE Thomas\nCC (beaulieu)\n\n(Modifié le:28/09/2023 12:34)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E8CA0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E8D30>",
+        "location": "B27 - 109,on cherche la salle pour evaluation"
+    },
+    {
+        "summary": "RES TP G4",
+        "description": "\n\nL2 ISTN-G4\nRES-G4\nVIHO César\nLAMDANI Wilem\n\n(Modifié le:26/09/2023 15:55)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E90C0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E9150>",
+        "location": "B02A - D26 Linux ISTIC (026),B02A - D24 Linux ISTIC (024)"
+    },
+    {
+        "summary": "Evénement d'accueil",
+        "description": "\n\nL1-L2 Portail ISTN\n\n(Modifié le:12/05/2023 18:17)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E94B0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E9540>",
+        "location": ""
+    },
+    {
+        "summary": "WEB Projet G4",
+        "description": "\n\nL2 ISTN-G4\nWEB-G4\nGRANIER Pierre\n\n(Modifié le:12/09/2023 18:37)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E98A0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E9930>",
+        "location": "B02A - D22 Linux ISTIC (022),B02A - D20 Linux ISTIC (020)"
+    },
+    {
+        "summary": "ALG2 TP G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nLAURENT Mathieu\nGIRARD Nathalie\n\n(Modifié le:11/09/2023 17:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E9C90>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5E9D20>",
+        "location": "B40 - Linux ISTIC/ESIR (011),B40 - Linux ISTIC/ESIR (013)"
+    },
+    {
+        "summary": "PO TD G4",
+        "description": "\n\nPO-G4\nL2 ISTN-G4\nMUCHERINO Antonio\n\n(Modifié le:29/08/2023 12:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EA080>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EA110>",
+        "location": "B02A - 202"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EA470>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EA500>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "EN2 TD G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\n\n(Modifié le:28/06/2023 11:26)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EA860>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EA8F0>",
+        "location": "B12D - i-56 (010) -44"
+    },
+    {
+        "summary": "Anglais L2 ISTN G5",
+        "description": "\n\nAnglais L2 G5 ISTIC\nMORALI Olivier\n\n(Modifié le:10/07/2023 12:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EAC50>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EACE0>",
+        "location": "B26-203 (14 places)"
+    },
+    {
+        "summary": "RES CM",
+        "description": "\n\nRES\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nVIHO César\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EB040>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EB0D0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:24/05/2023 23:51)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EB430>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EB4C0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EB820>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EB8B0>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "INTM CM",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:14/06/2023 22:08)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EBC10>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EBCA0>",
+        "location": "B12D - Salle Jersey (901) -56"
+    },
+    {
+        "summary": "PO CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nPO\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nTERMIER Alexandre\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD5EBFD0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6000D0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:37)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD600430>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6004C0>",
+        "location": "B02A - 202"
+    },
+    {
+        "summary": "OFI CC",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\nCC (beaulieu)\n\n(Modifié le:11/09/2023 17:31)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD600820>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6008B0>",
+        "location": "B27 - Salle d'examens (207)"
+    },
+    {
+        "summary": "WEB TP G4",
+        "description": "\n\nL2 ISTN-G4\nWEB-G4\nGRANIER Pierre\n\n(Modifié le:29/08/2023 12:17)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD600C10>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD600CA0>",
+        "location": "B02A - D22 Linux ISTIC (022),B02A - D20 Linux ISTIC (020)"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD601000>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD601090>",
+        "location": "B12D - i-52 (007) -44"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6013F0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD601480>",
+        "location": "B12D - i-60 (002) -44"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:19/05/2023 17:02)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6017E0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD601870>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:19/05/2023 17:02)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD601BD0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD601C60>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD601FC0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD602050>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "WEB CM",
+        "description": "\n\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nWEB\nRIDOUX Olivier\n\n(Modifié le:04/07/2023 21:30)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6023B0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD602440>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:38)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6027A0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD602830>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD602B90>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD602C20>",
+        "location": "B12D - Amphi P (001) -200"
+    },
+    {
+        "summary": "PO CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nPO\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nTERMIER Alexandre\n\n(Modifié le:12/06/2023 14:44)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD602F80>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD603010>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "ALG2 CM",
+        "description": "\n\nALG2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nANBERREE Thomas\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD603370>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD603400>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD603760>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6037F0>",
+        "location": "B12D - i-60 (002) -44"
+    },
+    {
+        "summary": "EN2 CM",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD603B50>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD603BE0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "WEB Projet G4",
+        "description": "\n\nWEB-G4\nL2 ISTN-G4\nGRANIER Pierre\n\n(Modifié le:12/09/2023 18:47)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD603F40>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD603FD0>",
+        "location": "B02A - D20 Linux ISTIC (020),B02A - D22 Linux ISTIC (022)"
+    },
+    {
+        "summary": "PO TP G4",
+        "description": "\n\nL2 ISTN-G4\nPO-G4\nMUCHERINO Antonio\nCHABOT Hector\n\n(Modifié le:29/08/2023 12:24)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD610370>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD610400>",
+        "location": "B02A - D24 Linux ISTIC (024),B02A - D26 Linux ISTIC (026)"
+    },
+    {
+        "summary": "RES TD G4",
+        "description": "\n\nRES-G4\nL2 ISTN-G4\nVIHO César\n\n(Modifié le:28/06/2023 13:19)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD610760>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6107F0>",
+        "location": "B12D - i-59 (004) -44"
+    },
+    {
+        "summary": "WEB TD G4",
+        "description": "\n\nL2 ISTN-G4\nWEB-G4\nGRANIER Pierre\n\n(Modifié le:12/09/2023 19:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD610B50>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD610BE0>",
+        "location": "B12D - i-56 (010) -44"
+    },
+    {
+        "summary": "PO TD G4",
+        "description": "\n\nPO-G4\nL2 ISTN-G4\nMUCHERINO Antonio\n\n(Modifié le:29/08/2023 12:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD610F40>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD610FD0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "RES CM",
+        "description": "\n\nRES\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nVIHO César\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD611330>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6113C0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD611720>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6117B0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "Anglais L2 ISTN G5",
+        "description": "\n\nAnglais L2 G5 ISTIC\nMORALI Olivier\n\n(Modifié le:10/07/2023 12:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD611B10>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD611BA0>",
+        "location": "B26-203 (14 places)"
+    },
+    {
+        "summary": "EN2 TP G4*",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\nTOUHAMI Abdellah\n\n(Modifié le:13/07/2023 17:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD611F00>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD611F90>",
+        "location": "B06 - L3 Elec 1 et 2 (013)"
+    },
+    {
+        "summary": "EN2 TD G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\n\n(Modifié le:28/06/2023 11:26)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6122F0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD612380>",
+        "location": "B12D - i-56 (010) -44"
+    },
+    {
+        "summary": "Anglais L2 ISTN G5",
+        "description": "\n\nAnglais L2 G5 ISTIC\nMORALI Olivier\n\n(Modifié le:10/07/2023 12:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6126E0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD612770>",
+        "location": "B26-203 (14 places)"
+    },
+    {
+        "summary": "EN2 CC",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\nCC (beaulieu)\n\n(Modifié le:05/07/2023 13:40)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD612AD0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD612B60>",
+        "location": "on cherche la salle pour evaluation"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:42)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD612EF0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD612F80>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6132E0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD613370>",
+        "location": "B12D - i-60 (002) -44"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:25/05/2023 18:57)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6136D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD613760>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "PO CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nPO\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nTERMIER Alexandre\n\n(Modifié le:01/09/2023 14:16)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD613AC0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD613B50>",
+        "location": "B02A - Amphi E (103)"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:24/05/2023 23:51)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD613EB0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD613F40>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nL2 ISTN-G4\nAlgLin-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62C2E0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62C370>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "PO TP G4",
+        "description": "\n\nL2 ISTN-G4\nPO-G4\nMUCHERINO Antonio\nCHABOT Hector\n\n(Modifié le:29/08/2023 12:24)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62C6D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62C760>",
+        "location": "B02A - D24 Linux ISTIC (024),B02A - D26 Linux ISTIC (026)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:37)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62CAC0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62CB50>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "WEB Projet G4",
+        "description": "\n\nL2 ISTN-G4\nWEB-G4\nGRANIER Pierre\n\n(Modifié le:12/09/2023 18:58)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62CEB0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62CF40>",
+        "location": "B02A - D24 Linux ISTIC (024),B02A - D22 Linux ISTIC (022)"
+    },
+    {
+        "summary": "WEB Projet G4",
+        "description": "\n\nWEB-G4\nL2 ISTN-G4\nGRANIER Pierre\n\n(Modifié le:12/09/2023 18:53)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62D2A0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62D330>",
+        "location": "B02A - D20 Linux ISTIC (020),B02A - D22 Linux ISTIC (022)"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62D690>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62D720>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "EN2 CM",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\n\n(Modifié le:25/05/2023 18:49)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62DA80>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62DB10>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "WEB CM",
+        "description": "\n\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nWEB\nRIDOUX Olivier\n\n(Modifié le:07/09/2023 16:21)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62DE70>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62DF00>",
+        "location": "B02A - Amphi E (103)"
+    },
+    {
+        "summary": "OFI CC",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\nCC (beaulieu)\n\n(Modifié le:11/09/2023 17:31)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62E260>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62E2F0>",
+        "location": "B27 - Salle d'examens (207)"
+    },
+    {
+        "summary": "AlgLin CC",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\nDELOUBRIERE Olivier\nCC (beaulieu)\nVIRRION Anne\nHERRERO VILA Sergio\nPASQUEREAU Laurence\n\n(Modifié le:28/09/2023 12:57)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62E650>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62E6E0>",
+        "location": "B08A - Examen (032),B02A - 011"
+    },
+    {
+        "summary": "ALG2 CM",
+        "description": "\n\nALG2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nANBERREE Thomas\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62EA40>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62EAD0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62EE30>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62EEC0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "EN2 CM",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62F220>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62F2B0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "PO TP G4",
+        "description": "\n\nL2 ISTN-G4\nPO-G4\nMUCHERINO Antonio\nCHABOT Hector\n\n(Modifié le:29/08/2023 12:24)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62F610>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62F6A0>",
+        "location": "B02A - D24 Linux ISTIC (024),B02A - D26 Linux ISTIC (026)"
+    },
+    {
+        "summary": "RES TD G4",
+        "description": "\n\nRES-G4\nL2 ISTN-G4\nVIHO César\n\n(Modifié le:28/06/2023 13:19)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62FA00>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62FA90>",
+        "location": "B12D - i-56 (010) -44"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62FDF0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD62FE80>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "ALG2 TD G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nLAURENT Mathieu\n\n(Modifié le:11/09/2023 17:19)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD640220>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6402B0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "WEB TD G4",
+        "description": "\n\nL2 ISTN-G4\nWEB-G4\nGRANIER Pierre\n\n(Modifié le:12/09/2023 18:51)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD640610>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6406A0>",
+        "location": "B12D - i-57 (008) -44"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 19:25)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD640A00>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD640A90>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "EN2 TP G4*",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\nTOUHAMI Abdellah\n\n(Modifié le:13/07/2023 17:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD640DF0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD640E80>",
+        "location": "B06 - L3 Elec 1 et 2 (013)"
+    },
+    {
+        "summary": "Anglais L2 ISTN G5",
+        "description": "\n\nAnglais L2 G5 ISTIC\nMORALI Olivier\n\n(Modifié le:10/07/2023 12:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6411E0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD641270>",
+        "location": "B26-203 (14 places)"
+    },
+    {
+        "summary": "EN2 TD G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nEnseignant à préciser ISTIC\n\n(Modifié le:28/06/2023 11:26)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6415D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD641660>",
+        "location": "B12D - i-60 (002) -44"
+    },
+    {
+        "summary": "Réunion de rentrée Portail L2 ISTN",
+        "description": "\n\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nL1-2 ISTN Parcours Aménagé\nRIDOUX Olivier\nFORET Annie\n\n(Modifié le:30/05/2023 16:34)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6419C0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD641A50>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nL2 ISTN-G4\nAlgLin-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD641DE0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD641E70>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "WEB TD G4",
+        "description": "\n\nL2 ISTN-G4\nWEB-G4\nGRANIER Pierre\n\n(Modifié le:12/09/2023 18:58)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6421D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD642260>",
+        "location": "B12D - i-57 (008) -44"
+    },
+    {
+        "summary": "PO CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nPO\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nTERMIER Alexandre\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6425C0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD642650>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "Permanence L2 - Salle HERM Bât 12D",
+        "description": "\n\nLicence 2\nRIDOUX Olivier\nFORET Annie\n\n(Modifié le:28/08/2023 19:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6429B0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD642A40>",
+        "location": "Distanciel (cf services numériques)"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD642E00>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD642E90>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "WEB Projet G4",
+        "description": "\n\nL2 ISTN-G4\nWEB-G4\nGRANIER Pierre\n\n(Modifié le:29/08/2023 12:17)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6431F0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD643280>",
+        "location": "B02A - D24 Linux ISTIC (024),B02A - D26 Linux ISTIC (026)"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6435E0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD643670>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6439D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD643A60>",
+        "location": "B02A - 202"
+    },
+    {
+        "summary": "WEB Projet G4",
+        "description": "\n\nWEB-G4\nL2 ISTN-G4\nGRANIER Pierre\n\n(Modifié le:29/08/2023 12:17)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD643DC0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD643E50>",
+        "location": "B02A - D24 Linux ISTIC (024),B02A - D26 Linux ISTIC (026)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 19:44)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6541F0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD654280>",
+        "location": "B12D - Salle Jersey (901) -56"
+    },
+    {
+        "summary": "WEB CM",
+        "description": "\n\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nWEB\nRIDOUX Olivier\n\n(Modifié le:05/07/2023 13:24)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6545E0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD654670>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "EN2 TP G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\nTOUHAMI Abdellah\n\n(Modifié le:13/07/2023 17:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6549D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD654A60>",
+        "location": "B06 - L3 Elec 1 et 2 (013)"
+    },
+    {
+        "summary": "EN2 CM",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\n\n(Modifié le:25/05/2023 19:03)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD654DC0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD654E50>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "EN2 TD G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\n\n(Modifié le:28/06/2023 11:26)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6551B0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD655240>",
+        "location": "B12D - i-52 (007) -44"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6555A0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD655630>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "PO TD G4",
+        "description": "\n\nPO-G4\nL2 ISTN-G4\nMUCHERINO Antonio\n\n(Modifié le:29/08/2023 12:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD655990>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD655A20>",
+        "location": "B02A - 202"
+    },
+    {
+        "summary": "RES TD G4",
+        "description": "\n\nRES-G4\nL2 ISTN-G4\nVIHO César\n\n(Modifié le:28/06/2023 13:19)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD655D80>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD655E10>",
+        "location": "B12D - i-52 (007) -44"
+    },
+    {
+        "summary": "PO TP G4",
+        "description": "\n\nL2 ISTN-G4\nPO-G4\nMUCHERINO Antonio\nCHABOT Hector\n\n(Modifié le:29/08/2023 12:24)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD656170>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD656200>",
+        "location": "B02A - D24 Linux ISTIC (024),B02A - D26 Linux ISTIC (026)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:42)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD656560>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6565F0>",
+        "location": "B12D - i-58 (006) -44"
+    },
+    {
+        "summary": "EN2 CM",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD656950>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6569E0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "Anglais L2 ISTN G5",
+        "description": "\n\nAnglais L2 G5 ISTIC\nMORALI Olivier\n\n(Modifié le:10/07/2023 12:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD656D40>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD656DD0>",
+        "location": "B26-203 (14 places)"
+    },
+    {
+        "summary": "PO CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nPO\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nTERMIER Alexandre\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD657130>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6571C0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "WEB Projet G4",
+        "description": "\n\nWEB-G4\nL2 ISTN-G4\nGRANIER Pierre\n\n(Modifié le:12/09/2023 18:47)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD657520>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6575B0>",
+        "location": "B02A - D20 Linux ISTIC (020),B02A - D22 Linux ISTIC (022)"
+    },
+    {
+        "summary": "EN2 TP G4*",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\nTOUHAMI Abdellah\n\n(Modifié le:13/07/2023 17:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD657910>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6579A0>",
+        "location": "B06 - L3 Elec 1 et 2 (013)"
+    },
+    {
+        "summary": "ALG2 TD G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nLAURENT Mathieu\n\n(Modifié le:11/09/2023 17:19)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD657D00>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD657D90>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "PO TP G4",
+        "description": "\n\nL2 ISTN-G4\nPO-G4\nMUCHERINO Antonio\nCHABOT Hector\n\n(Modifié le:29/08/2023 12:24)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66C130>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66C1C0>",
+        "location": "B02A - D24 Linux ISTIC (024),B02A - D26 Linux ISTIC (026)"
+    },
+    {
+        "summary": "EN2 TD G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\n\n(Modifié le:28/06/2023 11:26)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66C520>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66C5B0>",
+        "location": "B12D - i-57 (008) -44"
+    },
+    {
+        "summary": "PO TP G4",
+        "description": "\n\nL2 ISTN-G4\nPO-G4\nMUCHERINO Antonio\nCHABOT Hector\n\n(Modifié le:29/08/2023 12:24)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66C910>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66C9A0>",
+        "location": "B02A - D24 Linux ISTIC (024),B02A - D26 Linux ISTIC (026)"
+    },
+    {
+        "summary": "PO CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nPO\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nTERMIER Alexandre\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66CD00>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66CD90>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "INTM CM",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:14/06/2023 22:08)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66D0F0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66D180>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "Journées Entreprises Licences",
+        "description": "\n\nLicence 1\nLicence 2\nL3 INFO-Parcours Informatique\nL3 INFO-Parcours MIAGE\nL3 INFO-Parcours SIF\nL3 EEEA-Parcours Électronique\nLicence 1-2\nManifestation\n\n(Modifié le:22/09/2023 14:12)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66D4E0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66D570>",
+        "location": "B12D - Amphi P (001) -200,B02A - Amphi D (106)"
+    },
+    {
+        "summary": "RES TP G4",
+        "description": "\n\nL2 ISTN-G4\nRES-G4\nVIHO César\nLAMDANI Wilem\n\n(Modifié le:25/09/2023 11:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66D900>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66D990>",
+        "location": "B02A - D26 Linux ISTIC (026),B02A - D24 Linux ISTIC (024)"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66DCF0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66DD80>",
+        "location": "B12D - i-60 (002) -44"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 19:36)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66E0E0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66E170>",
+        "location": "B12D - i-58 (006) -44"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66E4D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66E560>",
+        "location": "B12D - i-58 (006) -44"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nL2 ISTN-G4\nAlgLin-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66E8C0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66E950>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "ALG2 CC",
+        "description": "\n\nALG2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nANBERREE Thomas\nCC (beaulieu)\n\n(Modifié le:28/09/2023 12:34)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66ECB0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66ED40>",
+        "location": "on cherche la salle pour evaluation"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 19:37)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66F0D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66F160>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66F4C0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66F550>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "PO TD G4",
+        "description": "\n\nPO-G4\nL2 ISTN-G4\nMUCHERINO Antonio\n\n(Modifié le:29/08/2023 12:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66F8B0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66F940>",
+        "location": "B02A - 204"
+    },
+    {
+        "summary": "RES TP G4",
+        "description": "\n\nL2 ISTN-G4\nRES-G4\nVIHO César\nLAMDANI Wilem\n\n(Modifié le:25/09/2023 11:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66FCA0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD66FD30>",
+        "location": "B02A - D26 Linux ISTIC (026),B02A - D24 Linux ISTIC (024)"
+    },
+    {
+        "summary": "WEB CM",
+        "description": "\n\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nWEB\nRIDOUX Olivier\n\n(Modifié le:05/07/2023 13:23)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6800D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD680160>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "ALG2 CM",
+        "description": "\n\nALG2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nANBERREE Thomas\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6804C0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD680550>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "ALG2 TP G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nLAURENT Mathieu\nGIRARD Nathalie\n\n(Modifié le:11/09/2023 17:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6808B0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD680940>",
+        "location": "B02A - D22 Linux ISTIC (022),B02A - D20 Linux ISTIC (020)"
+    },
+    {
+        "summary": "PO TD G4",
+        "description": "\n\nPO-G4\nL2 ISTN-G4\nMUCHERINO Antonio\n\n(Modifié le:29/08/2023 12:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD680CA0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD680D30>",
+        "location": "B02A - 202"
+    },
+    {
+        "summary": "EN2 TP G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\nTOUHAMI Abdellah\n\n(Modifié le:13/07/2023 17:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD681090>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD681120>",
+        "location": "B06 - L3 Elec 1 et 2 (013)"
+    },
+    {
+        "summary": "RES CM",
+        "description": "\n\nRES\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nVIHO César\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD681480>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD681510>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "EN2 CM",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\n\n(Modifié le:14/06/2023 15:15)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD681870>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD681900>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD681C60>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD681CF0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:24/05/2023 23:51)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD682050>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6820E0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "RES TD G4",
+        "description": "\n\nRES-G4\nL2 ISTN-G4\nVIHO César\n\n(Modifié le:28/06/2023 13:19)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD682440>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6824D0>",
+        "location": "B12D - i-56 (010) -44"
+    },
+    {
+        "summary": "EN2 CM",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD682830>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6828C0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "EN2 TD G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\n\n(Modifié le:28/06/2023 11:26)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD682C20>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD682CB0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "PO CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nPO\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nTERMIER Alexandre\n\n(Modifié le:04/09/2023 14:12)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD683010>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6830A0>",
+        "location": "B02A - Amphi B (Maryam Mirzakhani) (112)"
+    },
+    {
+        "summary": "WEB TD G4",
+        "description": "\n\nL2 ISTN-G4\nWEB-G4\nGRANIER Pierre\n\n(Modifié le:12/09/2023 19:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD683430>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6834C0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "OFI CC",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\nCC (beaulieu)\n\n(Modifié le:11/09/2023 17:31)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD683820>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6838B0>",
+        "location": "on cherche la salle pour evaluation"
+    },
+    {
+        "summary": "Anglais L2 ISTN G5",
+        "description": "\n\nAnglais L2 G5 ISTIC\nMORALI Olivier\n\n(Modifié le:10/07/2023 12:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD683C40>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD683CD0>",
+        "location": "B26-203 (14 places)"
+    },
+    {
+        "summary": "ALG2 TD G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nLAURENT Mathieu\n\n(Modifié le:11/09/2023 17:19)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD683FD0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD690100>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "EN2 TP G4*",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\nTOUHAMI Abdellah\n\n(Modifié le:13/07/2023 17:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD690460>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6904F0>",
+        "location": "B06 - L3 Elec 1 et 2 (013)"
+    },
+    {
+        "summary": "Anglais L2 ISTN G5",
+        "description": "\n\nAnglais L2 G5 ISTIC\nMORALI Olivier\n\n(Modifié le:10/07/2023 12:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD690850>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6908E0>",
+        "location": "B26-203 (14 places)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 19:38)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD690C40>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD690CD0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "AlgLin CC",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\nCC (beaulieu)\nDELOUBRIERE Olivier\nHERRERO VILA Sergio\nPASQUEREAU Laurence\nEnseignant à préciser ISTIC\n\n(Modifié le:26/09/2023 16:09)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD691030>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6910C0>",
+        "location": "B27 - 115,B27 - Salle d'examens (207)"
+    },
+    {
+        "summary": "RES CM",
+        "description": "\n\nRES\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nVIHO César\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD691450>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6914E0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "INTM CM",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:14/06/2023 22:08)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD691840>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6918D0>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD691C30>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD691CC0>",
+        "location": "B12D - i-56 (010) -44"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD692020>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6920B0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:42)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD692410>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6924A0>",
+        "location": "B12D - i-58 (006) -44"
+    },
+    {
+        "summary": "EN2 TD G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\n\n(Modifié le:28/06/2023 11:26)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD692800>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD692890>",
+        "location": "B12D - i-57 (008) -44"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD692BF0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD692C80>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD692FE0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD693070>",
+        "location": "B12D - i-59 (004) -44"
+    },
+    {
+        "summary": "EN2 CM",
+        "description": "\n\nEN2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nCRAND Samuel\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6933D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD693460>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "EN2 TP G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\nTOUHAMI Abdellah\n\n(Modifié le:13/07/2023 17:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6937C0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD693850>",
+        "location": "B06 - L3 Elec 1 et 2 (013)"
+    },
+    {
+        "summary": "EN2 TD G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\n\n(Modifié le:28/06/2023 11:26)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD693BB0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD693C40>",
+        "location": "B12D - i-56 (010) -44"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nAlgLin-G4\nL2 ISTN-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD693FA0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD693FD0>",
+        "location": "B12D - i-56 (010) -44"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:37)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A83D0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A8460>",
+        "location": "B02A - 203"
+    },
+    {
+        "summary": "ALG2 TP G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nLAURENT Mathieu\nPOIRIER Aurore\n\n(Modifié le:20/09/2023 16:15)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A87C0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A8850>",
+        "location": "B40 - Linux ISTIC/ESIR (011),B40 - Linux ISTIC/ESIR (013)"
+    },
+    {
+        "summary": "RES TP G4",
+        "description": "\n\nL2 ISTN-G4\nRES-G4\nVIHO César\nLAMDANI Wilem\n\n(Modifié le:25/09/2023 11:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A8BB0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A8C40>",
+        "location": "B02A - D22 Linux ISTIC (022),B02A - D20 Linux ISTIC (020)"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A8FA0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A9030>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A9390>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A9420>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "Anglais L2 ISTN G5",
+        "description": "\n\nAnglais L2 G5 ISTIC\nMORALI Olivier\n\n(Modifié le:10/07/2023 12:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A9780>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A9810>",
+        "location": "B26-203 (14 places)"
+    },
+    {
+        "summary": "PO TD G4",
+        "description": "\n\nPO-G4\nL2 ISTN-G4\nMUCHERINO Antonio\n\n(Modifié le:29/08/2023 12:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A9B70>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A9C00>",
+        "location": "B12D - i-52 (007) -44"
+    },
+    {
+        "summary": "RES CM",
+        "description": "\n\nRES\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nVIHO César\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A9F60>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6A9FF0>",
+        "location": "B12D - Amphi P (001) -200"
+    },
+    {
+        "summary": "EN2 TD G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\n\n(Modifié le:28/06/2023 11:26)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AA350>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AA3E0>",
+        "location": "B12D - i-52 (007) -44"
+    },
+    {
+        "summary": "Trombinoscope L2 ISTN-G4",
+        "description": "\n\nL2 ISTN-G4\n\n(Modifié le:12/07/2023 11:35)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AA740>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AA7D0>",
+        "location": "B12D - i-57 (008) -44"
+    },
+    {
+        "summary": "ALG2 TD G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nLAURENT Mathieu\n\n(Modifié le:11/09/2023 17:19)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AAB60>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AABF0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "INTM CM",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:14/06/2023 22:08)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AAF50>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AAFE0>",
+        "location": "B02A - 204"
+    },
+    {
+        "summary": "RES CM",
+        "description": "\n\nRES\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nVIHO César\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AB340>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AB3D0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AB730>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6AB7C0>",
+        "location": "B02A - 204"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 19:25)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6ABB20>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6ABBB0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "Permanence L2 - Salle HERM Bât 12D",
+        "description": "\n\nLicence 2\nRIDOUX Olivier\nFORET Annie\n\n(Modifié le:28/08/2023 19:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6ABF10>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6ABFA0>",
+        "location": "Distanciel (cf services numériques)"
+    },
+    {
+        "summary": "PO CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nPO\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nTERMIER Alexandre\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BC3A0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BC430>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BC790>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BC820>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "RES CC",
+        "description": "\n\nRES\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nVIHO César\nCC (beaulieu)\n\n(Modifié le:20/09/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BCB80>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BCC10>",
+        "location": "B27 - Salle d'examens (207),B27 - 114"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:19/05/2023 17:01)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BCFD0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BD060>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BD3C0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BD450>",
+        "location": "B02A - 202"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BD7B0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BD840>",
+        "location": "B02A - 202"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BDBA0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BDC30>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "ALG2 CC",
+        "description": "\n\nALG2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nANBERREE Thomas\nCC (beaulieu)\n\n(Modifié le:28/09/2023 12:39)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BDF90>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BE020>",
+        "location": "B02A - 014,B08A - Examen (032)"
+    },
+    {
+        "summary": "EN2 TP G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\nTOUHAMI Abdellah\n\n(Modifié le:13/07/2023 17:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BE380>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BE410>",
+        "location": "B06 - L3 Elec 1 et 2 (013)"
+    },
+    {
+        "summary": "INTM TD",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:05/07/2023 18:42)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BE770>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BE800>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "WEB TP G4",
+        "description": "\n\nL2 ISTN-G4\nWEB-G4\nGRANIER Pierre\n\n(Modifié le:29/08/2023 12:17)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BEB60>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BEBF0>",
+        "location": "B02A - D22 Linux ISTIC (022),B02A - D20 Linux ISTIC (020)"
+    },
+    {
+        "summary": "AlgLin CC",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\nCC (beaulieu)\nVIRRION Anne\nHERRERO VILA Sergio\nEnseignant à préciser ISTIC\n\n(Modifié le:25/09/2023 18:56)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BEF50>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BEFE0>",
+        "location": "B27 - 114,B27 - Salle d'examens (207)"
+    },
+    {
+        "summary": "RES TP G4",
+        "description": "\n\nL2 ISTN-G4\nRES-G4\nVIHO César\nLAMDANI Wilem\n\n(Modifié le:25/09/2023 11:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BF370>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BF400>",
+        "location": "B40 - Linux ISTIC/ESIR (011),B40 - Linux ISTIC/ESIR (013)"
+    },
+    {
+        "summary": "PO TD G4",
+        "description": "\n\nPO-G4\nL2 ISTN-G4\nMUCHERINO Antonio\n\n(Modifié le:29/08/2023 12:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BF760>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BF7F0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "PO TP G4",
+        "description": "\n\nL2 ISTN-G4\nPO-G4\nMUCHERINO Antonio\nCHABOT Hector\n\n(Modifié le:29/08/2023 12:24)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BFB50>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BFBE0>",
+        "location": "B40 - Linux ISTIC/ESIR (013),B40 - Linux ISTIC/ESIR (011)"
+    },
+    {
+        "summary": "PO TP G4",
+        "description": "\n\nL2 ISTN-G4\nPO-G4\nMUCHERINO Antonio\nCHABOT Hector\n\n(Modifié le:29/08/2023 12:24)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BFF40>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6BFFD0>",
+        "location": "B40 - Linux ISTIC/ESIR (013),B40 - Linux ISTIC/ESIR (011)"
+    },
+    {
+        "summary": "ALG2 TP G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nLAURENT Mathieu\nGIRARD Nathalie\n\n(Modifié le:11/09/2023 17:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CC370>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CC400>",
+        "location": "B02A - D22 Linux ISTIC (022),B02A - D20 Linux ISTIC (020)"
+    },
+    {
+        "summary": "ALG2 TP G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nLAURENT Mathieu\nGIRARD Nathalie\n\n(Modifié le:11/09/2023 17:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CC760>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CC7F0>",
+        "location": "B40 - Linux ISTIC/ESIR (011),B40 - Linux ISTIC/ESIR (013)"
+    },
+    {
+        "summary": "OFI CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nOFI\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nFORET Annie\n\n(Modifié le:19/05/2023 16:59)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CCB50>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CCBE0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "EN2 TP G4*",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\nTOUHAMI Abdellah\n\n(Modifié le:13/07/2023 17:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CCF40>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CCFD0>",
+        "location": "B06 - L3 Elec 1 et 2 (013)"
+    },
+    {
+        "summary": "RES CM",
+        "description": "\n\nRES\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nVIHO César\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CD330>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CD3C0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "ALG2 TD G4",
+        "description": "\n\nALG2-G4\nL2 ISTN-G4\nLAURENT Mathieu\n\n(Modifié le:11/09/2023 17:19)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CD720>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CD7B0>",
+        "location": "B12D - i-53 (009) -44"
+    },
+    {
+        "summary": "Anglais L2 ISTN G5",
+        "description": "\n\nAnglais L2 G5 ISTIC\nMORALI Olivier\n\n(Modifié le:10/07/2023 12:41)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CDB10>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CDBA0>",
+        "location": "B26-203 (14 places)"
+    },
+    {
+        "summary": "OFI TD G4",
+        "description": "\n\nL2 ISTN-G4\nOFI-G4\nKELODJOU Gwladys\n\n(Modifié le:11/09/2023 16:10)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CDF00>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CDF90>",
+        "location": "B02A - 202"
+    },
+    {
+        "summary": "INTM CM",
+        "description": "\n\nGroupe INTM\nPINA STRANGER Alvaro\n\n(Modifié le:14/06/2023 22:08)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CE2F0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CE380>",
+        "location": "B02A - 202"
+    },
+    {
+        "summary": "PO TD G4",
+        "description": "\n\nPO-G4\nL2 ISTN-G4\nMUCHERINO Antonio\n\n(Modifié le:29/08/2023 12:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CE6E0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CE770>",
+        "location": "B12D - i-59 (004) -44"
+    },
+    {
+        "summary": "Journées Entreprises Licences",
+        "description": "\n\nLicence 1\nLicence 2\nL3 INFO-Parcours Informatique\nL3 INFO-Parcours MIAGE\nL3 INFO-Parcours SIF\nL3 EEEA-Parcours Électronique\nLicence 1-2\nManifestation\n\n(Modifié le:22/09/2023 14:12)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CEAD0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CEB60>",
+        "location": "B12D - Amphi P (001) -200,B02A - Amphi D (106)"
+    },
+    {
+        "summary": "Permanence L2 - Salle HERM Bât 12D",
+        "description": "\n\nLicence 2\nRIDOUX Olivier\nFORET Annie\n\n(Modifié le:28/08/2023 19:20)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CEEF0>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CEF80>",
+        "location": "Distanciel (cf services numériques)"
+    },
+    {
+        "summary": "ALG2 CM",
+        "description": "\n\nALG2\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nANBERREE Thomas\n\n(Modifié le:19/05/2023 17:56)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CF340>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CF3D0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "PO CM",
+        "description": "\n\nL1-2 ISTN Parcours Aménagé\nPO\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nTERMIER Alexandre\n\n(Modifié le:19/05/2023 17:00)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CF730>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CF7C0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin CM",
+        "description": "\n\nAlgLin\nL2 ISTN Parcours Aménagé\nL2 ISTN Parcours Défi\nL2 ISTN Parcours LAS\nL2 Parcours Classique\nULMER Félix\n\n(Modifié le:24/05/2023 23:52)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CFB20>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CFBB0>",
+        "location": "B02A - Amphi D (106)"
+    },
+    {
+        "summary": "AlgLin TD G4",
+        "description": "\n\nL2 ISTN-G4\nAlgLin-G4\nHERRERO VILA Sergio\n\n(Modifié le:28/06/2023 11:22)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CFF10>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6CFFA0>",
+        "location": "B12D - i-59 (004) -44"
+    },
+    {
+        "summary": "EN2 TD G4",
+        "description": "\n\nEN2-G4\nL2 ISTN-G4\nLAMY Patrick\n\n(Modifié le:28/06/2023 11:26)",
+        "start": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6EC340>",
+        "end": "<icalendar.prop.vDDDTypes object at 0x000001EBAD6EC3D0>",
+        "location": "B12D - i-57 (008) -44"
+    }
+]
